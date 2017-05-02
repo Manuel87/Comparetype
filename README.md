@@ -23,8 +23,9 @@ Tool to compare fonts at a normalized typographic size.
 - workaround: to quickly change the size use the reading distance field (double the distance, double the size)
 
 
-![CompareType_Arabic](README_media/CompareType_Arabic.gif)
 ![CompareType_Latin](README_media/CompareType_Latin.gif)
+
+![CompareType_Arabic](README_media/CompareType_Arabic.gif)
 
 ![Minion_scaled-Latin-to-match-other-scripts-typeface-metrics](README_media/Minion_scaled-Latin-to-match-other-scripts-typeface-metrics.png)
 Different versions of Minion to accompany
