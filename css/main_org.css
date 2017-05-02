@@ -1,0 +1,976 @@
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 37, main_org.scss */
+.type {
+  line-height: 6em !important;
+}
+
+/* line 102, main_org.scss */
+#ruler {
+  font-size: 7px;
+  height: 0px;
+  width: 0px;
+  overflow: visible;
+}
+
+/* line 151, main_org.scss */
+.dropdown, [multiple] {
+  width: 20ex;
+}
+
+/* line 156, main_org.scss */
+[multiple] {
+  height: 5ex;
+}
+
+/* line 169, main_org.scss */
+#measurefonts_main {
+  background-color: #fee;
+  display: inline-block;
+  position: relative;
+  border: 1px solid red;
+  width: 100%;
+  height: 1em;
+  overflow: visible;
+  line-height: 200px !important;
+}
+
+/* line 180, main_org.scss */
+.measuring_fonts {
+  line-height: 0.1em;
+}
+
+/* equal wordspacing */
+/* line 245, main_org.scss */
+span.wspace {
+  width: 8px;
+  /*should actually relate to the typographic fontsize (em in .textframe)*/
+  display: inline-block;
+  background-color: #00f;
+  height: 1px;
+}
+
+/* line 253, main_org.scss */
+span.line {
+  margin: 0;
+  border-right: 3px solid blue;
+  margin-right: -3px;
+  display: inline-block;
+  width: auto;
+  min-width: 60%;
+  /*makes sure there are never two span.lines on one real line no matter how narrow a font is*/
+  /*mimic br properties...*/
+  /* clear:none;
+   display: inline;
+   width:auto;
+   height:auto;
+   position: static;*/
+  /*is not working. what am I missing?*/
+}
+
+/* line 273, main_org.scss */
+span.line:hover {
+  background-color: lightblue;
+}
+
+/* line 277, main_org.scss */
+span.word {
+  background-color: rgba(255, 200, 200, 0.7);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: visible;
+}
+
+/* line 285, main_org.scss */
+span.char {
+  border-right: 1px solid #f99;
+  margin-right: -1px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 312, main_org.scss */
+div {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 319, main_org.scss */
+.center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+/* line 325, main_org.scss */
+.options.collapsed {
+  display: none;
+}
+
+/* line 331, main_org.scss */
+body {
+  font: 100% "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size-adjust: 1.0;
+  /*only firefox -> */
+  color: black;
+  background-color: white;
+}
+
+/* line 340, main_org.scss */
+.container {
+  width: 100%;
+  padding: 0% 5% 0% 5%;
+  background-clip: content-box;
+}
+
+/* line 350, main_org.scss */
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+}
+
+/* line 358, main_org.scss */
+.navbar ul, #firstInfoTest ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0;
+}
+
+/* line 365, main_org.scss */
+#firstInfoTest, #firstInfoTest ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 366, main_org.scss */
+#firstInfoTest {
+  margin-top: 0px;
+}
+
+/* IE ..
+.menu {text-align:justify;}
+.menu > a {display:inline-block}
+.menu:after { content:' '; display:inline-block; width: 100%; height: 0 }
+*/
+/* line 374, main_org.scss */
+button, .button, #mainForm > ul > li, .button-group {
+  color: black;
+  background-color: white;
+  padding: 0.2rem 0.4rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+  min-height: 1.1rem;
+  min-width: 1.1rem;
+}
+
+/* line 387, main_org.scss */
+.btn-primary {
+  padding: 0.2rem 0.4rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  margin-top: -1px;
+}
+
+/* line 395, main_org.scss */
+.btn-mode, .btn-mode-overlay {
+  border: none;
+  margin-top: -0.8rem;
+  font-size: 2rem;
+  padding: 0.2rem 0;
+}
+
+/* line 403, main_org.scss */
+.btn-mode-overlay {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 406, main_org.scss */
+.btn-mode-overlay span {
+  margin-left: -0.4em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 412, main_org.scss */
+.btn-noborder {
+  border: none;
+  padding: none;
+  vertical-align: middle;
+}
+
+/* line 420, main_org.scss */
+.btn-gear {
+  font-size: 1.5rem;
+  border: none;
+  padding: none;
+  vertical-align: top;
+  margin-top: -0.2rem;
+}
+
+/* line 428, main_org.scss */
+.nav-space {
+  min-width: 2.5rem;
+  display: inline-block;
+}
+
+/* line 434, main_org.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 437, main_org.scss */
+*:focus {
+  outline: 0;
+}
+
+/* line 441, main_org.scss */
+input {
+  margin: 0;
+  width: auto;
+  box-shadow: none;
+  min-width: 10px;
+  width: 50px;
+}
+
+/* line 456, main_org.scss */
+input::-webkit-color-swatch-wrapper {
+  padding: 0;
+  max-height: 1.1rem;
+  max-width: 1.1rem;
+}
+
+/* line 461, main_org.scss */
+input::-webkit-color-swatch {
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* line 467, main_org.scss */
+input[type=color] {
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/* line 475, main_org.scss */
+.btn-color-bg, .btn-color-fg, .btn-invert {
+  padding: 0;
+  margin: 0 -0.05rem;
+  margin-top: 0.05rem;
+  vertical-align: middle;
+}
+
+/* line 481, main_org.scss */
+.btn-color-fg {
+  background-color: black;
+}
+
+/* line 485, main_org.scss */
+.btn-invert {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* line 497, main_org.scss */
+.font1 {
+  font-family: Times;
+  word-spacing: 0;
+  font-size: 2em;
+}
+
+/* line 502, main_org.scss */
+.font2 {
+  font-family: "Lucida Grande";
+  word-spacing: 0;
+  font-size: 2em;
+}
+
+/* line 508, main_org.scss */
+.font1_before {
+  font-family: Times;
+}
+
+/* line 509, main_org.scss */
+.font2_before {
+  font-family: "Lucida Grande";
+}
+
+/* line 516, main_org.scss */
+.module {
+  width: 100%;
+  background-color: auto;
+  clear: both;
+  padding-top: 5vw;
+}
+
+/* line 523, main_org.scss */
+.module_left, .module_right, .module_font1, .module_font2 {
+  width: 50%;
+  float: left;
+  background-color: auto;
+  padding: 40px;
+}
+
+/* line 531, main_org.scss */
+.module_left .type {
+  float: right;
+}
+
+/* line 535, main_org.scss */
+.module_left .myCompareDefault {
+  text-align: right;
+}
+
+/* line 538, main_org.scss */
+.comparetext .wrap {
+  overflow: visible;
+  display: inline-block;
+  width: auto;
+  background-color: #fcc;
+  height: auto;
+}
+
+/* line 549, main_org.scss */
+.module_control {
+  clear: both;
+  width: 100%;
+  display: block;
+  border-top: 3px solid;
+  padding-top: 4px;
+  font-size: 12px;
+}
+
+/* line 558, main_org.scss */
+.module_control .left, .module_control .center, .module_control .right {
+  width: 40%;
+  display: inline-block;
+  background-color: auto;
+}
+
+/* line 564, main_org.scss */
+.module_control .center {
+  width: 19% !important;
+  text-align: center;
+  margin-left: 0.5%;
+}
+
+/* line 572, main_org.scss */
+.left {
+  float: left;
+}
+
+/* line 578, main_org.scss */
+.right {
+  float: right;
+  text-align: right;
+}
+
+/* line 587, main_org.scss */
+.type, .myReadingRegular {
+  font-size: 8px;
+  line-height: 2.8em !important;
+  text-decoration: none;
+  white-space: normal;
+  background-color: auto;
+}
+
+/* line 598, main_org.scss */
+.myReadingRegular_frame {
+  padding-bottom: 4px;
+  width: 60em;
+  float: left;
+}
+
+/* line 607, main_org.scss */
+.myCompareDefault {
+  font-size: 100px;
+  line-height: 2em !important;
+  background-color: auto;
+}
+
+/* line 615, main_org.scss */
+.myCompareDefault_frame {
+  width: 100%;
+}
+
+/* line 639, main_org.scss */
+.show_outline .outline {
+  color: white;
+  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, 0px 0.5px 0 black, 0px -0.5px 0 black, -0.5px 0px 0 black, 0.5px 0px 0 black, 0px 0.5px 0 black, 0px 0.5px 0 black, 0px -0.5px 0 black, 0px -0.5px 0 black, -2px 0px 0 black, 2px 0px 0 black, 0px 2px 0 black, 0px -2px 0 black;
+}
+
+/* line 697, main_org.scss */
+.show_outline .outline_big {
+  color: white;
+}
+
+/* line 705, main_org.scss */
+.largeText {
+  font-size: 100px;
+  line-height: 2.8em !important;
+  width: 30em;
+}
+
+/* line 720, main_org.scss */
+.poster3d_frame {
+  width: 100%;
+  margin-top: -0.2em;
+  margin-bottom: 0.5em;
+}
+
+/* line 742, main_org.scss */
+.poster3d {
+  font-size: 400px;
+  line-height: 1em !important;
+  color: white;
+  text-shadow: 1.5px 1.5px 0 black, -1.5px 1.5px 0 black, 1.5px -1.5px 0 black, -1.5px -1.5px 0 black, 0px 1.5px 0 black, 0px -1.5px 0 black, -1.5px 0px 0 black, 1.5px 0px 0 black, 1px 1.5px 0 black, -1px 1.5px 0 black, 1px -1.5px 0 black, -1px -1.5px 0 black, -2px 0px 0 black, 2px 0px 0 black, 0px 2px 0 black, 0px -2px 0 black, 0 0.005em #e9cac7, -0.005em 0 #c9d5db, -0.005em 0.01em #e9cac7, -0.01em 0.005em #c9d5db, -0.01em 0.015em #e9cac7, -0.015em 0.01em #c9d5db, -0.015em 0.02em #e9cac7, -0.02em 0.015em #c9d5db, -0.02em 0.025em #e9cac7, -0.025em 0.02em #c9d5db, -0.025em 0.03em #e9cac7, -0.03em 0.025em #c9d5db, -0.03em 0.035em #e9cac7, -0.035em 0.03em #c9d5db, -0.035em 0.04em #e9cac7, -0.04em 0.035em #c9d5db, -0.04em 0.045em #e9cac7, -0.045em 0.04em #c9d5db, -0.045em 0.05em #e9cac7, -0.05em 0.045em #c9d5db, -0.05em 0.055em #e9cac7, -0.055em 0.05em #c9d5db, -0.045em 0.05em #e9cac7, -0.05em 0.045em #c9d5db, -0.05em 0.055em #e9cac7, -0.055em 0.05em #c9d5db, -0.055em 0.06em #e9cac7, -0.06em 0.055em #c9d5db, -0.06em 0.065em #e9cac7, -0.065em 0.06em #c9d5db, -0.065em 0.07em #e9cac7, -0.07em 0.065em #c9d5db, -0.07em 0.075em #e9cac7, -0.075em 0.07em #c9d5db, -0.075em 0.08em #e9cac7, -0.08em 0.075em #c9d5db, -0.08em 0.085em #e9cac7, -0.085em 0.08em #c9d5db, -0.085em 0.09em #e9cac7, -0.09em 0.085em #c9d5db, -0.09em 0.095em #e9cac7, -0.095em 0.09em #c9d5db, -0.093em 0.098em black, -0.098em 0.093em black;
+}
+
+/* line 857, main_org.scss */
+.consultation {
+  font-size: 6.5px;
+  line-height: 2.8em !important;
+  /* -moz-column-rule-color:  #ccc;
+   -moz-column-rule-style:  solid;
+   -moz-column-rule-width:  1px;
+   -webkit-column-rule-color:  #ccc;
+   -webkit-column-rule-style: solid ;
+   -webkit-column-rule-width:  1px;*/
+}
+
+/* line 872, main_org.scss */
+.consultation_frame {
+  width: 100%;
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+}
+
+/* line 884, main_org.scss */
+.smallest {
+  font-size: 5px;
+  line-height: 2em !important;
+  width: 30em;
+}
+
+/* line 892, main_org.scss */
+.dropcap:first-child:first-letter {
+  float: left;
+  color: black;
+  font-size: 3em;
+  line-height: 3em;
+}
+
+/*Visualize Baselines at 2 typographic em from top (javascript loop) */
+/* line 908, main_org.scss */
+div.baseline {
+  width: 100%;
+  height: 1px;
+  background-color: #f00;
+  position: absolute;
+  left: -3px;
+  z-index: -1;
+  /*margin-top: 2em;*/
+}
+
+/* line 923, main_org.scss */
+.show_measurements .type {
+  padding-top: 1.5em;
+  margin-bottom: -1.5em;
+}
+
+/* line 932, main_org.scss */
+.mode_overlay .font1 {
+  color: rgba(255, 39, 0, 0.8);
+}
+/* line 937, main_org.scss */
+.mode_overlay .font2 {
+  color: rgba(0, 89, 255, 0.8);
+}
+/* line 940, main_org.scss */
+.mode_overlay .module_left, .mode_overlay .module_font1 {
+  margin-left: 25%;
+}
+/* line 942, main_org.scss */
+.mode_overlay .module_left .type, .mode_overlay .module_font1 .type {
+  float: left;
+}
+/* line 946, main_org.scss */
+.mode_overlay .module_right, .mode_overlay .module_font2 {
+  margin-left: -50%;
+  mix-blend-mode: multiply;
+}
+/* line 951, main_org.scss */
+.mode_overlay .module_left .type, .mode_overlay .module_right .type, .mode_overlay .module_font1 .type, .mode_overlay .module_font2 .type {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+/* line 956, main_org.scss */
+.mode_overlay .myCompareDefault {
+  text-align: center;
+}
+
+/* line 974, main_org.scss */
+.mode_overlay.show_outline .myCompareDefault .font1 {
+  text-shadow: 1px 1px 0 rgba(255, 39, 0, 0.8), -1px 1px 0 rgba(255, 39, 0, 0.8), 1px -1px 0 rgba(255, 39, 0, 0.8), -1px -1px 0 rgba(255, 39, 0, 0.8), 0px 0.5px 0 rgba(255, 39, 0, 0.8), 0px -0.5px 0 rgba(255, 39, 0, 0.8), -0.5px 0px 0 rgba(255, 39, 0, 0.8), 0.5px 0px 0 rgba(255, 39, 0, 0.8), 0px 0.5px 0 rgba(255, 39, 0, 0.8), 0px 0.5px 0 rgba(255, 39, 0, 0.8), 0px -0.5px 0 rgba(255, 39, 0, 0.8), 0px -0.5px 0 rgba(255, 39, 0, 0.8), -2px 0px 0 rgba(255, 39, 0, 0.8), 2px 0px 0 rgba(255, 39, 0, 0.8), 0px 2px 0 rgba(255, 39, 0, 0.8), 0px -2px 0 rgba(255, 39, 0, 0.8);
+  color: auto;
+}
+
+/* line 1031, main_org.scss */
+.mode_overlay.show_outline .myCompareDefault .font2 {
+  text-shadow: 1px 1px 0 rgba(0, 89, 255, 0.8), -1px 1px 0 rgba(0, 89, 255, 0.8), 1px -1px 0 rgba(0, 89, 255, 0.8), -1px -1px 0 rgba(0, 89, 255, 0.8), 0px 0.5px 0 rgba(0, 89, 255, 0.8), 0px -0.5px 0 rgba(0, 89, 255, 0.8), -0.5px 0px 0 rgba(0, 89, 255, 0.8), 0.5px 0px 0 rgba(0, 89, 255, 0.8), 0px 0.5px 0 rgba(0, 89, 255, 0.8), 0px 0.5px 0 rgba(0, 89, 255, 0.8), 0px -0.5px 0 rgba(0, 89, 255, 0.8), 0px -0.5px 0 rgba(0, 89, 255, 0.8), -2px 0px 0 rgba(0, 89, 255, 0.8), 2px 0px 0 rgba(0, 89, 255, 0.8), 0px 2px 0 rgba(0, 89, 255, 0.8), 0px -2px 0 rgba(0, 89, 255, 0.8);
+  color: auto;
+}
+
+/* line 1085, main_org.scss */
+.size_detail {
+  font-size: 400px;
+}
+
+/* line 1086, main_org.scss */
+.size_big {
+  font-size: 100px;
+}
+
+/* line 1087, main_org.scss */
+.size_reg {
+  font-size: 8px;
+}
+
+/* line 1088, main_org.scss */
+.size_reg2 {
+  font-size: 12px;
+}
+
+/* line 1089, main_org.scss */
+.size_small {
+  font-size: 5px;
+}
+
+/* line 1094, main_org.scss */
+.lineheight_em {
+  line-height: 1em !important;
+}
+
+/* line 1095, main_org.scss */
+.lineheight_min {
+  line-height: 2em !important;
+}
+
+/* line 1096, main_org.scss */
+.lineheight_reg {
+  line-height: 2.8em !important;
+}
+
+/* line 1097, main_org.scss */
+.lineheight_regular2 {
+  line-height: 3em !important;
+}
+
+/* line 1098, main_org.scss */
+.lineheight_large {
+  line-height: 4em !important;
+}
+
+/* line 1101, main_org.scss */
+.framewidth_em {
+  width: 30em;
+}
+
+/* line 1102, main_org.scss */
+.framewidth_reg {
+  width: 60em;
+}
+
+/* line 1103, main_org.scss */
+.framewidth_reg2 {
+  width: 70em;
+}
+
+/* line 1104, main_org.scss */
+.framewidth_larg {
+  width: 100em;
+}
+
+/* line 1110, main_org.scss */
+.measurements_in_numbers {
+  font-size: 12px;
+  line-height: 2.4em;
+}
+
+/* line 1116, main_org.scss */
+.float {
+  float: left;
+}
+
+/* line 1120, main_org.scss */
+.oldsize {
+  font-size: 2em;
+}
+
+/* line 1130, main_org.scss */
+.show_measurements .words {
+  line-height: 1em;
+  height: 1em;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  background-color: transparent;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  padding: 0em 0.1em 0.5em 1em;
+  margin: -0em -0.1em -0.5em -1em;
+  margin-bottom: 0;
+  margin-top: -2em;
+  background-color: auto;
+    /*
+  border-top: 1px red solid;
+  padding-top: 0.15em;
+  border-bottom: 1px red solid;
+  padding-bottom: 0.3em;
+
+
+  background-color: transparent!important;
+  text-decoration: none;
+  background: url(../img/1px_green.png) repeat-x 100% 50%;
+
+  white-space: none;
+*/
+}
+
+/* line 1184, main_org.scss */
+.show_measurements .words .typographicsize {
+  top: -1em;
+  margin-bottom: -1em;
+  bottom: auto;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  left: 0;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  background-color: #ffccc1;
+  border-color: #ff313c;
+  clear: both;
+}
+
+/* line 1217, main_org.scss */
+.hide_size .typographicsize {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* line 1225, main_org.scss */
+.show_measurements .words .asc_desc {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  left: 0;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  top: -1.96em;
+  margin-bottom: -2em;
+  margin-top: 0;
+  border-color: #7aff9d;
+  clear: both;
+}
+
+/* line 1253, main_org.scss */
+.hide_asc_desc .asc_desc {
+  border-color: transparent;
+}
+
+/* line 1257, main_org.scss */
+.make_monospaced .words .char {
+  width: 0.6em;
+  text-align: center;
+}
+
+/* line 1264, main_org.scss */
+.show_measurements .words .char {
+  top: 0em;
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid #ff98b5;
+  margin-right: -1px !important;
+  vertical-align: bottom;
+}
+
+/* line 1287, main_org.scss */
+.hide_char .words .char {
+  border-right: none;
+}
+
+/*
+.measuring_fonts {
+  font-size: $Type_Size_Measuring;
+}
+*/
+/* line 1297, main_org.scss */
+.measuring_square {
+  height: 1ex;
+  width: 10px;
+  background-color: #f30;
+  display: inline-block;
+}
+
+/* line 1304, main_org.scss */
+.fixbaseline {
+  width: 0 !important;
+  display: inline-block;
+  opacity: 0;
+  height: auto;
+  clear: none;
+}
+
+/* line 1603, main_org.scss */
+#retinahide {
+  height: 20px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 1613, main_org.scss */
+#retinadetection {
+  display: inline-block;
+  background-color: yellow;
+  opacity: 0;
+  width: 100px;
+  z-index: 200;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0.75), (min-resolution: 72dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "0.75";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.17708), (min-resolution: 113dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1.17708";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1.25";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1.3";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1.5";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.69792), (min-resolution: 163dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "1.69792";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "2";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.29167), (min-resolution: 220dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "2.29167";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.36458), (min-resolution: 227dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "2.36458";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.375), (min-resolution: 228dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "2.375";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.75), (min-resolution: 264dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "2.75";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "3";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3.39583), (min-resolution: 326dppx) {
+  /* Retina-specific stuff here */
+  /* line 1631, main_org.scss */
+  #retinadetection:after {
+    content: "3.39583";
+  }
+}
+/* line 1640, main_org.scss */
+.debugging {
+  z-index: 200 !important;
+  padding: 10px;
+  background-color: #e3fdd0;
+  text-align: left;
+  right: 0;
+  top: 0;
+  font-size: 9px;
+  line-height: 9px;
+  opacity: 0;
+}
+
+/* line 1652, main_org.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 1658, main_org.scss */
+.textframe .readingtext {
+  border: 1px solid #aaf;
+  clear: none;
+  float: left;
+  position: relative;
+  display: block;
+  /*pseudo wordspacingonly for line detection not the actual word-spacing*/
+  word-spacing: 1em;
+}

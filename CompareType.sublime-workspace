@@ -1,0 +1,269 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"verti",
+				"vertical-align"
+			],
+			[
+				"displa",
+				"display:inline"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				],
+				[
+					"Packages/Compass/Compass.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Compass/Compass.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 188.0,
+		"last_filter": "keybin",
+		"selected_items":
+		[
+			[
+				"keybin",
+				"Preferences: Key Bindings - User"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/vongebhardi.de/webseiten/comparetype/dev"
+	],
+	"file_history":
+	[
+		"/Volumes/vongebhardi.de/webseiten/comparetype/dev/CompareType.sublime-project",
+		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/css/style.css",
+		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/index.html",
+		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/StudioFarn.sublime-workspace",
+		"/Volumes/vongebhardi.de/webseiten/comparetype/dev/CompareType.sublime-workspace",
+		"/Users/manuelvongebhardi/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/untitled.html",
+		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/Manu_Design_HTML-Template_StudioFarn/css/style.css"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Tomorrow",
+			"lineh",
+			"wrapper",
+			"header",
+			"padding-top",
+			"wrapper",
+			"max-wi",
+			"linehe",
+			"rightma",
+			".small",
+			"fontsize_smalltext",
+			"small",
+			"normal",
+			"fontsize_normal_responsive_query",
+			"normaltext",
+			"smalltext",
+			"\n",
+			"· ",
+			"minfontsize_smalltext",
+			"small",
+			"new typ",
+			"figure",
+			"figer",
+			"img",
+			"margin",
+			"media",
+			"top",
+			"padding",
+			"p ",
+			"main",
+			"textblock",
+			"text__width",
+			"width:",
+			"tabin",
+			"span",
+			"\n",
+			"text_lar",
+			"font-si",
+			"lineheight",
+			"fontsize_normaltext",
+			"Compare_Times_Lucida-Grande_New-Typographictem",
+			"font__main",
+			"font-fa",
+			"rl('",
+			"1920"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "CompareType.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 212.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

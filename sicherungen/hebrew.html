@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height" /> <!--and then the correct value can be get from window.innerWidth / window.innerHeight -->
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel   ="stylesheet" href="css/normalize.css">
+  <link rel   ="stylesheet" href="css/main.css">
+  <!-- <link rel   ="stylesheet" href="css/print.css"> -->
+  <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+  <script type="text/javascript" charset="utf-8" >
+       (function(){
+    // if firefox 3.5+, hide content till load (or 3 seconds) to prevent FOUT
+    //http://www.paulirish.com/2009/fighting-the-font-face-fout/
+    var d = document, e = d.documentElement, s = d.createElement('style');
+    //if (e.style.MozTransform === ''){ // gecko 1.9.1 inference
+      s.textContent = 'body{visibility:hidden}';
+      var r = document.getElementsByTagName('script')[0];
+      r.parentNode.insertBefore(s, r);
+      function f(){ s.parentNode && s.parentNode.removeChild(s); }
+      addEventListener('load',f,false);
+      setTimeout(f,3000);
+    //}
+})();
+  </script>
+  <script src ="js/vendor/modernizr-2.6.2.min.js"></script>
+  <!-- <script src ="js/vendor/detectizr.js">//console.log(Detectizr.os.name === "mac os");</script>  -->
+</head>
+<body class=""> <!--
+    show_split
+    debug
+    mode_overlay
+    mode_outline
+    show_frequency english german
+    show_measurements
+    make_monospaced
+  -->
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <!-- Add your site or application content here -->
+  <div id="header" class="" role="header"> <!--<header> had a strange css interaction-->
+  <div class="navbar navbar-fixed-top" role="banner">
+
+    <nav class="" role="navigation">
+      <div class="nav_wrap center" > <!-- style=" box-sizing: content-box; clear:both; background-color: #f00; width: 50vw!important; display:inline-block;" -->
+      <div id="add_fonts" class="button hide">
+        <!-- <div class="hidden">Drag</div> -->
+        <button id="add_fonts_open_dialog" class="btn btn-primary extend_options"><i class="fa fa-plus"></i>&nbsp;Add&nbsp;Fonts</button>
+        <div class="add_fonts options collapsed">
+          <!-- <div class"dropfonts">Drag Fonts Here!</div> -->
+          <span class="btn button">Drag Fonts Here!</span>
+          <div id="fonts"></div>
+
+
+        <label>System Fonts:
+          <datalist id="system_fonts">
+          <select name="system_fonts">
+            <option value="Comic Jens Pro">Comic Jens Pro</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Comic Relief">Comic Relief</option>
+            <option value="Times">Times</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Edmondas">Edmondas</option>
+            <!-- … -->
+          </select>
+          If other, please specify:
+          </datalist>
+          <input type="text" name="font" value="Helvetica" list="system_fonts" multiple placeholder="select Font" class="dropdown">
+        </label>
+        <label>Google Fonts:
+          <datalist id="google_fonts">
+          <select name="system_fonts">
+            <option value="Whatever">Whatever</option>
+            <option value="Helvetica Bold">Helvetica Bold</option>
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <!-- … -->
+          </select>
+          If other, please specify:
+          </datalist>
+          <input type="text" name="font" value="Whatever" list="google_fonts" multiple="true" class="dropdown">
+        </label>
+        <!-- <div>
+            <select name="system fonts" multiple>
+                <option value="">Helvetica</option>
+                <option value="">Helvetica Bold</option>
+                <option value="">Times</option>
+                <option value="">Times Bold</option>
+            </select>
+        </div>
+        <div>
+            <select name="google fonts" multiple>
+                <option value="">Helvetica</option>
+                <option value="">Helvetica Bold</option>
+                <option value="">Times</option>
+                <option value="">Times Bold</option>
+            </select>
+        </div> -->
+        <button>Specify Font Folder (only offline)</button>
+
+        <label>Active Fonts:
+          <datalist id="active_fonts">
+          <select name="active_fonts">
+            <option value="Vollkorn">Vollkorn</option>
+            <option value="Times">Times</option>
+            <!-- <option value="Dolly">Dolly</option> -->
+            <option value="TheAntiquaSunOT">TheAntiquaSunOT</option>
+            <option value="QuaText">QuaText</option>
+            <option value="Lava Std">Lava Std</option>
+            <option value="Larish Neue">Larish Neue</option>
+
+
+            <option value="Arnhem">Arnhem</option>
+            <option value="FedraSerifB">FedraSerifB</option>
+            <option value="FreightText">FreightText</option>
+
+            <option value="Minion Pro">Minion Pro</option>
+            <option value="Amman Serif Arabic">Amman Serif Arabic</option>
+            <option value="StanleyTrial Normal">StanleyTrial Normal</option>
+            <!-- <option value="Alida">Alida</option> -->
+            <!-- <option value="Koex">Koex</option> -->
+            <!-- <option value="Times New Roman">Times New Roman</option> -->
+
+            <option value="FreightMicro">FreightMicro</option>
+            <option value="Adobe Garamond Pro">Adobe Garamond Pro</option>
+            <!-- <option value="Garamond">Garamond MT</option> -->
+            <option value="Stempel Garamond LT Std">Stempel Garamond Std</option>
+            <option value="Garamond Premier Pro">Garamond Premier Pro</option>
+
+            <option value="Calibri">Calibri</option>
+            <option value="St Ryde">St Ryde</option>
+            <option value="Lucida Grande">Lucida Grande</option>
+            <option value="Fira Sans OT">Fira Sans OT</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Edmondsans">Edmondas</option>
+            <option value="Corpid C1s">Corpid C1s</option>
+            <option value="Windsor">Windsor</option>
+            <option value="Warnock Pro">Warnock Pro</option>
+            <option value="Taz">Taz</option>
+            <option value="TastyRegular">TastyRegular</option>
+            <option value="SchokoPro">SchokoPro</option>
+            <option value="Mission Script">Mission Script</option>
+            <option value="Ventography Personal Use Only">Ventography Personal Use Only</option>
+            <option value="Suisse BPtestFont Serif">Suisse BPtestFont Serif</option>
+            <option value="RicciaRegular">RicciaRegular</option>
+            <option value="Kava OT">Kava OT</option>
+            <option value="Harbell Personal Use Only">Harbell Personal Use Only</option>
+            <option value="GarySans">GarySans</option>
+            <option value="Choplin">Choplin</option>
+            <option value="BurgGroteskBeta">BurgGroteskBeta</option>
+            <option value="Antithesis OT">Antithesis OT</option>
+            <option value="Neutra Text TF">Neutra Text TF</option>
+            <option value="Brandon Grotesque">Brandon Grotesque</option>
+            <option value="Futura LT">Futura LT</option>
+            <option value="Verlag">Verlag</option>
+            <option value="Helvetica Bold">Helvetica Bold</option>
+            <option value="Comic Jens Pro">Comic Jens Pro</option>
+            <option value="Comic Relief">Comic Relief</option>
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <!-- <option value="Comic Sans MS">Comic Sans MS</option> -->
+            <!-- … -->
+          </select>
+          </datalist>
+          <input type="text" name="font" value="Whatever2" list="active_fonts" placeholder="select Font" class="dropdown">
+        </label>
+
+        <button id="add_fonts_clear" class="" >clear</button>
+        <div class="line">–––––</div>
+        </div>
+      </div>
+
+    <form id="mainForm" class="">
+    </form>
+
+
+<div id="measureInput" class="button-group"></div> <!-- First Info Test //Input -->
+
+<div id="colorInput">
+                <input class="btn-color btn-color-fg" type="color" id="color_fg" value="#000000"><!-- <button type="button" class="btn btn-color-fg"></button> --><button id="color_invert" type="button" class="btn btn-invert"><i class="fa fa-refresh" style="padding: 0 0.5ex;"></i></button><!--fa-exchange--><input class="btn-color btn-color-bg" type="color" id="color_bg" value="#FFFFFF">
+
+                <!-- <button type="button" class="btn btn-color-bg"> </button> -->
+            </div>
+
+
+  <div id="moreOptionsContainer" class="morecontainer">
+              <div class="openbutton morebutton button" onclick="$(this).closest('.morecontainer').toggleClass('open');">More Options</div>
+              <div id="moreOptions" style="width: 20px; overflow:visible;">
+              </div>
+      </div>
+
+<!-- <div> [print]</div> -->
+
+    <div class="chooseFontsContainer">
+      <div class="module_font1" id="fontselect1">
+        <input type="text" name="font" value="Times" list="active_fonts" class="dropdown center">
+      </div>
+      <div class="module_font2" id="fontselect2">
+        <input type="text" name="font" value="Lucida Grande" list="active_fonts" class="dropdown center">
+       </div>
+
+    </div>
+    </div>
+  </nav>
+</div>
+
+
+
+</div>
+<div id="container_main" class="container">
+<div id="ruler" ></div>
+<div class="module compare">
+	<div class="module_type myCompareDefault outline">
+		<div class="module_font1">
+			<div class="myCompareDefault_frame textframe" id="dropcontainer2">
+				<div class="font1 text comparetext" >
+						<span contenteditable="true" class="wrap">שקלו</span><!-- Schriftvergleich -->
+				</div>
+			</div>
+		</div>
+		<div class="module_font2">
+			<div class="myCompareDefault_frame textframe" id="dropcontainer">
+				<div class="font2 text comparetext" ><span contenteditable="true" class="wrap">שקלו</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left"><button type="button" class="btn btn-default">Editable Text <i class="fa fa-caret-down"> </i></button> </div>
+		<div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div class="module reading">
+	<div class="module_type myReadingRegular"  style="direction: rtl;">
+		<div class="module_font1">
+			<div class="myReadingRegular_frame textframe">
+				<span class="font1 text readingtext" contenteditable="true" title="Entspricht einer Technischen Größe von 13,2pt">פרנץ קפקא נולד ב-1883 למשפחה יהודית דוברת גרמנית בפראג אשר בבוהמיה, אז חלק מהאימפריה האוסטרו-הונגרית, לאב הרמן קפקא (1852–1931), סוחר עצמאי שעסק במסחר במוצרי מותרות, ולאם ג'ולי לבית לוי (1856–1934), בתו של בעל מבשלת שיכר מצליח, שזכתה להשכלה טובה יותר מזו של בעלה. במכתב לאביו (1919) תיאר עצמו קפקא כ"בן משפחת לוי עם שמץ של משקע קפקאי". אמרה זו חושפת את מערכת היחסים הנוקשה שלו עם אביו הסמכותן והתובעני שתואר כאיש עסקים "מגודל, אנוכי ושחצן".</span>
+			</div>
+		</div>
+		<div class="module_font2">
+			<div class="myReadingRegular_frame textframe">
+				<span class="font2 text readingtext" title="Technische Größe: 10,3pt">פרנץ קפקא נולד ב-1883 למשפחה יהודית דוברת גרמנית בפראג אשר בבוהמיה, אז חלק מהאימפריה האוסטרו-הונגרית, לאב הרמן קפקא (1852–1931), סוחר עצמאי שעסק במסחר במוצרי מותרות, ולאם ג'ולי לבית לוי (1856–1934), בתו של בעל מבשלת שיכר מצליח, שזכתה להשכלה טובה יותר מזו של בעלה. במכתב לאביו (1919) תיאר עצמו קפקא כ"בן משפחת לוי עם שמץ של משקע קפקאי". אמרה זו חושפת את מערכת היחסים הנוקשה שלו עם אביו הסמכותן והתובעני שתואר כאיש עסקים "מגודל, אנוכי ושחצן".</span>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+        <div class="left"><button type="button" class="btn btn-default">Dummy Text <i class="fa fa-caret-down"> </i></button> </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+<div class="module consultation">
+	<div class="module_type consultation"  style="direction: rtl;">
+		<div class="module_font1">
+			<div class="consultation_frame textframe">
+				<span class="font1 text readingtext">פרנץ קפקא נולד ב-1883 למשפחה יהודית דוברת גרמנית בפראג אשר בבוהמיה, אז חלק מהאימפריה האוסטרו-הונגרית, לאב הרמן קפקא (1852–1931), סוחר עצמאי שעסק במסחר במוצרי מותרות, ולאם ג'ולי לבית לוי (1856–1934), בתו של בעל מבשלת שיכר מצליח, שזכתה להשכלה טובה יותר מזו של בעלה. במכתב לאביו (1919) תיאר עצמו קפקא כ"בן משפחת לוי עם שמץ של משקע קפקאי". אמרה זו חושפת את מערכת היחסים הנוקשה שלו עם אביו הסמכותן והתובעני שתואר כאיש עסקים "מגודל, אנוכי ושחצן".
+				</span>
+			</div>
+		</div>
+		<div class="module_font2">
+			<div class="consultation_frame textframe" >
+				<span class="font2 text readingtext">פרנץ קפקא נולד ב-1883 למשפחה יהודית דוברת גרמנית בפראג אשר בבוהמיה, אז חלק מהאימפריה האוסטרו-הונגרית, לאב הרמן קפקא (1852–1931), סוחר עצמאי שעסק במסחר במוצרי מותרות, ולאם ג'ולי לבית לוי (1856–1934), בתו של בעל מבשלת שיכר מצליח, שזכתה להשכלה טובה יותר מזו של בעלה. במכתב לאביו (1919) תיאר עצמו קפקא כ"בן משפחת לוי עם שמץ של משקע קפקאי". אמרה זו חושפת את מערכת היחסים הנוקשה שלו עם אביו הסמכותן והתובעני שתואר כאיש עסקים "מגודל, אנוכי ושחצן".
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left">Dummy Text v </div>
+		<div class="center">left center right</div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+
+
+
+
+<div class="module reading">
+	<div class="module_type myChars">
+		<div class="module_font1">
+			<div class="myChars_frame textframe">
+				<span class="font1 text charstext" contenteditable="true" title="Entspricht einer Technischen Größe von 13,2pt">a b c d e f g h i j k l m n o p q r s t u v w x y z <br />A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  1 2 3 4 5 6 7 8 9 0 ( { [ . , ¡ ! ¿ ? * ' ‘ ’ " “ ” ] } )
+$ € £ % @ & ¶ § ¢ † ‡<!--  & @ . , ? ! ’ “ ” ( )  - – — --> <!-- He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. --></span>
+			</div>
+		</div>
+		<div class="module_font2">
+			<div class="myReadingRegular_frame textframe">
+				<span class="font2 text charstext" title="Technische Größe: 10,3pt">a b c d e f g h i j k l m n o p q r s t u v w x y z <br />A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  1 2 3 4 5 6 7 8 9 0 ( { [ . , ¡ ! ¿ ? * ' ‘ ’ " “ ” ] } )
+$ € £ % @ & ¶ § ¢ † ‡<!--  & @ . , ? ! ’ “ ” ( ) - – — --></span>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+        <div class="left"><button type="button" class="btn btn-default">Dummy Text <i class="fa fa-caret-down"> </i></button> </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="module">
+	<div class="module_type outline_big poster3d">
+		<div class="module_font1">
+			<div class="poster3d_frame">
+				<div class="font1 text">a</div>
+			</div>
+		</div>
+		<div class="module_font2">
+			<div class="poster3d_frame">
+				<div class="font2 text">a</div>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left">Dummy Text v </div>
+		<div class="center">left center right</div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div> -->
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</div>
+<!-- <div class="measuring_fonts">
+			<div class="font1_before float oldsize">x<span class="measuring_square"></span>
+			</div>
+			<div class="font2_before float oldsize">x<span class="measuring_square"></span>
+			</div>
+</div>
+<div class="measuring_fonts">
+			<div class="font1 float">x<span class="measuring_square"></span>
+			</div>
+			<div class="font2 float">x<span class="measuring_square"></span>
+			</div>
+</div> -->
+
+
+<div id="firstInfoTest" class="button-group" ></div> <!-- First Info Test //Input -->
+
+<!-- <div class="type lineheight_reg size_small framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_reg framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_large framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div> -->
+
+
+<div id="retinahide"><div id="retinadetection"> </div></div> <!-- later on this should get generated by the js, cause its not actual content -->
+</div>
+<div id="beta">Beta!&nbsp;Only Chrome/Mac</div>
+<div id="notchromeonmac">This is a beta version.<br>It’s developed on OSX with the latest version of Chrome. <br>So any other system or browser could cause problems. [x]</div>
+<div id="custom"></div> <!-- quick fix so Fontdrag wont crash, should remove that and fix it actually in the fontdrag.js -->
+<!--   ——————————————————————————————— End Content ————————————————————————————————— -->
+<!--<div id="debugging" class="fixed">[]</div>-->
+<div class="debugging fixed hidden"> <span id="on" class="button">[]</span> <br>
+<text>
+fontsizes:<br>
+<span class="fs_12">Agfs_012<span class="fs_05">&gt;2</span></span><br>
+<span class="fs_0">Agfs_0<span class="fs_0">&gt;0</span></span><br>
+<span class="fs_1">Agfs_1<span class="fs_1">&gt;1</span></span><br>
+<span class="fs_2">Agfs_2<span class="fs_2">&gt;2</span></span><br>
+<span class="fs_3">Agfs_3<span class="fs_3">&gt;3</span></span> <br>
+<span class="fs_test">fs_test<span class="fs_test">&gt;fs_test</span></span> <br>
+<div>div<span>[span]</span><p>&gt;p<span>&gt;span</span></p></div>
+<br></text>
+<additional> </additional></div>
+<div id="retinadetection" style="display: inline-block; height: 1px; background-color: #fff; position:fixed; top: 0; left: 0;"></div>
+
+
+<div id="typographicsizingcharacter" class="hidden" data-height="0.5">א</div> <!-- Hebrew ר 0.55 -->
+<div id="testcharactersinfont" class="hidden">שקלולמשפחה</div> <!--ـمـ   ه  Arabic -->
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+NOT WORKING PROPERLY-->
+<script type="text/javascript">
+
+	</script>
+
+<!-- detects system fonts and calls -> global.js -> populateFontList-->
+<object id="fontListSWF" name="fontListSWF" type="application/x-shockwave-flash" data="FontList.swf" width="1" height="1">
+    <param name="movie" value="FontList.swf">
+     <param name="AllowScriptAccess" value="always">
+	<embed src="FontList.swf" width="1" height="1">
+	<!-- <allow-access-from domain="localhost" />
+	<cross-domain-policy>
+<allow-access-from domain="localhost"/>
+
+</cross-domain-policy> -->
+</object>
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+<script src="js/plugins.js"></script>
+<!-- <script src="js/jquery.fittext.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/contentEditable.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/otfeatures.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="js/contentEditable.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
+
+<script src="js/fontcheck.js?2"></script>
+<script src="js/RoundFontsize.js"></script>
+        <script type="text/javascript" charset="utf-8">
+           new RoundFontsize(".myReadingRegular_frame .font1, .myReadingRegular_frame .font2, .myCompareDefault_frame .font1, .myCompareDefault_frame .font2, .consultation_frame .font1, .consultation_frame .font2", false, false, true, 1.0);
+        </script>
+<script src="js/global.js?1"></script> <!-- First -->
+<script src="js/main.js?2"></script> <!-- Second -->
+
+<script src="js/splitlineswordschars.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/fontdrag.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/normalize.js"></script>
+<script src="js/jwerty.js"></script>
+<script src="js/init.js?2"></script>
+<script type="text/javascript">
+
+
+
+
+
+
+</script>
+<!-- Last -->
+<!-- <script src="js/constants.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+-->
+
+</body>
+</html>

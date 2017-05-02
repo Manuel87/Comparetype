@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>	  <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>		 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>		 <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height" /> <!--and then the correct value can be get from window.innerWidth / window.innerHeight -->
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel   ="stylesheet" href="css/normalize.css">
+	<link rel   ="stylesheet" href="css/main.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link rel   ="stylesheet" href="css/font-awesome.min.css"> -->
+
+	<script src ="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body class=""> <!--
+mode_overlay
+mode_outline
+show_frequency english german
+show_measurements
+make_monospaced
+-->
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div class="header container" role="header"> <!--<header> had a strange css interaction-->
+<div class="navbar navbar-fixed-top" role="banner">
+	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+		<form>
+			<ul class="nav navbar-nav">
+				<li>
+					<button type="button" id="ui_font_add" class="btn btn-primary" role="button"><i class="fa fa-plus"></i>&nbsp;Add&nbsp;Fonts</button>
+				</li>
+				<li class="active">
+					<button type="button" id="ui_font_case" class="btn btn-default">Latin:&nbsp;normal&nbsp;case&nbsp;<i class="fa fa-caret-down"></i></button>
+				</li>
+			   <!--  <li>
+					<button type="button" class="btn btn-default">Normal Case <i class="fa fa-caret-down"></i></button>
+				</li> -->
+				<li>
+					<button type="button" id="ui_mainunit" class="btn btn-default">mm&nbsp;<i class="fa fa-caret-down"></i></button>
+				</li>
+				<li id="ui_typographicsizing">
+					<input type="checkbox"  name="typographicsizing" class="btn btn-default btn-lg btn-noborder " checked="checked">
+						<!-- <i class="fa fa-dot-circle-o"></i> -->
+						Typographic&nbsp;Sizing
+				</li>
+				<li>
+					<button type="button" id="ui_mode_two" class="btn btn-mode active"><span class="nav-space"></span>aa</button>
+				</li>
+				<li>
+					<button type="button" id="ui_mode_one" class="btn btn-mode">a</button>
+				</li>
+				<li>
+					<button type="button" id="ui_mode_overlay" class="btn btn-mode-overlay ">a<span>a</span><span class="nav-space"></span></button>
+				</li>
+				<li id="ui_font_fill">
+					<input type="checkbox" class="btn btn-default btn-lg btn-noborder" checked="checked">
+						<!-- <i class="fa fa-dot-circle-o"></i>&nbsp; -->
+						Fill
+				</li>
+				<li>
+					<input class="btn-color-fg" id="ui_colorselector" type="color">
+
+					<button type="button" class="btn btn-color-fg"></button>
+					<button type="button" class="btn btn-invert"><i class="fa fa-refresh"></i></button><!--fa-exchange-->
+					<button type="button" class="btn btn-color-bg"> </button>
+				</li>
+				<li id="ui_screensize">
+					<!-- <i class="fa fa-expand"></i>
+					<button type="button" class="btn btn-default">13.3"&nbsp;(158ppi)&nbsp;
+						<i class="fa fa-pencil"></i>
+					</button> -->
+					<fieldset>
+						<legend>Screen Size</legend>
+						<ul>
+							<li>
+								<label for="width">Width</label>
+								<input type="text" id="width" name="Width" value="">
+							</li>
+
+							<li>
+								<label for="height">Height</label>
+								<input type="text" id="height" name="Height" value="">
+							</li>
+
+							<li>
+								<label for="diagonal">Diagonal</label>
+								<input type="text" id="diagonal" name="Diagonal" value="">
+							</li>
+						</ul>
+					</fieldset>
+				</li>
+				<li>
+					<i class="fa fa-eye"></i> <button type="button" class="btn btn-default">ca.&nbsp;50cm&nbsp;<i class="fa fa-caret-down"></i></button>
+				</li>
+				<li>
+					<button type="button" class="btn btn-gear"><i class="fa fa-gear"></i></button>
+				</li>
+			</ul>
+		</form>
+	</nav>
+</div>
+</div>
+<div class="container">
+<div class="module compare">
+	<div class="module_type outline">
+		<div class="module_left">
+			<div class="type myCompareDefault">
+				<div class="font1 text comparetext">Compare</div>
+			</div>
+		</div>
+		<div class="module_right">
+			<div class="type myCompareDefault">
+				<div class="font2 text comparetext">Compare</div>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left"><button type="button" class="btn btn-default">Dummy Text <i class="fa fa-caret-down"> </i></button> </div>
+		<div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div class="module">
+	<div class="module_type">
+		<div class="module_left">
+			<div class="type myReadingRegular">
+				<div class="font1 text readingtext">Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</div>
+			</div>
+		</div>
+	</div>
+	<div class="module_right">
+		<div class="type myReadingRegular">
+			<div class="font2 text readingtext">Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left">Dummy Text v </div>
+		<div class="center">left center right</div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div class="module">
+	<div class="module_left">
+		<div class="type consultation">
+			<div class="font1 text readingtext">Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. Grumpy wizards make toxic brew for the evil Queen and Jack.</div>
+		</div>
+	</div>
+	<div class="module_right">
+		<div class="type consultation">
+			<div class="font2 text readingtext">Grumpy wizards make toxic brew for the evil Queen and Jack. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. Grumpy wizards make toxic brew for the evil Queen and Jack.
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left">Dummy Text v </div>
+		<div class="center">left center right</div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div class="module">
+	<div class="module_type outline_big">
+		<div class="module_left">
+			<div class="type poster3d">
+				<div class="font1 text">a</div>
+			</div>
+		</div>
+		<div class="module_right">
+			<div class="type poster3d">
+				<div class="font2 text">a</div>
+			</div>
+		</div>
+	</div>
+	<div class="module_control">
+		<div class="left">Dummy Text v </div>
+		<div class="center">left center right</div>
+		<div class="right module_info">Module Info</div>
+	</div>
+</div>
+<div>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</div>
+<div class="measuring_fonts">
+	<div class="font1_before float oldsize">x<span class="measuring_square"></span>
+	</div>
+	<div class="font2_before float oldsize">x<span class="measuring_square"></span>
+	</div>
+</div>
+<div class="measuring_fonts">
+	<div class="font1 float">x<span class="measuring_square"></span>
+	</div>
+	<div class="font2 float">x<span class="measuring_square"></span>
+	</div>
+</div>
+<div class="type lineheight_reg size_small framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_reg framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_large framewidth_reg myReadingRegular">
+	<div class="font1">Hamburgefonstiv</div>
+	<div class="font2">Hamburgefonstiv</div>
+</div>
+</div>
+<!--   ——————————————————————————————— End Content ————————————————————————————————— -->
+<!--<div id="debugging" class="fixed">[]</div>-->
+<div class="debugging fixed hidden"> <span id="on" class="button">[]</span> <br>
+<text>
+fontsizes:<br>
+<span class="fs_12">Agfs_012<span class="fs_05">&gt;2</span></span><br>
+<span class="fs_0">Agfs_0<span class="fs_0">&gt;0</span></span><br>
+<span class="fs_1">Agfs_1<span class="fs_1">&gt;1</span></span><br>
+<span class="fs_2">Agfs_2<span class="fs_2">&gt;2</span></span><br>
+<span class="fs_3">Agfs_3<span class="fs_3">&gt;3</span></span> <br>
+<span class="fs_test">fs_test<span class="fs_test">&gt;fs_test</span></span> <br>
+<div>div<span>[span]</span><p>&gt;p<span>&gt;span</span></p></div>
+<br></text>
+<additional> </additional></div>
+<div id="retinadetection" style="display: inline-block; height: 1px; background-color: #fff; position:fixed; top: 0; left: 0;"></div>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+NOT WORKING PROPERLY-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+-->
+</body>
+</html>

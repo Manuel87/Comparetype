@@ -1,0 +1,1307 @@
+//@import "compass/css3/transition"
+
+
+@import "compass/reset";
+@import "compass/css3";
+//@import "compass/utilities";
+//@import "compass/css3/transform";
+
+// T  Y  P  E
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$enable_frequency: false;
+
+// F O N T S
+//////////////////////////////////////
+$Type_Font_ui:   "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// $Type_Font_one:    Arial "Helvetica Neue", Helvetica, sans-serif;
+// $Type_Font_two:    Times, "Zapfino Linotype One", "Georgia", Times, sans-serif;
+
+
+// $Type_Font_one:    "Helvetica Neue", Helvetica, sans-serif;
+// $Type_Font_two:    Arial, Times, "Zapfino Linotype One", "Georgia", Times, sans-serif;
+
+
+$Type_Font_one:    "Vollkorn"; //, "Helvetica Neue", Helvetica, sans-serif;
+$Type_Font_two:    "Georgia"; //, Arial, Times, "Zapfino Linotype One", "Georgia", Times, sans-serif;
+
+
+
+//          "Zapfino Linotype One", "Skia", "Marker Felt", "Inconsolata"
+
+// U S E R - A D J U S T E M E N T S
+//OVERALL - Simple
+.type {
+
+  //font-size:    $Type_Size_Reading;
+  line-height:  4em!important;
+  //width:        $Type_FrameWidth_Reg;
+
+  //text-decoration: none;
+  //display: inline;
+  //padding-bottom: 4px;
+ // white-space: normal;
+}
+//$Type_LineHeight_Adjust:         1.5; //Multiplie everything with that 4.0em;
+
+
+///ONE
+$Type_Font_one_Wordspacing:     0;
+
+
+///TWO
+$Type_Font_two_Wordspacing:     0;//Zapf-0.3em;
+
+
+
+
+// S I Z E
+//////////////////////////////////////
+$Type_Size_Detail:              400px;
+$Type_Size_Large_3D:          400px;
+$Type_Size_Large_Text:          100px;
+$Type_Size_Reading:             8px;
+$Type_Size_Reading_Large:         12px;
+$Type_Size_Small:               6.5px;
+$Type_Size_Min:                 5px;
+$Type_Size_Ui:                  12px; //old size
+$Type_Size_Measuring:           200px;
+
+
+$Type_Size_Old:           2em;
+
+
+// L I N E H E G H T S
+//////////////////////////////////////
+$Type_LineHeight_Em:            1.0em!important;
+$Type_LineHeight_Min:           2.0em!important;
+$Type_LineHeight_Small:         2.2em!important;
+$Type_LineHeight_Regular:       2.8em!important; //!important
+$Type_LineHeight_Regular_Large: 3.0em!important;
+$Type_LineHeight_Large:         4.0em!important;
+
+
+$Type_LineHeight_Ui:         2.4em;
+
+
+
+// T E X T F R A M E    W I D T H
+//////////////////////////////////////
+$Type_FrameWidth_Small:         30em;
+$Type_FrameWidth_Reg:           60em;
+$Type_FrameWidth_Reg_Large:          70em;
+$Type_FrameWidth_Large:         100em;
+
+$Gap_Center: 40px;
+
+
+
+#ruler {
+	font-size: 7px;
+	height: 0px;
+	width:0px;
+	overflow: visible;
+}
+
+// C O L O R - General / Type
+//////////////////////////////////////
+$ColorsMyInvert : false;
+
+
+
+$Color_Bg:                      #fff;
+$Color_Type:                    #000; //#4200a4;//#f52c01; //#0025e4; //#0038a4
+$Color_Overlay_Type_one:          rgba(#ff2700,0.5);
+$Color_Overlay_Type_two:          rgba(#00d6ff,0.5);
+$Color_Overlay_Type_one:          rgba(#ff2700,0.8);
+$Color_Overlay_Type_two:          rgba(#0059ff,0.8);
+
+$Color_Type_Ui:                 $Color_Type;
+$Transparent:                   transparent;
+
+
+// C O L O R - Metric
+//////////////////////////////////////
+$Stroke_Width_Metrics:          1px solid;
+
+$Color_Type_Size:               #ff313c; // Both Baselines
+$Color_Type_Size_Bg:            #ffccc1;
+$Color_Type_Size_Kegel:         #ff0;
+
+$Color_Type_LineHeight_Bg:      #ffccc1;
+$Color_Type_Asc_Desc:           #7aff9d;
+
+
+$Colors: ();
+
+@if $ColorsMyInvert {
+
+
+$Color_Bg: invert($Color_Bg);
+$Color_Type: invert($Color_Type);
+$Color_Type: darken($Color_Type, 40%);
+
+
+
+}
+
+
+
+
+// C O L O R - D E B U G G I N G
+//////////////////////////////////////
+
+$DebuggingOpacity: 0.1;
+// $debugging: true;
+
+
+
+// @if $debugging {
+
+
+    $Color_Debugging_BG: auto;// #e3fdd0;
+    $Color_Type_Words_BG: auto; // #ffceef;
+    $Color_Type_BG: auto;// #cefdff!important;
+    $Color_Module: auto;
+    $Color_Module_LeftRight: auto;
+    $Color_Module_Control: auto;
+
+    // $Color_Debugging_BG: rgba(#e3fdd0,0.4);
+    // $Color_Type_Words_BG: rgba(#ffceef,0.4);
+    // $Color_Type_BG: rgba(#cefdff,0.4);
+    // $Color_Module: rgba(#7270ff,0.4);
+    // $Color_Module_LeftRight: rgba(#dd976a,0.4);
+    // $Color_Module_Control: rgba(#54ffbb,0.4);
+
+
+
+
+    // if width is not passed, or empty do this
+
+   // } @else {
+
+   //}
+
+
+// COLOR FUNCTIONS
+// adjust-hue($color, $degrees)
+// Changes the hue of a color.
+
+// lighten($color, $amount)
+// Makes a color lighter.
+
+// darken($color, $amount)
+// Makes a color darker.
+
+// saturate($color, $amount)
+// Makes a color more saturated.
+
+// desaturate($color, $amount)
+// Makes a color less saturated.
+
+// grayscale($color)
+// Converts a color to grayscale.
+
+// complement($color)
+// Returns the complement of a color.
+
+// invert($color)
+
+
+
+// M I S C
+//////////////////////////////////////
+$Color_Fg:                      $Color_Type;
+
+// Javascript
+/////////////
+//$Type_LineHeight_Kegel:         2.0em; // ->javascript //depends on font
+
+
+
+/// MY NORMALIZE
+/////////////////////////////////////////////
+// html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+
+
+
+div {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+body {
+  font: 100% $Type_Font_ui;
+  font-size: $Type_Size_Ui;
+  font-size-adjust: 1.0; /*only firefox -> */
+  color: $Color_Type;
+  background-color: $Color_Bg;
+
+}
+
+.container {
+  width:100%;
+        //r   o   u   l
+  padding: 0% 5% 0% 5%;
+  background-clip: content-box;
+
+}
+
+
+
+.navbar ul {
+    display: flex; justify-content: space-around;//space-between; // IE 10+
+    padding: 1.5rem 0;
+
+
+  }
+
+/* IE ..
+.menu {text-align:justify;}
+.menu > a {display:inline-block}
+.menu:after { content:' '; display:inline-block; width: 100%; height: 0 }
+*/
+
+button {
+  //background-color: $Color_Bg;
+  color: $Color_Type;
+  background-color: $Color_Bg;
+  padding: 0.2rem 0.4rem;
+  @include border-radius(0.5rem);
+  border: 1px solid lighten($Color_Type, 80%);
+  min-height:1.1rem;
+  min-width:1.1rem;
+
+
+}
+
+.btn-primary {
+  padding: 0.2rem 0.4rem;
+  @include border-radius(0.5rem);
+  border: 2px solid $Color_Type;
+  margin-top: -1px;
+
+}
+
+.btn-mode, .btn-mode-overlay {
+  border:none;
+  margin-top: -0.8rem;
+  font-size: 2rem;
+
+  padding: 0.2rem 0;
+}
+
+.btn-mode-overlay {
+  color: rgba($Color_Type, 0.8);
+}
+.btn-mode-overlay span {
+  margin-left: -0.4em;
+  color: rgba($Color_Type, 0.3);
+  //font-family: serif;
+}
+
+.btn-noborder {
+   border: none;
+   padding:none;
+   vertical-align: middle;
+}
+
+// .btn-lg { font-size: 1.4rem;}
+
+.btn-gear {
+   font-size: 1.5rem;
+   border: none;
+   padding:none;
+   vertical-align: top;
+   margin-top:-0.2rem
+}
+
+.nav-space {
+  min-width: 2.5rem;
+  display:inline-block;
+}
+
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+*:focus {
+    outline: 0;
+}
+
+input {
+    // background-color: transparent;
+    // border: none;
+    margin:0;
+    width:auto;
+    // -webkit-appearance: none;
+    box-shadow: none;
+    min-width: 10px;
+    width: 50px;
+
+}
+
+//http://stackoverflow.com/questions/11167281/webkit-css-to-control-the-box-around-the-color-in-an-inputtype-color
+//http://kopepasah.com/the-html5-inputs-you-should-style-using-css/
+input::-webkit-color-swatch-wrapper {
+        padding: 0;
+        max-height:1.1rem;
+        max-width:1.1rem;
+    }
+input::-webkit-color-swatch {
+        //border: none;
+        @include border-radius(0.5rem);
+    }
+
+input[type=color]
+{
+    background: transparent;
+    //padding:0;
+
+
+}
+
+.btn-color-bg, .btn-color-fg, .btn-invert {
+  padding: 0;
+  margin: 0 -0.05rem;
+  margin-top: 0.05rem;
+  vertical-align: middle;
+}
+.btn-color-fg {
+  background-color: $Color_Type
+}
+
+.btn-invert {
+  border:none;
+  padding: 0;
+  background-color: transparent;
+}
+
+
+.btn-lg {
+
+}
+
+
+.font1 {
+        font-family:        $Type_Font_one;
+        word-spacing:       $Type_Font_one_Wordspacing;
+         }
+.font2 {
+        font-family:        $Type_Font_two;
+        word-spacing:       $Type_Font_two_Wordspacing;
+        }
+
+.font1_before {font-family:     $Type_Font_one;}
+.font2_before {font-family:     $Type_Font_two;}
+
+
+// Type Defaults
+////////////////////////////////////////////////
+////////////////////////////////////////
+
+.module {
+  width:100%;
+  background-color: $Color_Module;
+  clear: both;
+  padding-top: 5vw;
+}
+
+.module_left,.module_right {
+  width:50%;
+  float:left;
+  background-color: $Color_Module_LeftRight;
+  //border:1px solid darken($Color_Module_LeftRight, 30% );
+  padding: $Gap_Center;
+}
+
+.module_left .type {
+  float:right;
+}
+
+.module_left .type_myCompareDefault{
+ text-align: right;}
+
+
+
+
+
+
+
+.module_control {
+  clear:both;
+  width: 100%;
+  display:block;
+  border-top: 3px solid;
+  padding-top:4px;
+  font-size: $Type_Size_Ui;
+}
+
+.module_control .left, .module_control .center, .module_control .right {
+  width:40%;
+  display: inline-block;
+  background-color: $Color_Module_Control;
+}
+
+.module_control .center {
+  width:19%!important;
+  text-align: center;
+  margin-left:0.5%;
+  // position:absolute;
+  // left:0
+}
+
+.left {
+  float:left;
+  // position:absolute;
+  // left:0
+}
+
+.right {
+  // position:absolute;
+  // right:0
+  float:right;
+  text-align: right;
+}
+
+
+
+.type, .type_myReadingRegular {
+  font-size:    $Type_Size_Reading;
+  line-height:  $Type_LineHeight_Regular;
+
+  text-decoration: none;
+  white-space: normal;
+  background-color: $Color_Type_BG;
+  // border:1px solid #f00;
+
+}
+
+.type_myReadingRegular_frame {
+
+  padding-bottom: 4px;
+  width:        $Type_FrameWidth_Reg;
+  float:left;
+}
+
+
+
+.type_myCompareDefault {
+  font-size:    $Type_Size_Large_Text;
+  line-height:  $Type_LineHeight_Min;//2em!important;
+
+  background-color: $Color_Type_BG;
+
+}
+
+.type_myCompareDefault_frame {
+	width:        100%;
+
+}
+
+// .mode_outline .type_myCompareDefault, .mode_outline .poster3d {
+
+// }
+
+
+.mode_outline .outline {
+  -webkit-text-stroke: 1.5px $Color_Type;
+
+    //-webkit-text-outline: 1px $Color_Type;
+    -webkit-text-fill-color: white;
+    text-stroke: 2px $Color_Type;
+    color: $Color_Bg;
+}
+
+
+
+.mode_outline .outline_big {
+    color: $Color_Bg;
+
+}
+
+
+
+.type_largeText {
+    font-size:    $Type_Size_Large_Text;
+    line-height:  $Type_LineHeight_Regular;
+    width:        $Type_FrameWidth_Small;
+    //collumns etc.
+
+
+}
+
+$shade-bottom: #e9cac7;
+$shade: #c9d5db;
+
+
+$outline_shadow_right_2 : 1.5px;
+$outline_shadow_right_1:  1px;
+
+$outline_shadow_left_2 : -1.5px;
+$outline_shadow_left_1:  -1px;
+
+$outline_shadow_top_2 :  -1.5px;
+$outline_shadow_top_1:   -1px;
+
+
+$outline_shadow_bottom_2 :1.5px;
+$outline_shadow_bottom_1: 1px;
+
+
+.type_poster3d_frame {
+	width:        100%;
+    margin-top: -0.2em;
+    margin-bottom: 0.5em;
+
+}
+
+
+.type_poster3d {
+    font-size:    $Type_Size_Large_3D;
+    line-height:  $Type_LineHeight_Em;
+
+    //collumns etc.
+
+    ///outline
+    color: $Color_Bg;
+
+  text-shadow:
+    //45 °
+    //rechts  unten 2
+    $outline_shadow_right_2 $outline_shadow_bottom_2 0 $Color_Type,
+     //links  unten
+     $outline_shadow_left_2 $outline_shadow_bottom_2 0 $Color_Type,
+     //rechts oben
+     $outline_shadow_right_2 $outline_shadow_top_2 0 $Color_Type,
+     //links  oben
+      $outline_shadow_left_2 $outline_shadow_top_2 0 $Color_Type,
+
+    //
+    //unten
+    0px $outline_shadow_bottom_2 0 $Color_Type,
+    //oben
+    0px $outline_shadow_top_2 0 $Color_Type,
+    //links
+    $outline_shadow_left_2 0px 0 $Color_Type,
+    //rechts
+    $outline_shadow_right_2 0px 0 $Color_Type,
+
+
+
+    // ~22°
+     //rechts unten
+     $outline_shadow_right_1 $outline_shadow_bottom_2 0 $Color_Type,
+     //links  unten
+     $outline_shadow_left_1 $outline_shadow_bottom_2 0 $Color_Type,
+     //rechts oben
+     $outline_shadow_right_1 $outline_shadow_top_2 0 $Color_Type,
+     //links  oben
+     $outline_shadow_left_1 $outline_shadow_top_2 0 $Color_Type,
+
+     // // ~22°
+     // //rechts unten
+     // $outline_shadow_right_2 $outline_shadow_bottom_1 0 $Color_Type,
+     // //links unten
+     // $outline_shadow_left_2 $outline_shadow_bottom_1 0 $Color_Type,
+     // //links oben
+     // $outline_shadow_right_2 $outline_shadow_top_1 0 $Color_Type,
+     // //links oben
+     // $outline_shadow_left_2 $outline_shadow_top_1 0 $Color_Type,
+
+     //correction
+
+    // //links
+     -2px 0px 0 $Color_Type,
+    // //rechts
+     2px 0px 0 $Color_Type,
+     //unten
+    0px 2px 0 $Color_Type,
+    //oben
+    0px -2px 0 $Color_Type,
+
+
+    0 .005em $shade-bottom,
+    -.005em 0 $shade,
+    -.005em .010em $shade-bottom,
+    -.010em .005em $shade,
+    -.010em .015em $shade-bottom,
+    -.015em .010em $shade,
+    -.015em .020em $shade-bottom,
+    -.020em .015em $shade,
+    -.020em .025em $shade-bottom,
+    -.025em .020em $shade,
+    -.025em .030em $shade-bottom,
+    -.030em .025em $shade,
+    -.030em .035em $shade-bottom,
+    -.035em .030em $shade,
+    -.035em .040em $shade-bottom,
+    -.040em .035em $shade,
+    -.040em .045em $shade-bottom,
+    -.045em .040em $shade,
+    -.045em .050em $shade-bottom,
+    -.050em .045em $shade,
+    -.050em .055em $shade-bottom,
+    -.055em .050em $shade,
+    -.045em .050em $shade-bottom,
+    -.050em .045em $shade,
+    -.050em .055em $shade-bottom,
+    -.055em .050em $shade,
+    -.055em .060em $shade-bottom,
+    -.060em .055em $shade,
+    -.060em .065em $shade-bottom,
+    -.065em .060em $shade,
+    -.065em .070em $shade-bottom,
+    -.070em .065em $shade,
+    -.070em .075em $shade-bottom,
+    -.075em .070em $shade,
+    -.075em .080em $shade-bottom,
+    -.080em .075em $shade,
+    -.080em .085em $shade-bottom,
+    -.085em .080em $shade,
+    -.085em .090em $shade-bottom,
+    -.090em .085em $shade,
+    -.090em .095em $shade-bottom,
+    -.095em .090em $shade,
+
+
+    -.093em .098em $Color_Type,
+    -.098em .093em $Color_Type;
+
+}
+
+
+.type_consultation {
+    font-size:    $Type_Size_Small;
+    line-height:  $Type_LineHeight_Regular;
+
+      /* -moz-column-rule-color:  #ccc;
+       -moz-column-rule-style:  solid;
+       -moz-column-rule-width:  1px;
+       -webkit-column-rule-color:  #ccc;
+       -webkit-column-rule-style: solid ;
+       -webkit-column-rule-width:  1px;*/
+
+
+
+}
+
+.type_consultation_frame {
+	width:        100%; //$Type_FrameWidth_Small;
+    //collumns etc.
+
+       -moz-column-count: 3;
+       -moz-column-gap: 20px;
+       -webkit-column-count: 3;
+       -webkit-column-gap : 20px;
+}
+
+
+
+.type_smallest {
+    font-size:    $Type_Size_Min;
+    line-height:  $Type_LineHeight_Min;
+    width:        $Type_FrameWidth_Small;
+
+}
+
+
+.dropcap:first-child:first-letter {
+  float: left;
+  color: $Color_Type;
+  font-size: 3em;
+  line-height: 3em;
+  // padding-top: 4px;
+  // padding-right: 8px;
+  // padding-left: 3px;
+  // font-family: Georgia;
+}
+
+
+
+
+.show_measurements .type {
+
+  padding-top: 1.5em;
+  margin-bottom: -1.5em;
+}
+
+.mode_overlay {
+     // background-blend-mode: multiply;
+
+    .font1 {
+      color: $Color_Overlay_Type_one;
+     // background-blend-mode: multiply;
+
+    }
+    .font2 {
+      color: $Color_Overlay_Type_two;
+    }
+   .module_left {
+      margin-left:25%;
+     .type{
+      float: left;
+      }
+    }
+    .module_right {
+      margin-left: -50%;
+
+      mix-blend-mode: multiply;
+    }
+    .module_left .type, .module_right .type {
+      position:relative;
+      left:50%;
+      @include translate(-50%, 0%);
+    }
+    .type_myCompareDefault {
+      //width:45%;
+      text-align:center;
+    }
+}
+
+.mode_overlay.mode_outline .type_myCompareDefault .font1 {
+       -webkit-text-stroke: 2px $Color_Overlay_Type_one;
+       -webkit-text-fill-color: $Color_Type_BG;
+        color: $Color_Type_BG;
+      }
+.mode_overlay.mode_outline .type_myCompareDefault .font2 {
+       -webkit-text-stroke: 2px $Color_Overlay_Type_two;
+       -webkit-text-fill-color: $Color_Type_BG;
+        color: $Color_Type_BG;
+      }
+
+
+.size_detail {      font-size:       $Type_Size_Detail;        }
+.size_big {         font-size:       $Type_Size_Large_Text;      }
+.size_reg{         font-size:       $Type_Size_Reading;     }
+.size_reg2 {        font-size:      $Type_Size_Reading_Large;    }
+.size_small {       font-size:       $Type_Size_Min;            }
+
+
+
+
+.lineheight_em { line-height:                 $Type_LineHeight_Em; }
+.lineheight_min { line-height:                $Type_LineHeight_Min; }
+.lineheight_reg { line-height:                $Type_LineHeight_Regular; }
+.lineheight_regular2 { line-height:           $Type_LineHeight_Regular_Large; }
+.lineheight_large { line-height:           $Type_LineHeight_Large; }
+
+
+.framewidth_em { width:                 $Type_FrameWidth_Small; }
+.framewidth_reg { width:                $Type_FrameWidth_Reg; }
+.framewidth_reg2 { width:                $Type_FrameWidth_Reg_Large; }
+.framewidth_larg { width:                $Type_FrameWidth_Large; }
+
+
+
+
+
+.measurements_in_numbers {
+  font-size: $Type_Size_Ui;
+  line-height: $Type_LineHeight_Ui;
+}
+
+
+.float {
+  float:left;
+}
+
+.oldsize {
+  font-size: 2em;
+}
+
+.text {
+   // background-color: #ceffff;
+   // vertical-align: top;
+
+}
+
+.show_measurements .words {
+//!!! new shit !!!
+//   outline-style:dashed;
+// outline-width:5px;
+// outline-color:#000000;
+// outline-offset:17px;
+/////!!!!!!!!!!!!!!!!///
+
+
+  //margin-top: 0;//-2em; //-1em;// -2em;
+  line-height: 1em;
+  height: 1em;
+
+  display:inline-block;
+  width: auto; //5em;
+  text-align: left;
+  background-color: transparent;
+   // border-color: #ff8d49;
+   // border-width: 2px; // 1px 1px 1px;
+   // border-style: solid;
+   // border:none;
+  // overflow: auto;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+
+           //t   r   b   l
+  //  padding: 1em 0.1em 0.5em 1em;
+  //  margin: -1em -0.1em -0.5em -1em;
+
+    padding: 0em 0.1em 0.5em 1em;
+    margin: -0em -0.1em -0.5em -1em;
+;
+ margin-bottom:0;
+ margin-top:-2em;
+  background-color: $Color_Type_Words_BG;
+
+    /*
+  border-top: 1px red solid;
+  padding-top: 0.15em;
+  border-bottom: 1px red solid;
+  padding-bottom: 0.3em;
+
+
+  background-color: transparent!important;
+  text-decoration: none;
+  background: url(../img/1px_green.png) repeat-x 100% 50%;
+
+  white-space: none;
+*/
+
+}
+
+
+.show_measurements .words .typographicsize {
+
+    top:-1em; //-2em
+    margin-bottom: -1em;
+    bottom:auto;
+
+     vertical-align: baseline;
+
+// scheintn
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+
+
+     width: 100%;
+     position: relative;
+     display: inline-block;
+
+    left: 0;
+    //hier kommt leider ein pixel außen dazu borderbox model greift nicht
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+
+
+
+      background-color: $Color_Type_Size_Bg;
+      border-color: $Color_Type_Size;
+    ;
+  //  overflow: auto;
+   clear: both;
+
+}
+
+.hide_size .typographicsize {
+    border-color: $Transparent;
+    background-color: $Transparent;
+}
+
+
+
+
+.show_measurements .words .asc_desc {
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  // line-height gets defined throu javascript
+  //   content: '';
+   //  line-height: 1em;
+    // height: 0.5em;
+     width: 100%;
+     position: relative;
+     display: inline-block;
+    vertical-align: bottom;
+    left: 0;
+    border-width: 1px 0 1px 0; // 1px 1px 1px;
+    border-style: solid;
+    top:-1.96em;
+
+     margin-bottom: -2em;// -2em;
+     margin-top: 0;//-1.25em;
+
+  border-color: $Color_Type_Asc_Desc;
+
+   //  overflow: auto;
+    clear: both;
+}
+
+.hide_asc_desc .asc_desc{
+  border-color: $Transparent;
+}
+
+.make_monospaced .words .char {
+  width: 0.6em; //auto!important; //1em for monospaced
+  text-align: center;
+  //left:50%;
+ //     @include translate(-50%, 0%);
+}
+
+.show_measurements .words .char {
+  top: 0em; //-1em; //2em
+
+
+
+
+
+  display:inline-block;
+  position: relative;
+
+
+  border-right: 1px solid #ff98b5;
+  //border-left: none;
+  //background-clip: none;
+  margin-right: -1px!important;
+
+  //clear: both;
+  //margin:0;
+  vertical-align: bottom;
+
+
+}
+
+.hide_char .words .char {
+  // color only works if not inline-block
+  border-right: none;
+}
+/*
+.measuring_fonts {
+  font-size: $Type_Size_Measuring;
+}
+*/
+
+.measuring_square {
+    height:             1ex;
+    width:              10px;
+    background-color:   #f30;
+    display:            inline-block;
+ }
+
+.fixbaseline {
+  width:0!important;
+  display:inline-block;
+  opacity: 0;
+  height: auto;
+  clear:none;
+
+}
+
+
+
+////// F R E Q U E N C Y
+//////////////////
+
+//
+
+@if $enable_frequency {
+//wikipedia
+
+$frequency_wiki: (a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,ß,à,á,â,ã,ä,å,æ,ç,è,é,ê,ë,ì,í,î,ï,ð,ñ,ò,ó,ô,ö,ø,ù,ú,ü,ý,þ,ą,ć,ĉ,ę,ĝ,ğ,ĥ,ı,ĵ,ł,ń,œ,ś,ŝ,ş,ŭ,ź,ż); //classical order!
+
+
+$frequency_UPPERCASE: (E,T,A,O,I,N,S,R,H,L,D,C,U,M,F,P,G,W,Y,B,V,K,X,J,Q,Z); //not actually true! //but here the order does not matter
+
+
+$frequency_en_es_fr_de: (8.71100,1.62350,3.22825,4.71450,14.69803,1.41050,1.91450,3.07275,7.07300,0.35225,0.56225,4.47125,2.76625,7.58300,6.04050,1.90750,0.58800,6.60350,7.38125,6.77150,4.33550,1.14750,1.09300,0.20650,0.78725,0.51275,0.07675,0.12150,0.12550,0.01275,0,0.11175,0,0,0.02125,0.06775,0.48425,0.05625,0.00025,0,0.18125,0.01125,0.00125,0,0.07775,0,0.20675,0.00575,0.14325,0,0.01450,0.04200,0.25175,0,0,0,0,0,0,0,0,0,0,0,0,0,0.00450,0,0,0,0,0,0);
+$frequency_en_es_fr_de_most: 14.69803;
+
+$frequency_en_es: (10.34600,1.85350,3.46050,5.05650,13.34055,1.46000,1.89150,3.39850,6.60650,0.29800,0.39150,4.49600,2.78150,6.73050,8.09500,2.21950,0.48600,6.42900,7.15200,6.84400,3.34250,1.05800,1.18850,0.18250,1.49100,0.29550,0,0,0.25100,0,0,0,0,0,0,0,0.21650,0,0,0,0.36250,0,0,0,0.15550,0,0.41350,0,0,0,0,0.08400,0.00600,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_en_es_most: 13.34055;
+
+
+//from here on unfortunately google docs spreadsheet averaged the last digit and I saw it too late … so all values should get replaced again  so its(0.000 instead of 0.00)
+// http://en.wikipedia.org/wiki/Letter_frequency
+// https://docs.google.com/spreadsheets/d/1c_e75icj8ZZKjVavHLYuylXf5G1OxJmi8fE3i1YPvoU/edit#gid=0
+
+$frequency_french: (7.64,0.90,3.26,3.67,14.72,1.07,0.87,0.74,7.53,0.55,0.05,5.46,2.97,7.10,5.38,2.52,1.36,6.55,7.95,7.24,6.31,1.63,0.07,0.43,0.13,0.33,0,0.49,0,0.05,0,0,0,0,0.09,0.27,1.50,0.23,0.00,0,0,0.05,0.01,0,0,0,0,0.02,0,0,0.06,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.02,0,0,0,0,0,0); //0 means no occurences at all
+
+$frequency_french_most: 14.72; // actually -> 14.715;
+
+
+$frequency_german: (6.52,1.89,2.73,5.08,17.40,1.66,3.01,4.76,7.55,0.27,1.42,3.44,2.53,9.78,2.59,0.67,0.02,7.00,7.27,6.15,4.35,0.85,1.92,0.03,0.04,1.13,0.31,0,0,0,0,0.45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.57,0,0,0,1.00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+$frequency_german_most: 17.40;
+
+$frequency_spanish: (12.53,2.22,4.14,5.86,13.68,0.69,1.77,0.70,6.25,0.44,0.01,4.97,3.16,6.71,8.68,2.51,0.88,6.87,7.98,4.63,3.93,1.14,0.02,0.22,1.01,0.52,0,0,0.50,0,0,0,0,0,0,0,0.43,0,0,0,0.73,0,0,0,0.31,0,0.83,0,0,0,0,0.17,0.01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+$frequency_spanish_most: 13.68;
+
+$frequency_portuguese: (14.63,1.04,3.88,4.99,12.57,1.02,1.30,0.78,6.19,0.40,0.02,2.78,4.74,5.05,10.74,2.52,1.20,6.53,7.81,4.74,4.63,1.67,0.04,0.25,0.01,0.47,0,0.07,0.12,0.56,0.73,0,0,0,0.53,0,0.34,0.45,0,0,0.13,0,0,0,0,0,0.30,0.64,0,0,0,0.21,0.03,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+
+$frequency_portuguese_most: 14.63;
+
+$frequency_esperanto: (12.12,0.98,0.78,3.04,9.00,1.04,1.17,0.38,10.01,3.50,4.16,6.15,2.99,7.96,8.78,2.75,0,5.91,6.09,5.28,3.18,1.90,0,0,0,0.49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.66,0,0.69,0,0.02,0,0.06,0,0,0,0,0.39,0,0.52,0,0);
+$frequency_esperanto_most: 12.12;
+
+$frequency_italian: (11.75,0.93,4.50,3.74,11.79,1.15,1.64,0.64,11.28,0.01,0.01,6.51,2.51,6.88,9.83,3.06,0.51,6.37,4.98,5.62,3.01,2.10,0.03,0.00,0.02,1.18,0,0.64,0,0,0,0,0,0,0,0.26,0,0,0,0.03,0,0,0,0,0,0.00,0,0,0,0,0.17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_italian_most: 11.79;
+
+$frequency_turkish: (11.92,2.84,0.96,4.71,8.91,0.46,1.25,1.21,8.600,0.03,4.68,5.92,3.75,7.49,2.48,0.89,0,6.72,3.01,3.31,3.24,0.96,0,0,3.34,1.50,0,0,0,0,0,0,0,0,1.16,0,0,0,0,0,0,0,0,0,0,0,0,0,0.78,0,0,0,1.85,0,0,0,0,0,0,0,1.13,0,5.114,0,0,0,0,0,0,1.78,0,0,0);
+$frequency_turkish_most: 11.92;
+
+
+$frequency_swedish: (9.38,1.54,1.49,4.70,10.15,2.03,2.86,2.09,5.82,0.61,3.14,5.28,3.47,8.54,4.48,1.84,0.02,8.43,6.59,7.69,1.92,2.42,0.14,0.16,0.71,0.07,0,0,0,0,0,1.80,1.34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_swedish_most: 10.15;
+
+$frequency_polish: (11.50,1.74,3.90,4.23,8.35,0.14,1.73,1.02,9.33,1.84,2.75,3.06,2.52,6.74,7.17,2.45,0,5.74,6.22,2.48,2.06,0.01,6.31,0.00,3.21,5.85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.14,0,0,0,0,0,0,0,0,0.70,0.74,0,1.04,0,0,0,0,0,2.11,0.36,0,0.81,0,0,0,0.08,0.71);
+$frequency_polish_most: 11.50;
+
+$frequency_dutch: (7.49,1.58,1.24,5.93,18.91,0.81,3.40,2.38,6.50,1.46,2.25,3.57,2.21,10.03,6.06,1.37,0.01,6.41,5.73,6.92,2.19,1.85,1.82,0.04,0.04,1.37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_dutch_most: 18.91;
+
+$frequency_danish: (6.03,2.00,0.57,5.86,15.45,2.41,4.08,1.62,6.00,0.73,3.40,5.23,3.24,7.24,4.64,1.76,0.01,8.96,5.81,6.86,1.98,2.33,0.07,0.03,0.70,0.03,0,0,0,0,0,0,1.19,0.87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_danish_most: 15.45;
+
+$frequency_icelandic:(10.11,1.04,0,1.58,6.42,3.01,4.24,1.87,7.58,1.14,3.31,4.53,4.04,7.71,2.17,0.79,0,8.58,5.63,4.95,4.56,2.44,0,0.05,0.90,0,0,0,1.80,0,0,0,0,0.87,0,0,0.65,0,0,0,1.57,0,0,4.39,0,0,0.99,0,0.78,0,0,0.61,0,0.23,1.46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_icelandic_most: 10.11;
+
+$frequency_finish: (12.22,0.28,0.28,1.04,7.97,0.19,0.39,1.85,10.82,2.04,4.97,5.76,3.20,8.83,5.61,1.84,0.01,2.87,7.86,8.75,5.01,2.25,0.09,0.03,1.75,0.05,0,0,0,0,0,3.58,0.00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+$frequency_finish_most: 12.22;
+
+
+
+//http://norvig.com/mayzner.html
+$frequency_en: (e,t,a,o,i,n,s,r,h,l,d,c,u,m,f,p,g,w,y,b,v,k,x,j,q,z);
+
+$frequency_2grams_en: ("th","he","in","er","an","re","on","at","en","nd","ti","es","or","te","of","ed","is","it","al","ar","st","to","nt","ng","se","ha","as","ou","io","le","ve","co","me","de","hi","ri","ro","ic","ne","ea","ra","ce","li","ch","ll","be","ma","si","om","ur");
+
+$frequency_words_en: ("the","of","and","to","in","a","is","that","for","it","as","was","with","be","by","on","not","he","i","this","are","or","his","from","at","which","but","have","an","had","they","you","were","their","one","all","we","can","her","has","there","been","if","more","when","will","would","who","so","n");
+
+
+//percentage
+$frequency_en_prz: (12.49,9.28,8.04,7.64,7.57,7.23,6.51,6.28,5.05,4.07,3.82,3.34,2.73,2.51,2.40,2.14,1.87,1.68,1.66,1.48,1.05,0.54,0.23,0.16,0.12,0.9);
+
+$frequency_2grams_en: (3.56,3.07,2.43,2.05,1.99,1.85,1.76,1.49,1.45,1.35,1.34,1.34,1.28,1.20,1.17,1.17,1.13,1.12,1.09,1.07,1.05,1.04,1.04,0.95,0.93,0.93,0.87,0.87,0.83,0.83,0.83,0.79,0.79,0.76,0.76,0.73,0.73,0.70,0.69,0.69,0.69,0.65,0.62,0.60,0.58,0.58,0.57,0.55,0.55,0.5);
+
+$frequency_words_en_prz: (7.14,4.16,3.04,2.60,2.27,2.06,1.13,1.08,0.88,0.77,0.77,0.74,0.70,0.65,0.63,0.62,0.61,0.55,0.52,0.51,0.50,0.49,0.49,0.47,0.46,0.42,0.38,0.37,0.37,0.35,0.33,0.31,0.31,0.29,0.29,0.28,0.28,0.22,0.22,0.22,0.22,0.22,0.21,0.21,0.20,0.20,0.20,0.20,0.19,0.19);
+
+
+//
+$frequency_en_count: (445.2,330.5,286.5,272.3,269.7,257.8,232.1,223.8,180.1,145.0,136.0,119.2, 97.3, 89.5, 85.6, 76.1, 66.6, 59.7, 59.3, 52.9,37.5,19.3,8.4,5.7,4.3,3.2);
+
+$frequency_words_en_count: (53.10,30.97,22.63,19.35,16.89,15.31, 8.38, 8.00, 6.55, 5.74, 5.70, 5.50, 5.18, 4.82, 4.70, 4.59, 4.52, 4.11, 3.88, 3.83, 3.70, 3.67, 3.61, 3.47, 3.41, 3.14, 2.79, 2.78, 2.73, 2.62, 2.46, 2.34, 2.27, 2.15, 2.15, 2.06, 2.06, 1.67, 1.63, 1.63, 1.62, 1.62, 1.56, 1.55, 1.52, 1.49, 1.47, 1.46, 1.45, 1.40);
+
+
+
+
+
+
+
+
+
+
+//// looks like that doesen’t work yet: http://stackoverflow.com/questions/18501130/is-it-possible-to-nest-variables-within-variables-in-sass
+
+//$frequency_languages: (french,german,spanish,portuguese,esperanto,italian,turkish,swedish,polish,dutch,danish,icelandic,finish);
+
+//by actual prz
+// @each $language in $frequency_languages
+//   {
+//   @each $letter in $frequency_wiki
+//     {$i: $i+1;
+//     .#{$language} .#{$letter} { color: rgba($Color_Type, nth($frequency_#{$language}, $i) / nth($frequency_#{$language}, 1));;}
+//     }
+//   }
+
+
+
+
+
+
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .en_es_fr_de .#{$letter} { color: rgba($Color_Type, nth($frequency_en_es_fr_de, $i) / $frequency_en_es_fr_de_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .en_es .#{$letter} { color: rgba($Color_Type, nth($frequency_en_es, $i) / $frequency_en_es_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .french .#{$letter} { color: rgba($Color_Type, nth($frequency_french, $i) / $frequency_french_most);;}
+    };
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .german .#{$letter} { color: rgba($Color_Type, nth($frequency_german, $i) / $frequency_german_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .spanish .#{$letter} { color: rgba($Color_Type, nth($frequency_spanish, $i) / $frequency_spanish_most);;}
+    };
+
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .portuguese .#{$letter} { color: rgba($Color_Type, nth($frequency_portuguese, $i) / $frequency_portuguese_most);;}
+    };
+
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .esperanto .#{$letter} { color: rgba($Color_Type, nth($frequency_esperanto, $i) / $frequency_esperanto_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .italian .#{$letter} { color: rgba($Color_Type, nth($frequency_italian, $i) / $frequency_italian_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .turkish .#{$letter} { color: rgba($Color_Type, nth($frequency_turkish, $i) / $frequency_turkish_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .swedish .#{$letter} { color: rgba($Color_Type, nth($frequency_swedish, $i) / $frequency_swedish_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .polish .#{$letter} { color: rgba($Color_Type, nth($frequency_polish, $i) / $frequency_polish_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .dutch .#{$letter} { color: rgba($Color_Type, nth($frequency_dutch, $i) / $frequency_dutch_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .danish .#{$letter} { color: rgba($Color_Type, nth($frequency_danish, $i) / $frequency_danish_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .icelandic .#{$letter} { color: rgba($Color_Type, nth($frequency_icelandic, $i) / $frequency_icelandic_most);;}
+    };
+
+
+$i: 0;
+@each $letter in $frequency_wiki
+    {$i: $i+1;
+    .finish .#{$letter} { color: rgba($Color_Type, nth($frequency_finish, $i) / $frequency_finish_most);;}
+    };
+
+
+
+// //equally distributed alpha // doesn't make much sense
+// @each $letter in $frequency_en
+//   {$i: $i+1;
+//   .#{$letter} { color: rgba($Color_Type, 1- (1 * $i/27));;}
+//   }
+
+// //by actual prz
+// @each $letter in $frequency_en
+//   {$i: $i+1;
+//   .#{$letter} { color: rgba($Color_Type, nth($frequency_en_prz, $i) / 12.49);;}
+//   }
+
+
+//by actual count // same as prz
+$i: 0;
+@each $letter in $frequency_en
+  {$i: $i+1;
+  .english .#{$letter} { color: rgba($Color_Type, nth($frequency_en_count, $i) / 445.2);;}
+  }
+
+
+
+//opposite // woaht is the opossite of that data
+// @each $letter in $frequency_en
+//   {$i: $i+1;
+//   .#{$letter} { color: rgba(#ff00e5, ( 445.2 -  nth($frequency_en_count, $i) ) / 445.2);;}
+//   }
+
+
+
+$most_irregular_letters: 5;
+$Color_Type_Frequency_Irregular: #f00;
+
+$i: 0;
+@for $i from length($frequency_en) - $most_irregular_letters to length($frequency_en) {
+    .english .#{nth($frequency_en, $i)} {
+        color: rgba($Color_Type_Frequency_Irregular, ( 445.2 -  nth($frequency_en_count, $i) ) / 445.2);
+    }
+}
+
+//UPPERCASE
+$i: 0;
+@each $letter in $frequency_UPPERCASE
+  {$i: $i+1;
+  .show_frequency .#{$letter} { color: rgba($Color_Type, 0.1);;}
+  }
+
+}
+// D E B U G G I N G
+///////////////////////////////////////////////////////////////////////////////////
+$Color_Debugging_BG: #e3fdd0;
+
+.debugging {
+      z-index: 200!important;
+      padding: 10px;
+      background-color: $Color_Debugging_BG;
+      text-align: left;
+      right: 0;
+      top: 0;
+      font-size: 9px;
+      line-height: 9px;
+      opacity: $DebuggingOpacity;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+

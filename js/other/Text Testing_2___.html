@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Alternative with raphael: http://stackoverflow.com/questions/23877271/convert-all-svg-text-nodes-into-path-nodes-with-raphael-js ??? -->
+	<meta charset="UTF-8">
+	<title>Text Testing</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../../dist/paper-full.js"></script>
+	<script type="text/paperscript" canvas="canvas">
+		var text = new PointText(new Point(0, 900)); //-200
+		text.fillColor = 'black';
+		text.content = 'o';
+		text.fontFamily = "Minion Pro";
+		text.fontWeight = 100;
+		text.fontSize = 1000;
+		//text.pivot = -text.bounds.height;
+
+		//alert(text.bounds.height);
+
+		// Create a rasterized version of the path:
+		var raster = text.rasterize(72);
+
+		text.remove();
+		// Move it 100pt to the right:
+		//raster.position.x += 400;
+
+		//text.scale(4);
+		//raster.scale(4);
+		var myColor = new Color(0, 0, 0, 0);
+
+		// var circle = new Path.Circle({
+		//     center: [0, 0],
+		//     radius: 1,
+		//     fillColor: 'red'
+		// });
+
+		var rect = new Path.Rectangle({
+		    point: [0, 0],
+		    size: [5,1]
+		});
+		var copy;
+		var color;
+		var anotherColor = new Color(0, 250, 0);
+		var path = new CompoundPath({
+	    fillColor: 'red'
+		});
+		//        var raster = group.rasterize();
+        //var imageData = raster.getImageData();
+  //       var myRect = new Path.Rectangle({
+		//     point: [0, 0],
+		//     size: [10,10]
+		// });
+        //var myRaster = myRect.rasterize();
+        var yMin = 1000;
+        var yMax = 0;
+		var i=0, x=0, y=0, rasterWidth = raster.width;
+
+
+		// var data = raster.getImageData(Rectangle([0,0], [200,100])); //imageData.data;
+		// console.log(data);
+
+		// for (var y = 0; y < raster.height; y++) {
+  //   		for (var x = 0; x < rasterWidth; x++) {
+  //    			var index = (y * rasterWidth + x) * 4;
+  //    			data[index]   = 255;    // red
+		//         data[++index] = 0;    // green
+		//         data[++index] = 0;    // blue
+		//         data[++index] = 255;      // alpha
+		//     }
+		// }
+		// var mysize = new Size(100, 100)
+		// raster.setImageData(data, {0,0});
+		// console.log(data);
+
+		for (x = 0; x < rasterWidth; x+=rasterWidth/10) {
+			for (y = 0; y < raster.height; y++) {
+				if (i<=1400) {
+					color = raster.getPixel(x, y);
+					if(!myColor.equals(color)) {//) {
+						if(y < yMin ) yMin = y;
+						else if(y > yMax ) yMax = y;
+						//copy = rect.clone();
+						//copy.position = [x,y];
+						//path.addChild(copy);
+						raster.setPixel(x, y, anotherColor)
+						i++;
+					 };
+				};
+			};
+		};
+		//path.position.y += -200;
+
+		var text2 = new PointText(new Point(20, 20));
+		text2.fillColor = 'red';
+		text2.content = "Height: " + (yMax - yMin); //path.bounds.height; // + " " + copybefore.bounds;//raster.getPixel(50,1); //raster.bounds;//text.hasChildren(); //strokeBounds;//text.bounds;
+
+		//window._json = project.exportJSON();
+		//console.log(window._json);
+
+		//document.body.appendChild(project.exportSVG());
+	</script>
+	<!-- <script type="text/paperscript" canvas="canvas2">
+	   // project.importJSON(window._json);
+	</script> -->
+</head>
+<body>
+	<canvas id="canvas" width="1000" height="1000"></canvas>
+	<!-- <canvas id="canvas2" width="1000" height="1000"></canvas> -->
+</body>
+</html>

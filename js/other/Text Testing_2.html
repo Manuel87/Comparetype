@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Alternative with raphael: http://stackoverflow.com/questions/23877271/convert-all-svg-text-nodes-into-path-nodes-with-raphael-js ??? -->
+	<meta charset="UTF-8">
+	<title>Text Testing</title>
+	<link rel="stylesheet" href="../css/style.css">
+<!-- 	<script type="text/javascript" src="../../dist/paper-full.js"></script> -->
+
+	<!-- <script type="text/paperscript" canvas="canvas2">
+	   // project.importJSON(window._json);
+	</script> -->
+
+</head>
+<body>
+
+	<canvas id="canvas2" width="1000" height="2000"></canvas>
+	<div> </div>
+	<canvas id="canvas" width="1000" height="1500"></canvas>
+	<!-- <canvas id="canvas2" width="1000" height="1000"></canvas> -->
+	<script type="text/javascript" canvas="canvas" >
+
+
+
+	</script>
+	<script type="text/javascript" canvas="canvas">
+
+	/*
+		var text = new PointText(new Point(0, 900)); //-200
+		text.fillColor = 'black';
+		text.content = 'o';
+		text.fontFamily = "Minion Pro";
+		text.fontWeight = 100;
+		text.fontSize = 1000;
+
+
+		// Create a rasterized version of the path:
+		var raster = text.rasterize(72);
+
+		text.remove();
+
+		var myColor = new Color(0, 0, 0, 0);
+
+
+
+		var rect = new Path.Rectangle({
+			point: [0, 0],
+			size: [5,1]
+		});
+		var copy;
+		var color;
+		var anotherColor = new Color(0, 250, 0);
+		var path = new CompoundPath({fillColor: 'red'});
+
+		var yMin = 1000;
+		var yMax = 0;
+		var i=0, x=0, y=0, rasterWidth = raster.width;
+
+
+
+
+
+
+
+		// unfortunately ultra slow
+
+		// for (x = 0; x < rasterWidth; x+=rasterWidth/10) {
+		// 	for (y = 0; y < raster.height; y++) {
+		// 		if (i<=1400) {
+		// 			color = raster.getPixel(x, y);
+		// 			if(!myColor.equals(color)) {//) {
+		// 				if(y < yMin ) yMin = y;
+		// 				else if(y > yMax ) yMax = y;
+		// 				//copy = rect.clone();
+		// 				//copy.position = [x,y];
+		// 				//path.addChild(copy);
+		// 				raster.setPixel(x, y, anotherColor)
+		// 				i++;
+		// 			 };
+		// 		};
+		// 	};
+		// };
+
+
+
+
+
+
+
+
+
+		var text2 = new PointText(new Point(20, 20));
+		text2.fillColor = 'red';
+		text2.content = "Height: " + (yMax - yMin); //path.bounds.height; // + " " + copybefore.bounds;//raster.getPixel(50,1); //raster.bounds;//text.
+
+*/
+
+		var canvas = document.getElementById('canvas2');
+		var yMin = 1000;
+		var yMax = 0;
+		var canvasWidth  = canvas.width;
+		var canvasHeight = canvas.height;
+
+
+		var ctx = canvas.getContext('2d');
+
+		ctx.font = "1000px Minion";
+		ctx.fillText("M", 10, 1000);
+
+
+		var imageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+
+
+
+		var data = imageData.data;
+
+
+		// var c = document.getElementById("myCanvas");
+		// var ctx = c.getContext("2d");
+
+		for (var y = 0; y < canvasHeight; ++y) {
+			for (var x = 0; x < canvasWidth; ++x) {
+				var index = (y * canvasWidth + x) * 4;
+
+				//check Alpha
+				if(data[index+3] > 0) {
+					if(y < yMin ) { yMin = y; }
+		 			else if (y > yMax ) { yMax = y; };
+
+					var value = x * y & 0xff;
+					data[index]   = value;	// red
+					data[++index] = 0;	// green
+					data[++index] = 0;	// blue
+					data[++index] = 255;	  // alpha
+				}
+
+
+			}
+		}
+		ctx.putImageData(imageData, 0, 0);
+
+
+		// Create gradient
+
+
+		ctx.beginPath();
+		ctx.moveTo(0, 999);
+		ctx.lineTo(1000, 999);
+		ctx.lineWidth = 1;
+		ctx.stroke();
+
+		ctx.font = "20px Helvetica";
+		ctx.fillText("Height: " + (yMax - yMin) , 20, 30);
+
+
+		//window._json = project.exportJSON();
+		//console.log(window._json);
+
+		//document.body.appendChild(project.exportSVG());
+	</script>
+</body>
+</html>

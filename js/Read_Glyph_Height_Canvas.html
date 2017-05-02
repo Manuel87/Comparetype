@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ??? Alternative with raphael: http://stackoverflow.com/questions/23877271/convert-all-svg-text-nodes-into-path-nodes-with-raphael-js ??? -->
+	<meta charset="UTF-8">
+	<title>Measure</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	var MeasureFontOnCanvas = function(FontFamily, Char, display) {
+		var canvas = document.createElement('canvas');
+		canvas.width = 1000;
+		canvas.height = 2000;
+		canvas.id = "measure_canvas";
+		canvas.style.display = display || "none";
+
+
+		var body = document.getElementsByTagName("body")[0];
+		body.appendChild(canvas);
+
+		var Font = {}, //"Minion Pro",
+		//canvas = document.getElementById('measure_canvas'),
+		canvasWidth  = canvas.width,
+		canvasHeight = canvas.height,
+		yMin = canvasHeight,
+		yMax = 0,
+		xMin = canvasWidth,
+		xMax = 0;
+
+		Font.family = FontFamily; //"Minion Pro"; //"Times";  //"BurgGroteskBeta", //"Maurea-RegularLf", //"Calibri", //"Brandon Grotesque", //"Arnhem", //"Akkurat-Mono", //"Helvetica Neue", //"Minion Pro",
+		Font.weight = 400;
+		Font.style = "normal";
+
+		var ctx = canvas.getContext('2d');
+
+		var EmptyImageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+		//JS-Syntax: context.font="italic small-caps bold 12px arial";
+		ctx.font = Font.style + " " + Font.weight + " " + "1000px" + " " + Font.family;
+		ctx.fillText(Char, 0, 1000);
+
+		var imageData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+		var data = imageData.data;
+
+		var MyReadImage = function(xMinInput, xMaxInput, yMinInput, yMaxInput) {
+		};
+
+		// Get Bounds
+		for (var y = 0; y < canvasHeight; ++y) {
+			for (var x = 0; x < canvasWidth; ++x) {
+				var index = (y * canvasWidth + x) * 4;
+				//check Alpha
+				if(data[index+3] > 0) {
+
+					if(y <= yMin ) { yMin = y; }
+		 			else if (y >= yMax ) { yMax = y; };
+
+					if(x <= xMin ) { xMin = x; }
+		 			else if (x >= xMax ) { xMax = x; };
+
+		 			//only to visualize, what got measured
+					var value = x * y / 20 & 255; //0xff
+					data[index]   = value;	// red
+					data[++index] = 0;		// green
+					data[++index] = 0;		// blue
+					data[++index] = 255;	// alpha
+
+
+				}
+			}
+		}
+		Font[Char] = {};
+		Font[Char].height = yMax + 1 - yMin;
+		Font[Char].width = xMax + 1 - xMin;
+		Font[Char].overshoot = yMax - 999;
+		Font[Char].boundleft = xMin;
+		Font[Char].boundtop = yMax;
+
+		var MeasureStrokeWidthX = parseInt(xMax + 1 - Font[Char].width/2);
+		var MeasureStrokeWidthY = parseInt(yMax + 1 - Font[Char].height/2) + 20;
+
+		// Get vertical Strokewidth
+		yMax = -500;
+		yMin = 5000;
+		xMax = -500;
+		xMin = 5000;
+
+		for (var y = MeasureStrokeWidthY; y < (MeasureStrokeWidthY + 1); ++y) {
+			for (var x = 0; x < Font[Char].boundleft + Font[Char].width/2; ++x) {
+				var index = (y * canvasWidth + x) * 4;
+				//check Alpha
+				if(data[index+3] > 0) {
+
+					if(y <= yMin ) { yMin = y; }
+		 			if (y >= yMax ) { yMax = y; };
+
+					if(x <= xMin ) { xMin = x; }
+		 			if (x >= xMax ) { xMax = x; };
+
+		 			//only to visualize, what got measured
+					var value = 255; //0xff
+					data[index]   = 0;	// red
+					data[++index] = value;		// green
+					data[++index] = 0;		// blue
+					data[++index] = 255;	// alpha
+				}
+			}
+		}
+
+		Font[Char].strokeWidth = xMax + 1 - xMin;
+
+
+		// Get horizontal Strokewidth
+		yMax = 0;
+		yMin = 2000;
+		xMax = 0;
+		xMin = 2000;
+
+		for (var y = 0; y < (Font[Char].boundtop - Font[Char].height/2 + 20); ++y) {
+			for (var x = MeasureStrokeWidthX; x < (MeasureStrokeWidthX + 1); ++x) {
+				var index = (y * canvasWidth + x) * 4;
+				//check Alpha
+				if(data[index+3] > 0) {
+
+					if(y <= yMin ) { yMin = y; }
+		 			else if (y >= yMax ) { yMax = y; };
+
+					if(x <= xMin ) { xMin = x; }
+		 			else if (x >= xMax ) { xMax = x; };
+
+		 			//only to visualize, what got measured
+					var value = 255; //0xff
+					data[index]   = 0;	// red
+					data[++index] = value;		// green
+					data[++index] = value;		// blue
+					data[++index] = 255;	// alpha
+				}
+			}
+		}
+
+
+		Font[Char].strokeWidthX = yMax + 1 - yMin;
+
+		ctx.putImageData(imageData, 0, 0);
+
+
+		// Show Basline
+		ctx.beginPath();
+		ctx.moveTo(Font[Char].boundleft, 999.5);
+		ctx.lineTo(Font[Char].boundleft + Font[Char].width, 999.5);
+		ctx.lineWidth = 1;
+		ctx.stroke();
+
+
+
+		// Show Info
+		var InfoLineHeight = 20, InfoYPos = 0;
+		ctx.font = "15px Helvetica";
+
+		ctx.fillText(Char +" — " + Font.family + ", " + Font.weight + ", " + Font.style, 20, InfoYPos += InfoLineHeight);
+		ctx.fillText("Height: " + Font[Char].height + "‰", 20, InfoYPos += InfoLineHeight);
+
+		if(Char === "o" || Char === "O") {
+			ctx.fillText("Overshoot: " + Font[Char].overshoot + "‰ -> Height: " + (Font[Char].height - Font[Char].overshoot*2) + "‰ ", 20, InfoYPos += InfoLineHeight);
+		} else {
+			ctx.fillText("Overshoot: " + Font[Char].overshoot + "‰ ", 20, InfoYPos += InfoLineHeight);
+		}
+		ctx.fillText("Width: " + Font[Char].width + "‰", 20, InfoYPos += InfoLineHeight);
+		ctx.fillText("StrokeWidth: " + Font[Char].strokeWidth + "‰", 20, InfoYPos += InfoLineHeight);
+		ctx.fillText("StrokeWidthX: " + Font[Char].strokeWidthX + "‰", 20, InfoYPos += InfoLineHeight);
+
+		//clear canvas
+		//ctx.putImageData(EmptyImageData, 0, 0); //canvas.remove();
+
+		return Font;
+	}; // End MeasureFont
+
+
+
+	console.log(MeasureFontOnCanvas("Minion Pro", "o", "block"));
+
+	//"Minion Pro"; //"Times";  //"BurgGroteskBeta", //"Maurea-RegularLf", //"Calibri", //"Brandon Grotesque", //"Arnhem", //"Akkurat-Mono", //"Helvetica Neue", //"Minion Pro",
+	</script>
+</body>
+</html>

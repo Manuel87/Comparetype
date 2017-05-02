@@ -1,0 +1,426 @@
+{
+    "shapes": {
+        "name": "Basic Shape",
+        "name_de": "Grundform",
+        "patterns": {
+            "name": "Basic Pattern",
+            "name_de": "Grundform",
+            "guideline": "no case distinction! -> if it is the same shape -> take lowercase",
+            "fonts": [
+                "AAVT-Skeleton, Unicase"
+            ],
+            "content": {
+                "variable_descriptions": {
+                    "script": {
+                        "description": "latin",
+                        "values": [{
+                                "latin": [
+                                    "german",
+                                    "finish"
+                                ]
+                            },
+                            "cyrillic",
+                            "hebrew",
+                            "arabic",
+                            "chinese",
+                            "devanagari"
+                        ],
+                        "distinctions": "the main shape hast to be significantly different",
+                        "example": "s -> 'latin' // ß -> 'latin':'german'"
+                    },
+                    "type": {
+                        "description": "fsd",
+                        "values": [
+                            "standard",
+                            "marking",
+                            "numerals",
+                            "interpunction",
+                            "equations",
+                            ""
+                        ]
+                    },
+                    "composite": {
+                        "a": "dieresis"
+                    },
+                    "case": "lower",
+                    "related_numerals": "",
+                    "related_basic": "",
+                    "related_ext": "",
+                    "related_symmetry_x": "",
+                    "related_symmetry_y": [
+                        "g_single_storey",
+                        "9"
+                    ],
+                    "related_symmetry_xy": "e",
+                    "midline": true,
+                    "straight_y": true,
+                    "straight_x": false,
+                    "round": true,
+                    "aperture_y": true,
+                    "diagonal": false,
+                    "right": "n",
+                    "left": "a",
+                    "counter": 1,
+                    "room": 1,
+                    "whitespace_importance": false
+                },
+                "a_double_storey": {
+                    "type": "latin",
+                    "case": "lower",
+                    "related_numerals": "",
+                    "related_basic": "",
+                    "related_ext": "",
+                    "related_symmetry_x": "",
+                    "related_symmetry_y": {
+                        "g_single_storey": {},
+                        "9": {}
+                    },
+                    "related_symmetry_xy": "e",
+                    "midline": true,
+                    "straight_y": true,
+                    "straight_x": false,
+                    "round": true,
+                    "aperture_y": true,
+                    "diagonal": false,
+                    "right": "n",
+                    "left": "a",
+                    "counter": 1,
+                    "room": 1,
+                    "whitespace_importance": false
+                },
+                "a_single_storey": {
+                    "type": "latin",
+                    "case": "lower",
+                    "related": [
+                        "d",
+                        "q",
+                        "o"
+                    ],
+                    "straight": true,
+                    "round": true,
+                    "left": "round",
+                    "right": "straight",
+                    "circle": "true",
+                    "counter": 1,
+                    "room": 1
+                },
+                "A": {
+                    "type": "latin",
+                    "case": "upper",
+                    "related_symmetry_y": [
+                        "v"
+                    ],
+                    "related_far": "M",
+                    "symetry": "x",
+                    "midline": true,
+                    "straight_x": true,
+                    "diagonal": true,
+                    "right": "A",
+                    "left": "A",
+                    "counter": 1,
+                    "room": 1
+                },
+                "b": {
+                    "type": "latin",
+                    "case": "lower",
+                    "related": [
+                        "6"
+                    ],
+                    "related_symmetry_x": "d",
+                    "related_symmetry_y": "p",
+                    "related_symmetry_xy": "q",
+                    "related_far": "g_double_storey",
+                    "straight": true,
+                    "circle": true,
+                    "round": true,
+                    "right": "round",
+                    "left": "straight",
+                    "counter": 1,
+                    "room": 1
+                },
+                "B": {
+                    "type": "latin",
+                    "case": "upper",
+                    "related": [
+                        "8",
+                        "sz",
+                        "SZ"
+                    ],
+                    "related_far": "s",
+                    "symmetry": "y",
+                    "midline": true,
+                    "straight": true,
+                    "right": "8",
+                    "left": "straight",
+                    "counter": 2,
+                    "circle_half": 2,
+                    "room": 1
+                },
+                "c": {
+                    "type": "latin",
+                    "case": [
+                        "lower",
+                        "upper"
+                    ],
+                    "characters": [
+                        "c",
+                        "C"
+                    ],
+                    "round": true,
+                    "aperture_y": true,
+                    "right": [
+                        "c",
+                        "o"
+                    ],
+                    "left": "o",
+                    "room": 1
+                },
+                "d": {},
+                "D": {},
+                "e": {},
+                "E": {},
+                "f": {},
+                "F": {},
+                "g_single_storey": {},
+                "g_double_storey": {
+                    "binocular": ""
+                },
+                "h": {},
+                "H": {},
+                "i": {},
+                "I-seriflike": {
+                    "type": "latin",
+                    "case": [
+                        "upper",
+                        "lower"
+                    ],
+                    "related_far_far": [
+                        "Z"
+                    ],
+                    "characters": [
+                        "I",
+                        "i-dotless"
+                    ],
+                    "straight_y": true,
+                    "straight_x": true,
+                    "right": [
+                        "I-seriflike"
+                    ],
+                    "left": [
+                        "I-seriflike"
+                    ],
+                    "room": 0
+                },
+                "l-straight": {
+                    "type": "latin",
+                    "case": [
+                        "lower",
+                        "upper"
+                    ],
+                    "case_different_meaning": true,
+                    "related": [
+                        "I",
+                        "|"
+                    ],
+                    "related_far": [
+                        "B",
+                        "sz",
+                        "SZ"
+                    ],
+                    "characters": [
+                        "l",
+                        "I",
+                        "|"
+                    ],
+                    "straight": true,
+                    "right": [
+                        "straight"
+                    ],
+                    "left": [
+                        "straight"
+                    ],
+                    "room": 0
+                },
+                "l-hook": {
+                    "type": "latin",
+                    "case": [
+                        "lower"
+                    ],
+                    "related_far": [
+                        "t"
+                    ],
+                    "characters": [
+                        "l",
+                        "I",
+                        "|"
+                    ],
+                    "straight_y": true,
+                    "right": [
+                        "straight-hooked"
+                    ],
+                    "left": [
+                        "straight"
+                    ],
+                    "hook": true,
+                    "room": 0
+                },
+                "j": {},
+                "J": {},
+                "k": {},
+                "K": {},
+                "m": {},
+                "M": {},
+                "n": {},
+                "N": {},
+                "o": {
+                    "oO0": {}
+                },
+                "p": {},
+                "q": {},
+                "Q": {},
+                "r": {},
+                "R": {},
+                "s": {
+                    "type": "latin",
+                    "case": [
+                        "lower",
+                        "upper"
+                    ],
+                    "related": [
+                        "8"
+                    ],
+                    "related_far": [
+                        "B",
+                        "sz",
+                        "SZ"
+                    ],
+                    "characters": [
+                        "s",
+                        "S"
+                    ],
+                    "round": true,
+                    "diagonal": true,
+                    "midline": true,
+                    "aperture_y": true,
+                    "right": [
+                        "s"
+                    ],
+                    "left": [
+                        "s",
+                        "a"
+                    ],
+                    "room": 1
+                },
+                "t": {},
+                "u": {},
+                "v": {},
+                "w": {},
+                "x": {},
+                "y": {},
+                "z": {},
+                "ß": {
+                    "script": {
+                        "latin": [
+                            "german"
+                        ]
+                    },
+                    "type": "lowercase"
+                },
+                "1": {},
+                "2": {},
+                "3": {},
+                "4": {},
+                "5": {},
+                "6": {},
+                "7": {},
+                "8": {
+                    "type": "latin",
+                    "case": [
+                        "lower",
+                        "upper"
+                    ],
+                    "related": [
+                        "B",
+                        "S",
+                        "sz",
+                        "SZ"
+                    ],
+                    "symetry": "xy",
+                    "round": true,
+                    "diagonal": "sometimes",
+                    "midline": true,
+                    "right": [
+                        "8"
+                    ],
+                    "left": [
+                        "8"
+                    ],
+                    "room": 1
+                },
+                "9": {}
+            },
+            "variations": {
+                "name": "Shape Variation",
+                "name_de": "Stilvariation",
+                "content": {
+                    "a_double_storey_hooked": {
+                        "pattern": "a_dobule_storey",
+                        "right": "straight-hooked",
+                        "hook": true
+                    }
+                }
+            },
+            "alternation": {
+                "name": "Modulation",
+                "name_de": "Modulation",
+                "script": {}
+            }
+        }
+    },
+    "Space": {
+        "Spacing": {
+            "definition_short": ["The space inbetween lettershapes"],
+            "definition": ["The space inbetween lettershapes, as a whole "],
+            "sampletext": {
+                "latin_abstact": ["nn", "oo", "nonnoon", "nnpnonopoo"],
+                "latin_uc_abstract": ["HOHHOOH", "HHDHOHODOO"]
+            },
+            "technical": "side bearings",
+            "measurable": true,
+            "measuralbe_simple": "n",
+            "measuralbe_hard": "r,L,T",
+            "sub": "characterspacing, wordspacing, contextual spacing",
+
+
+            "synonyms": ["Hochizontal Spacing", "Zurichtung"],
+            "_comment": "dont remember what this should do maybe frequency? or direction",
+            "influence_lat_abs": "all",
+            "influence_lat_world": "all",
+            "influence_lat_europe": "all",
+            "influence_lat_german": "all"
+        },
+        "Position": {}
+    },
+    "Skeleton": {
+        "Size": {},
+        "Proportion": {},
+        "Slant": {},
+        "Curvature": {}
+    },
+    "Outline": {
+        "Stroke_width": {},
+        "Stroke_modulation": {},
+        "Outline_Angles": {},
+        "Freeform": {}
+    },
+    "Surface": {
+        "Color": {},
+        "Texture": {},
+        "Room": {}
+    },
+    "Visual_Influences": {
+        "Optical_Phenomenons": {},
+        "Geometrical_Effects": {},
+        "Technical_Problems": {}
+    }
+}

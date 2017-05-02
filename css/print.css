@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@media print {
+  /* line 11, print.scss */
+  #header {
+    padding-top: 0.5cm;
+    position: relative !important;
+  }
+  /* line 15, print.scss */
+  #header .navbar.navbar-fixed-top {
+    position: relative !important;
+    background: none;
+  }
+
+  /* line 20, print.scss */
+  #container_main {
+    padding-top: 0;
+  }
+
+  /* line 23, print.scss */
+  .module {
+    page-break-inside: avoid;
+    -webkit-region-break-inside: avoid;
+    padding-top: 5%;
+  }
+  /* line 32, print.scss */
+  .module.compare {
+    padding-top: 0.5cm;
+  }
+
+  /* line 38, print.scss */
+  .no-print {
+    display: none !important;
+  }
+
+  /* line 41, print.scss */
+  html * {
+    max-height: 999999px;
+  }
+
+  @page {
+    size: landscape;
+    left: 0;
+    top: 0;
+    padding: 0;
+    border: none;
+    /*not sure if that fixes anything*/
+    margin: 0 !important;
+    /* this affects the margin in the printer settings */
+    /*disables printer margins i.e. in firefox*/
+    widows: 3;
+    orphans: 3;
+  }
+  /* line 60, print.scss */
+  .safari body {
+    /*check if browser detection is activated and adds the class to html element*/
+    -webkit-transform: translate(-6mm, -6mm);
+    transform: translate(-6mm, -6mm);
+    /*fixes the 6mm margin in safari, except for absolute positioned elements -> in US or on Win it could be different … ? */
+  }
+
+  /* line 67, print.scss */
+  .chrome #container_main, .safari #container_main {
+    /*seems to be a general webkit issue*/
+    /*check if browser detection is activated and adds the class to html element*/
+    zoom: 0.9372;
+  }
+}
+@media print and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* line 83, print.scss */
+  #container_main {
+    zoom: 0.9372;
+  }
+
+  /* Safari only override */
+}
+@media print and (color) {
+  /* line 92, print.scss */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

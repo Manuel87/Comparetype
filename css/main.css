@@ -1,0 +1,8171 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*! normalize-opentype.css v0.2.4 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
+/**
+ * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ *    Turn off all other ligatures, tabular, lining numerals, and alternates
+      Uses same settings for tables
+ * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s per via http://stackoverflow.com/a/16094931/864799
+
+ http://help.typekit.com/customer/portal/articles/1789736-syntax-for-opentype-features-in-css#onum
+ */
+/* line 11, _normalize-opentype.scss */
+::-moz-selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */
+}
+
+/* line 18, _normalize-opentype.scss */
+::selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 2. */
+  background-color: #ACCEF7;
+  /* 3. */
+}
+
+/* line 29, _normalize-opentype.scss */
+html, body, table {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1;
+  font-kerning: normal;
+  /* 2. */
+}
+
+/* Headings
+========================================================================== */
+/**
+ * 1. Turn on discretionary ligatures for larger headings
+ // corections
+//disables onum
+ */
+/* line 45, _normalize-opentype.scss */
+h1, h2, h3 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 1;
+  /* 1. */
+}
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * 1. Change all letters to uppercase
+ * 2. Turn on small caps for upper and lowercase letters
+ */
+/* line 57, _normalize-opentype.scss */
+abbr {
+  text-transform: uppercase;
+  /* 1 */
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  /* 2 */
+}
+
+/*
+ * TODO: Turn on diagonal fractions where appropriate
+ */
+/* line 69, _normalize-opentype.scss */
+time {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+}
+
+/*
+ * 1. Turn off kerning and ligatures,
+ *    Turn on lining, tabular numerals, slashed zero
+ */
+/* line 78, _normalize-opentype.scss */
+pre, kbd, samp, code {
+  -webkit-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  -moz-font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  font-feature-settings: "kern" 0, "liga" 0, "calt" 1, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */
+}
+
+/**
+ * 1. Turn on proper supercript numerals
+ */
+/* line 87, _normalize-opentype.scss */
+sup {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
+  /* 1. */
+}
+
+/**
+ * 1. Turn on proper subscript numerals
+ */
+/* line 96, _normalize-opentype.scss */
+sub {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1;
+  /* 1. */
+}
+
+/* Grouping content
+========================================================================== */
+/**
+ * TODO: Adds proper bullets
+ */
+/*
+ * TODO:
+ * 1. Adds counters for lists
+ * 2. Use proper numerals for lists
+ */
+/**
+ * Adds proper small caps
+ */
+/**
+ * TODO: scmp, sc2c, pnum, case sensitive forms for postal codes
+ */
+/* Forms
+========================================================================== */
+/**
+ * 1. Turns on lining, proportional numerals without clarified zeroes
+ * TODO: Additional input modes https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
+ */
+/* line 124, _normalize-opentype.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="number"], input[type="range"], input[type="tel"], input[type="week"] {
+  -webkit-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  -moz-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  /* 1. */
+}
+
+/* Localisation
+========================================================================== */
+/* Tables
+========================================================================== */
+/**
+ * 1. Turns on tabular, lining numerals and slashed zero
+ */
+/* line 137, _normalize-opentype.scss */
+tbody, caption {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
+  /* 1. */
+}
+
+/* NEW // ADDED*/
+/* line 146, _normalize-opentype.scss */
+.tnumonum {
+  -webkit-font-feature-settings: "onum" 1, "tnum" 1;
+  -moz-font-feature-settings: "onum" 1, "tnum" 1;
+  font-feature-settings: "onum" 1, "tnum" 1;
+  -ms-font-feature-settings: "onum", "tnum";
+}
+
+/* line 154, _normalize-opentype.scss */
+.tnumlnum {
+  /*font-variant-numeric: lining-nums; */
+  -webkit-font-feature-settings: "lnum" 1, "tnum" 1;
+  -moz-font-feature-settings: "lnum" 1, "tnum" 1;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  -ms-font-feature-settings: "lnum", "tnum";
+}
+
+/* line 162, _normalize-opentype.scss */
+.onum {
+  -webkit-font-feature-settings: "onum" 1;
+  -moz-font-feature-settings: "onum" 1;
+  font-feature-settings: "onum" 1;
+  -ms-font-feature-settings: "onum";
+}
+
+/* line 170, _normalize-opentype.scss */
+.lnum {
+  /*font-variant-numeric: lining-nums; */
+  -webkit-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+  -ms-font-feature-settings: "lnum";
+}
+
+@font-face {
+  font-family: 'Blank';
+  src: url("../fonts/AdobeBlank.eot?v=4.1.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/AdobeBlank.otf.woff?v=4.1.0") format("woff"), url("../fonts/AdobeBlank.ttf?v=4.1.0") format("truetype");
+}
+/* line 9, _fonts.scss */
+#fontcheckid {
+  font-family: 'Blank';
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on June 11, 2015 */
+@font-face {
+  font-family: 'baselinefix';
+  src: url("../fonts/baselinefix-regular-webfont.eot");
+}
+@font-face {
+  font-family: 'baselinefix';
+  src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAWEABEAAAAADCQAAAUgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCYggGCYRlEQgKZIFmATYCJAOBaAt2AAQgBYZsB4EsDC4/d2ViZgYbAgvIrjBu4UnLpKmTnjNUwxaNsnWeDAqxDP7Ye/fiR+Rb0poq20ejWTRP7OuAorFAh7M6HGt7NPL4w5AbexFHxDaSahILZSXQaQeexLtZavbLfu3OQxV7l8WimGDyRTSk2w+JURIeKonQWGfw8P29ed7dArIgaeVSOF1LqZqJBzwB6aAfAxzAaKVYcEt9QOd/beH/f69qxtSArUcSygloSPJu5ns3a93/Kdmdy9YAKvVUuDTWtFLFJlCRloh1lc1JoMftXtyuBIAAvLy79/iA19dsNMiK9sfLuAARBAJRDQ2VuQogY7Jc0lQcxz4f+tiuPFUrBRBAMz3pS00sDXaQLhj+se79Yz/n/42Gx6UTT31W5wWjjpQ0zd06yEZQDKch7vBPRYGMrRryDr1PL26cfcw0vgJgs7Y8YzATzBjrHUe9K4/RTavN7nC63B6vz5+Tm5dfUKgrKqYlpWWE/CfI9rEKrjcYTWaL1WZ3OF1uj9fnDwRDYUIelxdOhZIKwSXs3wrsNSWiYE6HlsnphHy927aEpxe2ynQOZJqPF9dkKYrs6xH1XDKyhswdHWDzVjC3/cqBKvOtwzjbEN/054piDhW/9O+KcoZ6cho7TfnWb/Kq1tfpvj10oCVz+f5Tw33Naf6WIsqoWjNX+Gxu3tiWgWyIuBxoT7Ndg7hhFwKUwz0cUI30Iob31Ya3AuHAMGVMUpUxjEJtMUfHylqqZZVVnWke+hJ10Su40Do5LwAaecPILAgYH80PGOlulAubgjIT1YlwZbyCuiQvOY3NwIcGTwo2EymOR08jYxMvsRyj8OKNAc8xZAaIif1SA/90ebMAXmpel4No7aUMebCvetO7h6sCUD2uRP4OAviKA31zoA1If+shXCxApfKjXFgwPAgQKFiAjsuDMVu3d5wra9W3FXF68fHQUOEAzaV5sUbT9+bzjfHgz8zEJV1n9JKPAqJgkQoaRiXdp3kv9mHUXtXss490OBoM40RJMxQu4AfiCHeogxCwZ4fpa3O7HnH7CbN6ALAByvbhNzdHs67o1G416b7Kwbwr+8Nv3/flvZPtlaPy6X1rnV9Tr5bGZ2yVofj25Dudbr1Zm+JHQSqhs+yQibvq/4es+m8b+Qcn6oJOUOWEeB5wcLBbEeznPYj9H5OeWANQW3g5MbaC+HM4Of5PQxG1kzJQICHyLrwgx3ldQ2LdDmCPLyGKQJAyweOSSfV2mFLsg2mX1LAoLlhho8Yvrd34y1yqI8BuRKLOblXElt3xxL7rniPOX/ytJhFP2khkDhWDQtOBXRhebh4BYJQDtEOIDAQeWCFxAo1wGRQNocIxSkA1/ve4ylDj+xM0BJWJgCupoaiJ6zNEBBLDtqcdFAMPokrRbX2WmH4LF9YahRYrwjQQ7gDPuyM0NTiYCY11dDmAZMKHgdMkOgybNEF1CsHABQgO8VuQGjRMqBrDgLN+mI9XBKgzYn7ad2ljaxUtx9pxWLOwELOAgMXpq5PVuaz5C3hjaXFqgTvGES4+IPkzqU/B2D40A2jxglOJnumjgCiIMF8a4NtaUIlKQgYldC2uLkJyXCX1UpjKULdPgr+Kff+v6jlqEQYlJD89AyMTMwsrGzsHJ1ezl/Xy8QsICgmLiIqJSyzJfmMTUzNzC0srgOWx7+wdnnDm3IVLV67duHVXlGXren152uM/zJtp3Mx4Aw21p+xVae71Vbb1/T2W84PXzvu+L/quWjG0D2lfpu/l0ryQ6f55otm57dkGAAA=) format("woff2"), url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAegABEAAAAADCQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABgAAAABwAAAAcdAgvW0dERUYAAAGcAAAAHAAAAB4AJwBAT1MvMgAAAbgAAABEAAAAYGh+kYhjbWFwAAAB/AAAAJQAAAFiuGijMWN2dCAAAAKQAAAABgAAAAYCeQAhZnBnbQAAApgAAAGxAAACZVO0L6dnYXNwAAAETAAAAAgAAAAI//8AA2dseWYAAARUAAAAXAAAAGQ+p8dBaGVhZAAABLAAAAAuAAAANgOaSXloaGVhAAAE4AAAAB4AAAAkCowCkmhtdHgAAAUAAAAAGwAAAOiDPQAhbG9jYQAABRwAAAAPAAAAdgTKBMJtYXhwAAAFLAAAACAAAAAgAVQAOm5hbWUAAAVMAAABkQAAA2wuu3qGcG9zdAAABuAAAACHAAAArFkVAvlwcmVwAAAHaAAAAC4AAAAusPIrFHdlYmYAAAeYAAAABgAAAAZSflV5AAAAAQAAAADQyg1XAAAAANGfHwcAAAAA0Z8C/HjaY2BkYGDgAWIxIGZiYARCSyBmAfMYAAYRAGh42mNgZgpjnMDAysDC1MUUwcDA4A2hGeMYjBh1gHygFBwwMiCBUO9wPwYHBgXVP+wX/v9nYOBMAMsjq1FgYAQA4ogJ+HjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgxRDFUqf75/x8oCuI5MiSCeP8f/7/2/8j/fbdsoSbAASMbA1yIkQlIMDGgKYBYjQAsDBiAlY2dg5OLm4eXj19AUEhYRFRMXEJSSlpGVg4iL6+gqKSsoqqmrqGppa2jq6dvYGhkbGJqZm7BMBgAAN0+F+QAAAAhAnkAAHjaXVG7TltBEN0NDwOBxNggOdoUs5mQxnuhBQnE1Y1iZDuF5QhpN3KRi3EBH0CBRA3arxmgoaRImwYhF0h8Qj4hEjNriKI0Ozuzc86ZM0vKkap36WvPU+ckkMLdBs02/U5ItbMA96Tr642MtIMHWmxm9Mp1+/4LBpvRlDtqAOU9bykPGU07gVq0p/7R/AqG+/wf8zsYtDTT9NQ6CekhBOabcUuD7xnNussP+oLV4WIwMKSYpuIuP6ZS/rc052rLsLWR0byDMxH5yTRAU2ttBJr+1CHV83EUS5DLprE2mJiy/iQTwYXJdFVTtcz42sFdsrPoYIMqzYEH2MNWeQweDg8mFNK3JMosDRH2YqvECBGTHAo55dzJ/qRA+UgSxrxJSjvjhrUGxpHXwKA2T7P/PJtNbW8dwvhZHMF3vxlLOvjIhtoYEWI7YimACURCRlX5hhrPvSwG5FL7z0CUgOXxj3+dCLTu2EQ8l7V1DjFWCHp+29zyy4q7VrnOi0J3b6pqqNIpzftezr7HA54eC8NBY8Gbz/v+SoH6PCyuNGgOBEN6N3r/orXqiKu8Fz6yJ9O/sVoAAAAAAAAB//8AAnjaY2BiUGRgYNRimsXAzMDOoLeRkUHfZhM7C+Nbo41srHdsNjEzAZkMG5lBwqwg4U3sbEx/bDYxgsSNBRUF1Y0FlRUZOV8cP84062+aIlME0DgGJGDIAAA5eRTheNpjYGRgYADi1B6LV/H8Nl8Z5JlfAEUYLs5n+otMM2oxzQJSHAxMIB4AQioKbgAAeNpjYGRg4Ez4/5+BgSmCAQgYtRgYGVCBFQBUFQMpAAB42mPMYVBkAAJGXwYGpojhiRm/MDAAACnLFM4AeNpjYGDQojs0AgAohAmNAAABAAAAOgAIAAIAAAAAAAIAAQACABYAAAEAAC4AAAAAeNqNUrtOAkEUPTugEWOwo7Dais51V0JEtPGBJipIBKUGd3lEHgoLUSu/wFBa2fsDFn6Bjy/Q+DGenR0eQQqymZlz7z3n3r13BsAy3hCAFgwBuOfysYYILR8LhNFXOIBtPCscRBQ/Cs+hrw2084hqA/4C8avCIeJfhZeQEELhd0REUuEPmCKr8CfC4kHhLyyKRx9/B7AinrCHFq5xhzZqqKAKFzpeuNZhwkKcqMSojjSKaKILB3VaPaqaPA9pl6gqUm8zg0HfDhkeZ5SxIy2Hp8Ozx90mc5eqjsxXYy4HZZ63OCOqsE5d5rTIM+W3hXMco4AM0XTl6oR2OkufYF3If+ow5nc0XjGLHD2mnMTIWyXTxaXk94YKAxsy2mDWK+b0OGV6veolTtPgLL2VQIzWJnX7SLF6Cic4ZaU0UQb5GXub7TZmY3k35PINJLHGrzGmMZSm8u+WbXoK0luWDHc4hzx5XVpH3P15WnKGcea32H2SKDb2vmzZY1F25jJXW93EwTBvDjeM1hjx3lD9DzxhhWcAAAB42m3LOU4CAQBA0TdgoOYOqMimMzCKLBUKuLO4sEitJMTQUHAwzydEWl7zqy/h39+vyCF1gkSQlJSRdezEqZwzeQVFJWXnLoS7u6IqdulKzfXua2hquXGro6vnzr0Hj548e9E3MDTy6s27D2MTUzOf5sFR6mu5WX2H+0Tp9c8iijvtLTCxFlcAuAH/hbABjQBLsAhQWLEBAY5ZsUYGK1ghsBBZS7AUUlghsIBZHbAGK1xYWbAUKwAAAAFVeVJ9AAA=) format("woff"), url("../fonts/baselinefix-regular-webfont.ttf") format("truetype");
+}
+/* line 12, main.scss */
+html {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  /* Prevent font scaling in landscape while allowing user zoom */
+  /*none would disable zoom behaviour completly*/
+}
+
+/* line 18, main.scss */
+html, button, input, select, textarea {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+/* line 29, main.scss */
+.optimizeSpeed {
+  text-rendering: optimizeSpeed;
+}
+
+/* line 30, main.scss */
+.optimizeLegibility {
+  text-rendering: optimizeLegibility;
+}
+
+/* line 31, main.scss */
+.geometricPrecision {
+  text-rendering: geometricPrecision;
+}
+
+/* line 34, main.scss */
+.turnoffsubpixelrendring {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-smooth: always;
+}
+
+/* line 42, main.scss */
+.bitmapstylerendering {
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smoothing: none;
+  font-smooth: never;
+}
+
+/* line 65, main.scss */
+.ui_font.textframe {
+  line-height: 3ex;
+}
+
+/* line 91, main.scss */
+.type {
+  line-height: 6em !important;
+}
+
+/* line 158, main.scss */
+b, strong {
+  font-weight: bolder;
+}
+
+/* line 162, main.scss */
+i {
+  font-style: italic;
+}
+
+/* line 209, main.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom-width: 0.12em;
+  border-bottom-style: solid;
+}
+
+/* line 219, main.scss */
+html.invert_colors {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -o-filter: invert(100%);
+  -ms-filter: invert(100%);
+}
+
+/* Mozilla based browsers */
+/* line 227, main.scss */
+::-moz-selection {
+  background-color: #ddd;
+}
+
+/* Works in Safari */
+/* line 232, main.scss */
+::selection {
+  background-color: #ddd;
+}
+
+/* line 241, main.scss */
+#measurefonts_main {
+  background-color: #fee;
+  position: relative;
+  border: 1px solid red;
+  height: 1em !important;
+  line-height: 200px !important;
+  overflow-x: scroll;
+  overflow-y: visible;
+  white-space: nowrap;
+}
+
+/* line 257, main.scss */
+.measuring_fonts {
+  line-height: 0.1em;
+  display: inline-block;
+  white-space: normal;
+}
+
+/* line 309, main.scss */
+.script_uppercase .font1, .script_uppercase .font2 {
+  text-transform: uppercase;
+}
+/* line 312, main.scss */
+.script_uppercase .nocase .font1, .script_uppercase .nocase .font2 {
+  text-transform: inherit;
+}
+/* line 317, main.scss */
+.script_uppercase .font1:before, .script_uppercase .font2:before {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* line 326, main.scss */
+.script_smallcaps .font1, .script_smallcaps .font2 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1;
+}
+
+/* line 334, main.scss */
+.script_smallcaps.script_uppercase .font1, .script_smallcaps.script_uppercase .font2, .script_smallcaps.script_uppercase #canvas_font1, .script_smallcaps.script_uppercase #canvas_font2 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+}
+
+/* line 346, main.scss */
+#ruler {
+  font-size: 7px;
+  height: 0px;
+  width: 0px;
+  overflow: visible;
+  display: none;
+}
+/* line 352, main.scss */
+#ruler li {
+  color: #00cccc;
+  border-color: rgba(0, 255, 255, 0.6);
+  border-left-style: solid;
+  border-top-style: solid;
+}
+
+/* line 361, main.scss */
+.showruler #ruler {
+  display: block;
+}
+
+/* equal wordspacing */
+/* line 369, main.scss */
+span.wspace {
+  display: inline-block;
+  height: 1px;
+}
+
+/* line 375, main.scss */
+span.wspace:before {
+  content: " ";
+}
+
+/* line 381, main.scss */
+span.line {
+  margin: 0;
+  display: inline-block;
+  width: auto;
+  min-width: 60%;
+  /*makes sure there are never two span.lines on one real line no matter how narrow a font is*/
+  max-width: 100%;
+  overflow: visible;
+  white-space: nowrap;
+  margin-right: -99999px;
+  /*mimic br properties...*/
+ /* clear:none;
+	display: inline;
+	width:auto;
+	height:auto;
+	position: static;*/
+  /*is not working. what am I missing?*/
+}
+
+/* line 405, main.scss */
+span.line:hover {
+  border-left: 1px solid #000;
+  padding-left: 10px;
+  margin-left: -11px;
+}
+
+/* line 414, main.scss */
+span.word {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: visible;
+}
+
+/* line 424, main.scss */
+span.char {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: -1px;
+}
+
+/* line 437, main.scss */
+.show_split span.wspace {
+  background-color: #00f;
+}
+/* line 441, main.scss */
+.show_split span.line {
+  border-right: 3px solid blue;
+  margin-right: -3px;
+}
+/* line 446, main.scss */
+.show_split span.word {
+  border-left: 1px solid #00f;
+  margin-left: -1px;
+  border-right: 1px solid #00f;
+  margin-right: -1px;
+}
+/* line 453, main.scss */
+.show_split span.char {
+  border-right: 1px solid rgba(255, 0, 0, 0.2);
+  margin-right: -1px;
+}
+
+/* line 476, main.scss */
+#header, #header .navbar {
+  z-index: 2000 !important;
+  position: fixed;
+  display: inline-block;
+  top: 0;
+}
+
+/* line 489, main.scss */
+.module, .myCompareDefault, .comparetext {
+  z-index: -100;
+}
+
+/* line 495, main.scss */
+div, input {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, otgher Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 501, main.scss */
+.chooseFontsContainer {
+  clear: both;
+  width: 100%;
+  padding-top: 4ex;
+}
+/* line 505, main.scss */
+.chooseFontsContainer div {
+  text-align: center;
+}
+
+/* line 511, main.scss */
+.center {
+  position: relative;
+  left: 50%;
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+/* line 517, main.scss */
+.options.collapsed {
+  display: none;
+}
+
+/* line 523, main.scss */
+body {
+  font: 100% "Lucida Grande", "Avenir-Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /*font-size-adjust: 1.0; only firefox -> */
+  color: #000;
+  background-color: #fff;
+}
+
+/* line 533, main.scss */
+#header {
+  max-width: 100vw;
+  width: 100%;
+  background-clip: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 543, main.scss */
+.container {
+  width: 100%;
+  padding: 0% 5% 0% 5%;
+  background-clip: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 553, main.scss */
+.navbar {
+  white-space: nowrap;
+  float: left;
+  width: 100%;
+  display: inline-block;
+  background-clip: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 2ex;
+  padding-bottom: 8ex;
+  margin-bottom: -5ex;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjk1Ii8+PHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC45NSIvPjxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.95)), color-stop(60%, rgba(255, 255, 255, 0.95)), color-stop(70%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 60%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 60%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 60%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0));
+}
+
+/* line 574, main.scss */
+nav {
+  padding: 0% 5% 0% 5%;
+}
+/* line 575, main.scss */
+nav > div, nav > span, nav form#mainForm {
+  display: inline-block;
+  float: left;
+  clear: none;
+}
+
+/* line 588, main.scss */
+#container_main {
+  padding-top: 15ex;
+}
+
+/* line 593, main.scss */
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+}
+
+/* line 601, main.scss */
+.navbar ul, #measureInput ul, #measureInput ul {
+  padding: 0.1ex;
+  display: inline-block;
+  float: left;
+}
+
+/* line 610, main.scss */
+#measureInput ul li {
+  float: left;
+  display: inline-block;
+}
+
+/* line 612, main.scss */
+#measureInput {
+  display: inline-block;
+}
+
+/* line 613, main.scss */
+#measureInput {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 10px;
+  padding-right: 0;
+}
+
+/* line 622, main.scss */
+#measureInput, #measureInput {
+  margin-top: 0px;
+}
+
+/* line 624, main.scss */
+#readingdistance_fieldset {
+  margin-right: -1.1ex;
+}
+
+/* line 628, main.scss */
+#screensize_fieldset ul li {
+  display: none;
+}
+
+/* line 631, main.scss */
+fieldset {
+  display: inline-block;
+  white-space: nowrap;
+  float: left;
+  width: auto;
+}
+
+/* line 633, main.scss */
+fieldset legend, fieldset ul {
+  display: inline-block;
+  white-space: nowrap;
+  float: left;
+  clear: none;
+}
+
+/* line 634, main.scss */
+fieldset legend {
+  margin-right: 0.6ex;
+}
+
+/* line 637, main.scss */
+#screensize_fieldset ul li:last-of-type {
+  display: inline-block;
+}
+
+/* IE ..
+.menu {text-align:justify;}
+.menu > a {display:inline-block}
+.menu:after { content:' '; display:inline-block; width: 100%; height: 0 }
+*/
+/* line 646, main.scss */
+button, .button, #mainForm > ul > li, .button-group, #fontselect1 > input, #fontselect2 > input {
+  color: #000;
+  background-color: #fff;
+  padding: 0.5ex 1.1ex;
+  -moz-border-radius: 1.2ex;
+  -webkit-border-radius: 1.2ex;
+  border-radius: 1.2ex;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  min-height: 3ex;
+  min-width: 3ex;
+  cursor: pointer;
+  vertical-align: top;
+  /*deactivate seleciton*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 2ex;
+  margin-bottom: 1ex;
+}
+
+/* line 674, main.scss */
+.button-group, #colorInput {
+  float: left;
+}
+
+/* line 678, main.scss */
+#colorInput {
+  padding-right: 0.4rem;
+}
+
+/* line 681, main.scss */
+#color_invert {
+  margin-top: -0.3ex !important;
+}
+
+/* line 685, main.scss */
+.button.noborder {
+  border: none;
+  padding: 0;
+}
+
+/* The CSS */
+/* line 695, main.scss */
+select {
+  min-height: 3ex;
+  outline: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 0.5ex 1.1ex;
+  margin-right: 0.8ex;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+}
+
+/* line 723, main.scss */
+.dropdown, [multiple] {
+  width: 20ex;
+}
+
+/* line 728, main.scss */
+[multiple] {
+  height: 5ex;
+}
+
+/* line 734, main.scss */
+#measureInput select {
+  width: 7ex;
+  border: none;
+  padding: 0;
+  padding-left: 0.5ex;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+/* line 747, main.scss */
+label {
+  position: relative;
+}
+
+/* line 748, main.scss */
+label.select:after {
+  content: '<>';
+  font: 0.9em "Consolas", monospace;
+  height: 0;
+  width: 0;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 1.8ex;
+  top: 0.4ex;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 769, main.scss */
+.chooseFontsContainer label.select:after {
+  right: 2.6ex;
+  top: 0.4ex;
+}
+
+/* line 789, main.scss */
+#moreOptionsContainer {
+  display: inline-block;
+  height: 1px;
+  overflow: visible;
+}
+/* line 794, main.scss */
+#moreOptionsContainer li {
+  display: none;
+  cursor: pointer;
+}
+
+/* line 801, main.scss */
+#moreOptionsContainer.open ul {
+  position: absolute;
+  padding: 1ex;
+  background-color: #fff;
+  display: inline-block;
+  float: left;
+  padding: 0.5ex 1.1ex;
+  z-index: 900;
+  -moz-border-radius: 1.2ex;
+  -webkit-border-radius: 1.2ex;
+  border-radius: 1.2ex;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* line 813, main.scss */
+#moreOptionsContainer.open ul li {
+  display: block;
+  padding: 0.5ex 0ex;
+}
+
+/* line 826, main.scss */
+.show_technicalsizes .text:before, .show_technicalsizes #fontselect1:after, .show_technicalsizes #fontselect2:after {
+  font-family: "Lucida Grande", "Avenir-Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px !important;
+  line-height: 12px !important;
+  opacity: 0.6;
+  position: absolute;
+}
+/* line 834, main.scss */
+.show_technicalsizes .text:before {
+  content: attr(data-content);
+  padding: 0.5ex;
+  margin-top: -4ex;
+  margin-left: -0.5ex;
+  text-align: right;
+  float: right;
+}
+/* line 847, main.scss */
+.show_technicalsizes #fontselect1:after, .show_technicalsizes #fontselect2:after {
+  content: attr(data-height);
+  position: relative;
+  margin-top: 1ex;
+  display: block;
+  text-align: center;
+}
+
+/* line 861, main.scss */
+#fontselect1 > input, #fontselect2 > input {
+  background-color: transparent;
+}
+
+/*FontAwesome Icon Adjustment*/
+/* line 873, main.scss */
+.fa {
+  padding-top: 0.65ex;
+}
+
+/* line 876, main.scss */
+.module_control .fa {
+  padding-top: 0;
+}
+
+/*
+#fontselect1:before, #fontselect2:before {
+	content:"\f0d7";//"\f078";
+	font-family: "FontAwesome";
+
+	// position:relative;
+	position: relative;
+	display: inline-block;
+
+	margin: 0;
+	padding: 0;
+	left: 0;
+	margin-right:  -9.1ex; //140px; //20.5ex; //140px;
+	//width: 100%;
+	left:63%;
+	@include translate(-50%, 0%);
+}
+*/
+/* line 896, main.scss */
+.btn-primary {
+  padding: 0.2rem 0.4rem;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000;
+  margin-top: -1px;
+}
+
+/* line 904, main.scss */
+.btn-mode, .btn-mode-overlay {
+  border: none;
+  margin-top: -0.8rem;
+  font-size: 2rem;
+  padding: 0.2rem 0;
+}
+
+/* line 912, main.scss */
+.btn-mode-overlay {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 915, main.scss */
+.btn-mode-overlay span {
+  margin-left: -0.4em;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 921, main.scss */
+.btn-noborder {
+  border: none;
+  padding: none;
+  vertical-align: middle;
+}
+
+/* line 929, main.scss */
+.btn-gear {
+  font-size: 1.5rem;
+  border: none;
+  padding: none;
+  vertical-align: top;
+  margin-top: -0.2rem;
+}
+
+/* line 937, main.scss */
+.nav-space {
+  min-width: 2.5rem;
+  display: inline-block;
+}
+
+/* line 943, main.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 946, main.scss */
+*:focus {
+  outline: 0;
+}
+
+/* line 950, main.scss */
+input {
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 0.2ex;
+  width: 7ex;
+  box-shadow: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0;
+  outline: 0;
+  margin-right: 0.2ex;
+}
+
+/* line 971, main.scss */
+.module_info {
+  opacity: 0.4;
+}
+
+/* line 975, main.scss */
+.typographicsizing .module_info {
+  opacity: 1.0;
+}
+
+/* line 979, main.scss */
+.module_info input {
+  background: none;
+}
+
+/* line 990, main.scss */
+input::-webkit-color-swatch-wrapper {
+  padding: 0;
+  max-height: 1.1rem;
+  max-width: 1.1rem;
+}
+
+/* line 996, main.scss */
+input::-webkit-color-swatch {
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* line 1001, main.scss */
+input[type=checkbox] {
+  width: 1.5ex;
+  margin-right: 0.8ex;
+  display: inline;
+  white-space: nowrap;
+}
+
+/* line 1009, main.scss */
+#mainForm ul > li {
+  white-space: nowrap !important;
+  display: inline-block;
+  min-height: 10px;
+}
+
+/* line 1015, main.scss */
+input[type=color] {
+  background: transparent;
+  border: none;
+}
+
+/* line 1024, main.scss */
+.btn-color {
+  width: 20px;
+}
+
+/* line 1029, main.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 1032, main.scss */
+*:focus {
+  outline: 0;
+}
+
+/* line 1041, main.scss */
+.btn-color-bg, .btn-color-fg, .btn-invert {
+  padding: 0;
+  margin: 0 -0.05rem;
+  margin-top: 0.05rem;
+  vertical-align: middle;
+}
+
+/* line 1047, main.scss */
+.btn-color-fg {
+  background-color: #000;
+}
+
+/* line 1051, main.scss */
+.btn-invert {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* line 1065, main.scss */
+.font1 {
+  font-family: Times, "Times New Roman", "Blank";
+  font-size: 2em;
+  line-height: 0.2em;
+}
+
+/* line 1071, main.scss */
+.font2 {
+  font-family: "Lucida Grande", "Blank";
+  font-size: 2em;
+  line-height: 0.2em;
+}
+
+/* line 1078, main.scss */
+.myCompareDefault .font1, .myCompareDefault .font2 {
+  line-height: inherit;
+}
+
+/* line 1082, main.scss */
+.font1_before {
+  font-family: Times, "Times New Roman", "Blank";
+}
+
+/* line 1083, main.scss */
+.font2_before {
+  font-family: "Lucida Grande", "Blank";
+}
+
+/* line 1091, main.scss */
+.module {
+  width: 100%;
+  clear: both;
+  padding-top: 5vw;
+  display: inline-block;
+}
+
+/* line 1100, main.scss */
+.module_left, .module_right, .module_font1, .module_font2 {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+/* line 1106, main.scss */
+.module_left, .module_font1 {
+  padding-right: 40px;
+}
+/* line 1107, main.scss */
+.module_left .textframe, .module_font1 .textframe {
+  float: right;
+}
+
+/* line 1113, main.scss */
+.module_right, .module_font2 {
+  padding-left: 40px;
+}
+
+/* line 1119, main.scss */
+.module_left .type {
+  float: right;
+}
+
+/* line 1123, main.scss */
+.module_left .myCompareDefault_frame, .module_font1 .myCompareDefault_frame {
+  text-align: right;
+}
+
+/* line 1136, main.scss */
+.comparetext {
+  display: inline-block;
+  white-space: nowrap;
+  clear: both;
+  width: 100%;
+}
+
+/* line 1152, main.scss */
+.comparetext .wrap {
+  overflow: visible;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
+/* line 1164, main.scss */
+.myCompareDefault_frame {
+  white-space: nowrap;
+}
+
+/* line 1177, main.scss */
+.module_control {
+  clear: both;
+  width: 100%;
+  display: block;
+  border-top: 3px solid;
+  padding-top: 2ex;
+  margin-top: 2ex;
+}
+
+/* line 1188, main.scss */
+.module_control .left, .module_control .center, .module_control .right {
+  width: 49%;
+  display: inline-block;
+}
+
+/* line 1194, main.scss */
+.module_control .right span, .module_control .right div {
+  display: inline-block;
+  padding: 0.5ex 0ex;
+}
+
+/* line 1199, main.scss */
+.module_control .center {
+  width: 9% !important;
+  text-align: center;
+  margin-left: 0.5%;
+  position: absolute;
+  left: auto;
+  -moz-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  display: none;
+}
+
+/* line 1211, main.scss */
+.left {
+  float: left;
+}
+
+/* line 1218, main.scss */
+.right {
+  float: right;
+  text-align: right;
+}
+
+/* line 1229, main.scss */
+div.css_edit {
+  position: relative;
+  display: inline-block;
+}
+/* line 1234, main.scss */
+div.css_edit style {
+  text-align: left;
+  display: none;
+  font-family: monospace;
+  white-space: pre;
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+  padding: 2ex 4ex 2ex 2ex;
+  -moz-border-radius: 1.2ex;
+  -webkit-border-radius: 1.2ex;
+  border-radius: 1.2ex;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* line 1238, main.scss */
+div.css_edit style.open {
+  display: block;
+}
+
+/* line 1261, main.scss */
+.chooseFontsContainer .button {
+  margin-left: -1ex;
+  opacity: 0.5;
+}
+
+/* line 1265, main.scss */
+.chooseFontsContainer div.css_edit style {
+  margin-top: 0.5ex;
+  margin-bottom: -80ex;
+}
+/* line 1269, main.scss */
+.chooseFontsContainer div.css_edit style.open {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1279, main.scss */
+.type, .myReadingRegular {
+  font-size: 8px;
+  line-height: 2.8em !important;
+  text-decoration: none;
+  white-space: normal;
+}
+
+/* line 1289, main.scss */
+.myReadingRegular_frame {
+  padding-bottom: 4px;
+  width: 65em;
+  float: left;
+  max-width: 100%;
+}
+
+/* line 1303, main.scss */
+.myCompareDefault {
+  font-size: 100px;
+  line-height: 2em !important;
+}
+
+/* line 1311, main.scss */
+.myCompareDefault_frame {
+  width: 100%;
+}
+
+/* line 1319, main.scss */
+.textframe {
+  overflow: hidden;
+  max-width: 100% !important;
+}
+
+/* line 1356, main.scss */
+.show_outline .module_type, .show_outline .outline {
+  /*Firefox and IE does not support -> text-shadow*/
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  /*
+  	text-shadow:
+  		//45 °
+  		//rechts  unten 2
+  		1px 1px 0 $Color_Type,
+  		 //links  unten
+  		 -1px 1px 0 $Color_Type,
+  		 //rechts oben
+  		 1px -1px 0 $Color_Type,
+  		 //links  oben
+  			-1px -1px 0 $Color_Type,
+  
+  		//
+  		//unten
+  		0px $outline_shadow_bottom_2 0 $Color_Type,
+  		//oben
+  		0px $outline_shadow_top_2 0 $Color_Type,
+  		//links
+  		$outline_shadow_left_2 0px 0 $Color_Type,
+  		//rechts
+  		$outline_shadow_right_2 0px 0 $Color_Type,
+  
+  
+  
+  		// ~22°
+  		 //rechts unten
+  		 $outline_shadow_right_1 $outline_shadow_bottom_2 0 $Color_Type,
+  		 //links  unten
+  		 $outline_shadow_left_1 $outline_shadow_bottom_2 0 $Color_Type,
+  		 //rechts oben
+  		 $outline_shadow_right_1 $outline_shadow_top_2 0 $Color_Type,
+  		 //links  oben
+  		 $outline_shadow_left_1 $outline_shadow_top_2 0 $Color_Type,
+  
+  		 //correction
+  
+  		// //links
+  		 -2px 0px 0 $Color_Type,
+  		// //rechts
+  		 2px 0px 0 $Color_Type,
+  		 //unten
+  		0px 2px 0 $Color_Type,
+  		//oben
+  		0px -2px 0 $Color_Type;
+  */
+}
+
+/* line 1415, main.scss */
+.show_outline .outline_big {
+  color: #fff;
+}
+
+/* line 1423, main.scss */
+.largeText {
+  font-size: 100px;
+  line-height: 2.8em !important;
+  width: 30em;
+}
+
+/* line 1438, main.scss */
+.poster3d_frame {
+  width: 100%;
+  margin-top: -0.2em;
+  margin-bottom: 0.5em;
+}
+
+/* line 1462, main.scss */
+.poster3d {
+  font-size: 400px;
+  line-height: 1em !important;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px -1.5px 0 #000, 0px 1.5px 0 #000, 0px -1.5px 0 #000, -1.5px 0px 0 #000, 1.5px 0px 0 #000, 1px 1.5px 0 #000, -1px 1.5px 0 #000, 1px -1.5px 0 #000, -1px -1.5px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, 0 0.005em #e9cac7, -0.005em 0 #c9d5db, -0.005em 0.01em #e9cac7, -0.01em 0.005em #c9d5db, -0.01em 0.015em #e9cac7, -0.015em 0.01em #c9d5db, -0.015em 0.02em #e9cac7, -0.02em 0.015em #c9d5db, -0.02em 0.025em #e9cac7, -0.025em 0.02em #c9d5db, -0.025em 0.03em #e9cac7, -0.03em 0.025em #c9d5db, -0.03em 0.035em #e9cac7, -0.035em 0.03em #c9d5db, -0.035em 0.04em #e9cac7, -0.04em 0.035em #c9d5db, -0.04em 0.045em #e9cac7, -0.045em 0.04em #c9d5db, -0.045em 0.05em #e9cac7, -0.05em 0.045em #c9d5db, -0.05em 0.055em #e9cac7, -0.055em 0.05em #c9d5db, -0.045em 0.05em #e9cac7, -0.05em 0.045em #c9d5db, -0.05em 0.055em #e9cac7, -0.055em 0.05em #c9d5db, -0.055em 0.06em #e9cac7, -0.06em 0.055em #c9d5db, -0.06em 0.065em #e9cac7, -0.065em 0.06em #c9d5db, -0.065em 0.07em #e9cac7, -0.07em 0.065em #c9d5db, -0.07em 0.075em #e9cac7, -0.075em 0.07em #c9d5db, -0.075em 0.08em #e9cac7, -0.08em 0.075em #c9d5db, -0.08em 0.085em #e9cac7, -0.085em 0.08em #c9d5db, -0.085em 0.09em #e9cac7, -0.09em 0.085em #c9d5db, -0.09em 0.095em #e9cac7, -0.095em 0.09em #c9d5db, -0.093em 0.098em #000, -0.098em 0.093em #000;
+}
+
+/* line 1577, main.scss */
+.consultation {
+  /* -moz-column-rule-color:  #ccc;
+   -moz-column-rule-style:  solid;
+   -moz-column-rule-width:  1px;
+   -webkit-column-rule-color:  #ccc;
+   -webkit-column-rule-style: solid ;
+   -webkit-column-rule-width:  1px;*/
+}
+
+/* line 1619, main.scss */
+.smallest {
+  font-size: 5px;
+  line-height: 2em !important;
+  width: 30em;
+}
+
+/* line 1627, main.scss */
+.dropcap:first-child:first-letter {
+  float: left;
+  color: #000;
+  font-size: 3em;
+  line-height: 3em;
+}
+
+/*Normalize baselines*/
+/*
+.fixbaseline {
+	&.font1, &.font2 {
+		font-family: "baselinefix";
+		font-size: 2em!important;
+	}
+}
+
+.textframe {background: url(http://baselinebg.keyes.ie/?h=24&r=0&g=255&b=255&s=1) repeat; //24 = lineheight
+	//most effective performant way of doing it // there should be a simple php image generator behind // a strokewidht would be also nice so we could show the typographic size.
+  background-position-y: 19px; //how the offset gets calculated is still unclear yet // should be the fontsize
+  //might be fontsize x2.5 ()
+ }
+*/
+/* line 1655, main.scss */
+.textframe:before {
+  display: none;
+}
+
+/* line 1658, main.scss */
+.show_typographicsize .textframe:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1em;
+  margin-right: -100%;
+  background-color: rgba(0, 255, 255, 0.15);
+  vertical-align: baseline;
+  line-height: 1px !important;
+}
+
+/* line 1670, main.scss */
+.show_typographicsize.typographicsizing .textframe:before {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+/*Visualize Baselines at 2 typographic em from top (javascript loop) */
+/* line 1693, main.scss */
+div.baseline {
+  width: 100%;
+  height: 1px;
+  background-color: #f00;
+  position: absolute;
+  left: -3px;
+  z-index: -1;
+  /*margin-top: 2em;*/
+}
+
+/* line 1708, main.scss */
+.show_measurements .type {
+  padding-top: 1.5em;
+  margin-bottom: -1.5em;
+}
+
+/* line 1719, main.scss */
+.module.compare .module_font1 {
+  height: 0;
+  overflow: visible;
+}
+
+/* line 1728, main.scss */
+.mode_overlay #fontselect1 select {
+  color: rgba(255, 39, 0, 0.8);
+  border-color: rgba(255, 39, 0, 0.8);
+}
+/* line 1732, main.scss */
+.mode_overlay #fontselect2 select {
+  color: rgba(0, 89, 255, 0.8);
+  border-color: rgba(0, 89, 255, 0.8);
+}
+
+/* line 1739, main.scss */
+.mode_overlay #container_main .font1 {
+  color: rgba(255, 39, 0, 0.8);
+}
+/* line 1744, main.scss */
+.mode_overlay #container_main .font2 {
+  color: rgba(0, 89, 255, 0.8);
+}
+/* line 1749, main.scss */
+.mode_overlay #container_main .module_left, .mode_overlay #container_main .module_font1 {
+  margin-left: 25%;
+}
+/* line 1755, main.scss */
+.mode_overlay #container_main .module_left .type, .mode_overlay #container_main .module_font1 .type {
+  float: left;
+}
+/* line 1758, main.scss */
+.mode_overlay #container_main .module_left .myCompareDefault_frame, .mode_overlay #container_main .module_font1 .myCompareDefault_frame {
+  text-align: center;
+}
+/* line 1763, main.scss */
+.mode_overlay #container_main .module_right, .mode_overlay #container_main .module_font2 {
+  margin-left: -50%;
+  mix-blend-mode: multiply;
+}
+/* line 1772, main.scss */
+.mode_overlay #container_main .module_left .textframe, .mode_overlay #container_main .module_right .textframe, .mode_overlay #container_main .module_font1 .textframe, .mode_overlay #container_main .module_font2 .textframe {
+  float: left;
+}
+/* line 1783, main.scss */
+.mode_overlay #container_main .myCompareDefault {
+  text-align: center;
+}
+/* line 1797, main.scss */
+.mode_overlay #container_main .module.compare .module_font1, .mode_overlay #container_main .module.compare .module_font2 {
+  margin-left: 25%;
+}
+/* line 1803, main.scss */
+.mode_overlay #container_main .module.compare .module_font1 {
+  height: 0;
+  overflow: visible;
+}
+
+/* line 1822, main.scss */
+.mode_overlay.show_outline .module_type .font1 {
+  /*Firefox and IE does not support -> text-shadow*/
+  -webkit-text-stroke: 0.5px rgba(255, 39, 0, 0.8);
+  text-stroke: 0.5px rgba(255, 39, 0, 0.8);
+  /*
+  	 text-shadow:
+  		//45 °
+  		//rechts  unten 2
+  		1px 1px 0 $Color_Overlay_Type_one,
+  		 //links  unten
+  		 -1px 1px 0 $Color_Overlay_Type_one,
+  		 //rechts oben
+  		 1px -1px 0 $Color_Overlay_Type_one,
+  		 //links  oben
+  			-1px -1px 0 $Color_Overlay_Type_one,
+  
+  		//
+  		//unten
+  		0px $outline_shadow_bottom_2 0 $Color_Overlay_Type_one,
+  		//oben
+  		0px $outline_shadow_top_2 0 $Color_Overlay_Type_one,
+  		//links
+  		$outline_shadow_left_2 0px 0 $Color_Overlay_Type_one,
+  		//rechts
+  		$outline_shadow_right_2 0px 0 $Color_Overlay_Type_one,
+  
+  
+  
+  		// ~22°
+  		 //rechts unten
+  		 $outline_shadow_right_1 $outline_shadow_bottom_2 0 $Color_Overlay_Type_one,
+  		 //links  unten
+  		 $outline_shadow_left_1 $outline_shadow_bottom_2 0 $Color_Overlay_Type_one,
+  		 //rechts oben
+  		 $outline_shadow_right_1 $outline_shadow_top_2 0 $Color_Overlay_Type_one,
+  		 //links  oben
+  		 $outline_shadow_left_1 $outline_shadow_top_2 0 $Color_Overlay_Type_one,
+  
+  		 //correction
+  
+  		// //links
+  		 -2px 0px 0 $Color_Overlay_Type_one,
+  		// //rechts
+  		 2px 0px 0 $Color_Overlay_Type_one,
+  		 //unten
+  		0px 2px 0 $Color_Overlay_Type_one,
+  		//oben
+  		0px -2px 0 $Color_Overlay_Type_one;
+  */
+}
+
+/* line 1883, main.scss */
+.mode_overlay.show_outline .module_type .font2 {
+  /*Firefox and IE does not support -> text-shadow*/
+  -webkit-text-stroke: 0.5px rgba(0, 89, 255, 0.8);
+  text-stroke: 0.5px rgba(0, 89, 255, 0.8);
+  /*
+  		text-shadow:
+  		//45 °
+  		//rechts  unten 2
+  		1px 1px 0 $Color_Overlay_Type_two,
+  		 //links  unten
+  		 -1px 1px 0 $Color_Overlay_Type_two,
+  		 //rechts oben
+  		 1px -1px 0 $Color_Overlay_Type_two,
+  		 //links  oben
+  			-1px -1px 0 $Color_Overlay_Type_two,
+  
+  		//
+  		//unten
+  		0px $outline_shadow_bottom_2 0 $Color_Overlay_Type_two,
+  		//oben
+  		0px $outline_shadow_top_2 0 $Color_Overlay_Type_two,
+  		//links
+  		$outline_shadow_left_2 0px 0 $Color_Overlay_Type_two,
+  		//rechts
+  		$outline_shadow_right_2 0px 0 $Color_Overlay_Type_two,
+  
+  
+  
+  		// ~22°
+  		 //rechts unten
+  		 $outline_shadow_right_1 $outline_shadow_bottom_2 0 $Color_Overlay_Type_two,
+  		 //links  unten
+  		 $outline_shadow_left_1 $outline_shadow_bottom_2 0 $Color_Overlay_Type_two,
+  		 //rechts oben
+  		 $outline_shadow_right_1 $outline_shadow_top_2 0 $Color_Overlay_Type_two,
+  		 //links  oben
+  		 $outline_shadow_left_1 $outline_shadow_top_2 0 $Color_Overlay_Type_two,
+  
+  		 //correction
+  
+  		// //links
+  		 -2px 0px 0 $Color_Overlay_Type_two,
+  		// //rechts
+  		 2px 0px 0 $Color_Overlay_Type_two,
+  		 //unten
+  		0px 2px 0 $Color_Overlay_Type_two,
+  		//oben
+  		0px -2px 0 $Color_Overlay_Type_two;
+  
+  */
+}
+
+/* line 1941, main.scss */
+.size_detail {
+  font-size: 400px;
+}
+
+/* line 1942, main.scss */
+.size_big {
+  font-size: 100px;
+}
+
+/* line 1943, main.scss */
+.size_reg {
+  font-size: 8px;
+}
+
+/* line 1944, main.scss */
+.size_reg2 {
+  font-size: 12px;
+}
+
+/* line 1945, main.scss */
+.size_small {
+  font-size: 5px;
+}
+
+/* line 1950, main.scss */
+.lineheight_em {
+  line-height: 1em !important;
+}
+
+/* line 1951, main.scss */
+.lineheight_min {
+  line-height: 2em !important;
+}
+
+/* line 1952, main.scss */
+.lineheight_reg {
+  line-height: 2.8em !important;
+}
+
+/* line 1953, main.scss */
+.lineheight_regular2 {
+  line-height: 3em !important;
+}
+
+/* line 1954, main.scss */
+.lineheight_large {
+  line-height: 4em !important;
+}
+
+/* line 1957, main.scss */
+.framewidth_em {
+  width: 30em;
+}
+
+/* line 1958, main.scss */
+.framewidth_reg {
+  width: 65em;
+}
+
+/* line 1959, main.scss */
+.framewidth_reg2 {
+  width: 70em;
+}
+
+/* line 1960, main.scss */
+.framewidth_larg {
+  width: 100em;
+}
+
+/* line 1966, main.scss */
+.measurements_in_numbers {
+  font-size: 12px;
+  line-height: 2.4em;
+}
+
+/* line 1972, main.scss */
+.float {
+  float: left;
+}
+
+/* line 1976, main.scss */
+.oldsize {
+  font-size: 2em;
+}
+
+/* line 1986, main.scss */
+.show_measurements .words {
+  line-height: 1em;
+  height: 1em;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  background-color: transparent;
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  padding: 0em 0.1em 0.5em 1em;
+  margin: -0em -0.1em -0.5em -1em;
+  margin-bottom: 0;
+  margin-top: -2em;
+  		/*
+  	border-top: 1px red solid;
+  	padding-top: 0.15em;
+  	border-bottom: 1px red solid;
+  	padding-bottom: 0.3em;
+  
+  
+  	background-color: transparent!important;
+  	text-decoration: none;
+  	background: url(../img/1px_green.png) repeat-x 100% 50%;
+  
+  	white-space: none;
+  */
+}
+
+/* line 2039, main.scss */
+.show_measurements .words .typographicsize {
+  top: -1em;
+  margin-bottom: -1em;
+  bottom: auto;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  left: 0;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  background-color: #ffccc1;
+  border-color: #ff313c;
+  clear: both;
+}
+
+/* line 2072, main.scss */
+.hide_size .typographicsize {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* line 2080, main.scss */
+.show_measurements .words .asc_desc {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  left: 0;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  top: -1.96em;
+  margin-bottom: -2em;
+  margin-top: 0;
+  border-color: #7aff9d;
+  clear: both;
+}
+
+/* line 2108, main.scss */
+.hide_asc_desc .asc_desc {
+  border-color: transparent;
+}
+
+/* line 2112, main.scss */
+.make_monospaced .words .char {
+  width: 0.6em;
+  text-align: center;
+}
+
+/* line 2119, main.scss */
+.show_measurements .words .char {
+  top: 0em;
+  display: inline-block;
+  position: relative;
+  border-right: 1px solid #ff98b5;
+  margin-right: -1px !important;
+  vertical-align: bottom;
+}
+
+/* line 2142, main.scss */
+.hide_char .words .char {
+  border-right: none;
+}
+
+/*
+.measuring_fonts {
+	font-size: $Type_Size_Measuring;
+}
+*/
+/* line 2152, main.scss */
+.measuring_square {
+  height: 1ex;
+  width: 10px;
+  background-color: #f30;
+  display: inline-block;
+}
+
+/* line 2159, main.scss */
+.fixbaseline {
+  width: 0 !important;
+  display: inline-block;
+  opacity: 0;
+  height: auto;
+  clear: none;
+  color: green;
+  white-space: nowrap;
+}
+
+/* line 2291, main.scss */
+.show_frequency .e {
+  color: black;
+}
+
+/* line 2291, main.scss */
+.show_frequency .t {
+  color: rgba(0, 0, 0, 0.74236);
+}
+
+/* line 2291, main.scss */
+.show_frequency .a {
+  color: rgba(0, 0, 0, 0.64353);
+}
+
+/* line 2291, main.scss */
+.show_frequency .o {
+  color: rgba(0, 0, 0, 0.61164);
+}
+
+/* line 2291, main.scss */
+.show_frequency .i {
+  color: rgba(0, 0, 0, 0.6058);
+}
+
+/* line 2291, main.scss */
+.show_frequency .n {
+  color: rgba(0, 0, 0, 0.57907);
+}
+
+/* line 2291, main.scss */
+.show_frequency .s {
+  color: rgba(0, 0, 0, 0.52134);
+}
+
+/* line 2291, main.scss */
+.show_frequency .r {
+  color: rgba(0, 0, 0, 0.5027);
+}
+
+/* line 2291, main.scss */
+.show_frequency .h {
+  color: rgba(0, 0, 0, 0.40454);
+}
+
+/* line 2291, main.scss */
+.show_frequency .l {
+  color: rgba(0, 0, 0, 0.3257);
+}
+
+/* line 2291, main.scss */
+.show_frequency .d {
+  color: rgba(0, 0, 0, 0.30548);
+}
+
+/* line 2291, main.scss */
+.show_frequency .c {
+  color: rgba(0, 0, 0, 0.26774);
+}
+
+/* line 2291, main.scss */
+.show_frequency .u {
+  color: rgba(0, 0, 0, 0.21855);
+}
+
+/* line 2291, main.scss */
+.show_frequency .m {
+  color: rgba(0, 0, 0, 0.20103);
+}
+
+/* line 2291, main.scss */
+.show_frequency .f {
+  color: rgba(0, 0, 0, 0.19227);
+}
+
+/* line 2291, main.scss */
+.show_frequency .p {
+  color: rgba(0, 0, 0, 0.17093);
+}
+
+/* line 2291, main.scss */
+.show_frequency .g {
+  color: rgba(0, 0, 0, 0.1496);
+}
+
+/* line 2291, main.scss */
+.show_frequency .w {
+  color: rgba(0, 0, 0, 0.1341);
+}
+
+/* line 2291, main.scss */
+.show_frequency .y {
+  color: rgba(0, 0, 0, 0.1332);
+}
+
+/* line 2291, main.scss */
+.show_frequency .b {
+  color: rgba(0, 0, 0, 0.11882);
+}
+
+/* line 2291, main.scss */
+.show_frequency .v {
+  color: rgba(0, 0, 0, 0.08423);
+}
+
+/* line 2291, main.scss */
+.show_frequency .k {
+  color: rgba(0, 0, 0, 0.04335);
+}
+
+/* line 2291, main.scss */
+.show_frequency .x {
+  color: rgba(0, 0, 0, 0.01887);
+}
+
+/* line 2291, main.scss */
+.show_frequency .j {
+  color: rgba(0, 0, 0, 0.0128);
+}
+
+/* line 2291, main.scss */
+.show_frequency .q {
+  color: rgba(0, 0, 0, 0.00966);
+}
+
+/* line 2291, main.scss */
+.show_frequency .z {
+  color: rgba(0, 0, 0, 0.00719);
+}
+
+/* line 2298, main.scss */
+.show_frequency .E {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .T {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .A {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .O {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .I {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .N {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .S {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .R {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .H {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .L {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .D {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .C {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .U {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .M {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .F {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .P {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .G {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .W {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .Y {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .B {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .V {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .K {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .X {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .J {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .Q {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2298, main.scss */
+.show_frequency .Z {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .a {
+  color: rgba(0, 0, 0, 0.59266);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .b {
+  color: rgba(0, 0, 0, 0.11046);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .c {
+  color: rgba(0, 0, 0, 0.21964);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .d {
+  color: rgba(0, 0, 0, 0.32076);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .e {
+  color: black;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .f {
+  color: rgba(0, 0, 0, 0.09597);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .g {
+  color: rgba(0, 0, 0, 0.13026);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .h {
+  color: rgba(0, 0, 0, 0.20906);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .i {
+  color: rgba(0, 0, 0, 0.48122);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .j {
+  color: rgba(0, 0, 0, 0.02397);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .k {
+  color: rgba(0, 0, 0, 0.03825);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .l {
+  color: rgba(0, 0, 0, 0.30421);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .m {
+  color: rgba(0, 0, 0, 0.18821);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .n {
+  color: rgba(0, 0, 0, 0.51592);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .o {
+  color: rgba(0, 0, 0, 0.41097);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .p {
+  color: rgba(0, 0, 0, 0.12978);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .q {
+  color: rgba(0, 0, 0, 0.04001);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .r {
+  color: rgba(0, 0, 0, 0.44928);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .s {
+  color: rgba(0, 0, 0, 0.50219);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .t {
+  color: rgba(0, 0, 0, 0.46071);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .u {
+  color: rgba(0, 0, 0, 0.29497);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .v {
+  color: rgba(0, 0, 0, 0.07807);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .w {
+  color: rgba(0, 0, 0, 0.07436);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .x {
+  color: rgba(0, 0, 0, 0.01405);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .y {
+  color: rgba(0, 0, 0, 0.05356);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .z {
+  color: rgba(0, 0, 0, 0.03489);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ß {
+  color: rgba(0, 0, 0, 0.00522);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .à {
+  color: rgba(0, 0, 0, 0.00827);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .á {
+  color: rgba(0, 0, 0, 0.00854);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .â {
+  color: rgba(0, 0, 0, 0.00087);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ã {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ä {
+  color: rgba(0, 0, 0, 0.0076);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .å {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .æ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ç {
+  color: rgba(0, 0, 0, 0.00145);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .è {
+  color: rgba(0, 0, 0, 0.00461);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .é {
+  color: rgba(0, 0, 0, 0.03295);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ê {
+  color: rgba(0, 0, 0, 0.00383);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ë {
+  color: rgba(0, 0, 0, 2.0e-05);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ì {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .í {
+  color: rgba(0, 0, 0, 0.01233);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .î {
+  color: rgba(0, 0, 0, 0.00077);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ï {
+  color: rgba(0, 0, 0, 9.0e-05);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ð {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ñ {
+  color: rgba(0, 0, 0, 0.00529);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ò {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ó {
+  color: rgba(0, 0, 0, 0.01407);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ô {
+  color: rgba(0, 0, 0, 0.00039);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ö {
+  color: rgba(0, 0, 0, 0.00975);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ø {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ù {
+  color: rgba(0, 0, 0, 0.00099);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ú {
+  color: rgba(0, 0, 0, 0.00286);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ü {
+  color: rgba(0, 0, 0, 0.01713);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ý {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .þ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ą {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ć {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ĉ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ę {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ĝ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ğ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ĥ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ı {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ĵ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ł {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ń {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .œ {
+  color: rgba(0, 0, 0, 0.00031);
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ś {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ŝ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ş {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ŭ {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ź {
+  color: transparent;
+}
+
+/* line 2309, main.scss */
+.en_es_fr_de .ż {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .a {
+  color: rgba(0, 0, 0, 0.77553);
+}
+
+/* line 2316, main.scss */
+.en_es .b {
+  color: rgba(0, 0, 0, 0.13894);
+}
+
+/* line 2316, main.scss */
+.en_es .c {
+  color: rgba(0, 0, 0, 0.2594);
+}
+
+/* line 2316, main.scss */
+.en_es .d {
+  color: rgba(0, 0, 0, 0.37903);
+}
+
+/* line 2316, main.scss */
+.en_es .e {
+  color: black;
+}
+
+/* line 2316, main.scss */
+.en_es .f {
+  color: rgba(0, 0, 0, 0.10944);
+}
+
+/* line 2316, main.scss */
+.en_es .g {
+  color: rgba(0, 0, 0, 0.14179);
+}
+
+/* line 2316, main.scss */
+.en_es .h {
+  color: rgba(0, 0, 0, 0.25475);
+}
+
+/* line 2316, main.scss */
+.en_es .i {
+  color: rgba(0, 0, 0, 0.49522);
+}
+
+/* line 2316, main.scss */
+.en_es .j {
+  color: rgba(0, 0, 0, 0.02234);
+}
+
+/* line 2316, main.scss */
+.en_es .k {
+  color: rgba(0, 0, 0, 0.02935);
+}
+
+/* line 2316, main.scss */
+.en_es .l {
+  color: rgba(0, 0, 0, 0.33702);
+}
+
+/* line 2316, main.scss */
+.en_es .m {
+  color: rgba(0, 0, 0, 0.2085);
+}
+
+/* line 2316, main.scss */
+.en_es .n {
+  color: rgba(0, 0, 0, 0.50451);
+}
+
+/* line 2316, main.scss */
+.en_es .o {
+  color: rgba(0, 0, 0, 0.6068);
+}
+
+/* line 2316, main.scss */
+.en_es .p {
+  color: rgba(0, 0, 0, 0.16637);
+}
+
+/* line 2316, main.scss */
+.en_es .q {
+  color: rgba(0, 0, 0, 0.03643);
+}
+
+/* line 2316, main.scss */
+.en_es .r {
+  color: rgba(0, 0, 0, 0.48191);
+}
+
+/* line 2316, main.scss */
+.en_es .s {
+  color: rgba(0, 0, 0, 0.53611);
+}
+
+/* line 2316, main.scss */
+.en_es .t {
+  color: rgba(0, 0, 0, 0.51302);
+}
+
+/* line 2316, main.scss */
+.en_es .u {
+  color: rgba(0, 0, 0, 0.25055);
+}
+
+/* line 2316, main.scss */
+.en_es .v {
+  color: rgba(0, 0, 0, 0.07931);
+}
+
+/* line 2316, main.scss */
+.en_es .w {
+  color: rgba(0, 0, 0, 0.08909);
+}
+
+/* line 2316, main.scss */
+.en_es .x {
+  color: rgba(0, 0, 0, 0.01368);
+}
+
+/* line 2316, main.scss */
+.en_es .y {
+  color: rgba(0, 0, 0, 0.11176);
+}
+
+/* line 2316, main.scss */
+.en_es .z {
+  color: rgba(0, 0, 0, 0.02215);
+}
+
+/* line 2316, main.scss */
+.en_es .ß {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .à {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .á {
+  color: rgba(0, 0, 0, 0.01881);
+}
+
+/* line 2316, main.scss */
+.en_es .â {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ã {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ä {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .å {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .æ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ç {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .è {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .é {
+  color: rgba(0, 0, 0, 0.01623);
+}
+
+/* line 2316, main.scss */
+.en_es .ê {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ë {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ì {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .í {
+  color: rgba(0, 0, 0, 0.02717);
+}
+
+/* line 2316, main.scss */
+.en_es .î {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ï {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ð {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ñ {
+  color: rgba(0, 0, 0, 0.01166);
+}
+
+/* line 2316, main.scss */
+.en_es .ò {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ó {
+  color: rgba(0, 0, 0, 0.031);
+}
+
+/* line 2316, main.scss */
+.en_es .ô {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ö {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ø {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ù {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ú {
+  color: rgba(0, 0, 0, 0.0063);
+}
+
+/* line 2316, main.scss */
+.en_es .ü {
+  color: rgba(0, 0, 0, 0.00045);
+}
+
+/* line 2316, main.scss */
+.en_es .ý {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .þ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ą {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ć {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ĉ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ę {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ĝ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ğ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ĥ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ı {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ĵ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ł {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ń {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .œ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ś {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ŝ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ş {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ŭ {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ź {
+  color: transparent;
+}
+
+/* line 2316, main.scss */
+.en_es .ż {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .a {
+  color: rgba(0, 0, 0, 0.51902);
+}
+
+/* line 2323, main.scss */
+.french .b {
+  color: rgba(0, 0, 0, 0.06114);
+}
+
+/* line 2323, main.scss */
+.french .c {
+  color: rgba(0, 0, 0, 0.22147);
+}
+
+/* line 2323, main.scss */
+.french .d {
+  color: rgba(0, 0, 0, 0.24932);
+}
+
+/* line 2323, main.scss */
+.french .e {
+  color: black;
+}
+
+/* line 2323, main.scss */
+.french .f {
+  color: rgba(0, 0, 0, 0.07269);
+}
+
+/* line 2323, main.scss */
+.french .g {
+  color: rgba(0, 0, 0, 0.0591);
+}
+
+/* line 2323, main.scss */
+.french .h {
+  color: rgba(0, 0, 0, 0.05027);
+}
+
+/* line 2323, main.scss */
+.french .i {
+  color: rgba(0, 0, 0, 0.51155);
+}
+
+/* line 2323, main.scss */
+.french .j {
+  color: rgba(0, 0, 0, 0.03736);
+}
+
+/* line 2323, main.scss */
+.french .k {
+  color: rgba(0, 0, 0, 0.0034);
+}
+
+/* line 2323, main.scss */
+.french .l {
+  color: rgba(0, 0, 0, 0.37092);
+}
+
+/* line 2323, main.scss */
+.french .m {
+  color: rgba(0, 0, 0, 0.20177);
+}
+
+/* line 2323, main.scss */
+.french .n {
+  color: rgba(0, 0, 0, 0.48234);
+}
+
+/* line 2323, main.scss */
+.french .o {
+  color: rgba(0, 0, 0, 0.36549);
+}
+
+/* line 2323, main.scss */
+.french .p {
+  color: rgba(0, 0, 0, 0.1712);
+}
+
+/* line 2323, main.scss */
+.french .q {
+  color: rgba(0, 0, 0, 0.09239);
+}
+
+/* line 2323, main.scss */
+.french .r {
+  color: rgba(0, 0, 0, 0.44497);
+}
+
+/* line 2323, main.scss */
+.french .s {
+  color: rgba(0, 0, 0, 0.54008);
+}
+
+/* line 2323, main.scss */
+.french .t {
+  color: rgba(0, 0, 0, 0.49185);
+}
+
+/* line 2323, main.scss */
+.french .u {
+  color: rgba(0, 0, 0, 0.42867);
+}
+
+/* line 2323, main.scss */
+.french .v {
+  color: rgba(0, 0, 0, 0.11073);
+}
+
+/* line 2323, main.scss */
+.french .w {
+  color: rgba(0, 0, 0, 0.00476);
+}
+
+/* line 2323, main.scss */
+.french .x {
+  color: rgba(0, 0, 0, 0.02921);
+}
+
+/* line 2323, main.scss */
+.french .y {
+  color: rgba(0, 0, 0, 0.00883);
+}
+
+/* line 2323, main.scss */
+.french .z {
+  color: rgba(0, 0, 0, 0.02242);
+}
+
+/* line 2323, main.scss */
+.french .ß {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .à {
+  color: rgba(0, 0, 0, 0.03329);
+}
+
+/* line 2323, main.scss */
+.french .á {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .â {
+  color: rgba(0, 0, 0, 0.0034);
+}
+
+/* line 2323, main.scss */
+.french .ã {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ä {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .å {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .æ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ç {
+  color: rgba(0, 0, 0, 0.00611);
+}
+
+/* line 2323, main.scss */
+.french .è {
+  color: rgba(0, 0, 0, 0.01834);
+}
+
+/* line 2323, main.scss */
+.french .é {
+  color: rgba(0, 0, 0, 0.1019);
+}
+
+/* line 2323, main.scss */
+.french .ê {
+  color: rgba(0, 0, 0, 0.01563);
+}
+
+/* line 2323, main.scss */
+.french .ë {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ì {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .í {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .î {
+  color: rgba(0, 0, 0, 0.0034);
+}
+
+/* line 2323, main.scss */
+.french .ï {
+  color: rgba(0, 0, 0, 0.00068);
+}
+
+/* line 2323, main.scss */
+.french .ð {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ñ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ò {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ó {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ô {
+  color: rgba(0, 0, 0, 0.00136);
+}
+
+/* line 2323, main.scss */
+.french .ö {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ø {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ù {
+  color: rgba(0, 0, 0, 0.00408);
+}
+
+/* line 2323, main.scss */
+.french .ú {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ü {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ý {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .þ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ą {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ć {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ĉ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ę {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ĝ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ğ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ĥ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ı {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ĵ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ł {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ń {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .œ {
+  color: rgba(0, 0, 0, 0.00136);
+}
+
+/* line 2323, main.scss */
+.french .ś {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ŝ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ş {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ŭ {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ź {
+  color: transparent;
+}
+
+/* line 2323, main.scss */
+.french .ż {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .a {
+  color: rgba(0, 0, 0, 0.37471);
+}
+
+/* line 2329, main.scss */
+.german .b {
+  color: rgba(0, 0, 0, 0.10862);
+}
+
+/* line 2329, main.scss */
+.german .c {
+  color: rgba(0, 0, 0, 0.1569);
+}
+
+/* line 2329, main.scss */
+.german .d {
+  color: rgba(0, 0, 0, 0.29195);
+}
+
+/* line 2329, main.scss */
+.german .e {
+  color: black;
+}
+
+/* line 2329, main.scss */
+.german .f {
+  color: rgba(0, 0, 0, 0.0954);
+}
+
+/* line 2329, main.scss */
+.german .g {
+  color: rgba(0, 0, 0, 0.17299);
+}
+
+/* line 2329, main.scss */
+.german .h {
+  color: rgba(0, 0, 0, 0.27356);
+}
+
+/* line 2329, main.scss */
+.german .i {
+  color: rgba(0, 0, 0, 0.43391);
+}
+
+/* line 2329, main.scss */
+.german .j {
+  color: rgba(0, 0, 0, 0.01552);
+}
+
+/* line 2329, main.scss */
+.german .k {
+  color: rgba(0, 0, 0, 0.08161);
+}
+
+/* line 2329, main.scss */
+.german .l {
+  color: rgba(0, 0, 0, 0.1977);
+}
+
+/* line 2329, main.scss */
+.german .m {
+  color: rgba(0, 0, 0, 0.1454);
+}
+
+/* line 2329, main.scss */
+.german .n {
+  color: rgba(0, 0, 0, 0.56207);
+}
+
+/* line 2329, main.scss */
+.german .o {
+  color: rgba(0, 0, 0, 0.14885);
+}
+
+/* line 2329, main.scss */
+.german .p {
+  color: rgba(0, 0, 0, 0.03851);
+}
+
+/* line 2329, main.scss */
+.german .q {
+  color: rgba(0, 0, 0, 0.00115);
+}
+
+/* line 2329, main.scss */
+.german .r {
+  color: rgba(0, 0, 0, 0.4023);
+}
+
+/* line 2329, main.scss */
+.german .s {
+  color: rgba(0, 0, 0, 0.41782);
+}
+
+/* line 2329, main.scss */
+.german .t {
+  color: rgba(0, 0, 0, 0.35345);
+}
+
+/* line 2329, main.scss */
+.german .u {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 2329, main.scss */
+.german .v {
+  color: rgba(0, 0, 0, 0.04885);
+}
+
+/* line 2329, main.scss */
+.german .w {
+  color: rgba(0, 0, 0, 0.11034);
+}
+
+/* line 2329, main.scss */
+.german .x {
+  color: rgba(0, 0, 0, 0.00172);
+}
+
+/* line 2329, main.scss */
+.german .y {
+  color: rgba(0, 0, 0, 0.0023);
+}
+
+/* line 2329, main.scss */
+.german .z {
+  color: rgba(0, 0, 0, 0.06494);
+}
+
+/* line 2329, main.scss */
+.german .ß {
+  color: rgba(0, 0, 0, 0.01782);
+}
+
+/* line 2329, main.scss */
+.german .à {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .á {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .â {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ã {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ä {
+  color: rgba(0, 0, 0, 0.02586);
+}
+
+/* line 2329, main.scss */
+.german .å {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .æ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ç {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .è {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .é {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ê {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ë {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ì {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .í {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .î {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ï {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ð {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ñ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ò {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ó {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ô {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ö {
+  color: rgba(0, 0, 0, 0.03276);
+}
+
+/* line 2329, main.scss */
+.german .ø {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ù {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ú {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ü {
+  color: rgba(0, 0, 0, 0.05747);
+}
+
+/* line 2329, main.scss */
+.german .ý {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .þ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ą {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ć {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ĉ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ę {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ĝ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ğ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ĥ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ı {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ĵ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ł {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ń {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .œ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ś {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ŝ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ş {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ŭ {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ź {
+  color: transparent;
+}
+
+/* line 2329, main.scss */
+.german .ż {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .a {
+  color: rgba(0, 0, 0, 0.91594);
+}
+
+/* line 2336, main.scss */
+.spanish .b {
+  color: rgba(0, 0, 0, 0.16228);
+}
+
+/* line 2336, main.scss */
+.spanish .c {
+  color: rgba(0, 0, 0, 0.30263);
+}
+
+/* line 2336, main.scss */
+.spanish .d {
+  color: rgba(0, 0, 0, 0.42836);
+}
+
+/* line 2336, main.scss */
+.spanish .e {
+  color: black;
+}
+
+/* line 2336, main.scss */
+.spanish .f {
+  color: rgba(0, 0, 0, 0.05044);
+}
+
+/* line 2336, main.scss */
+.spanish .g {
+  color: rgba(0, 0, 0, 0.12939);
+}
+
+/* line 2336, main.scss */
+.spanish .h {
+  color: rgba(0, 0, 0, 0.05117);
+}
+
+/* line 2336, main.scss */
+.spanish .i {
+  color: rgba(0, 0, 0, 0.45687);
+}
+
+/* line 2336, main.scss */
+.spanish .j {
+  color: rgba(0, 0, 0, 0.03216);
+}
+
+/* line 2336, main.scss */
+.spanish .k {
+  color: rgba(0, 0, 0, 0.00073);
+}
+
+/* line 2336, main.scss */
+.spanish .l {
+  color: rgba(0, 0, 0, 0.3633);
+}
+
+/* line 2336, main.scss */
+.spanish .m {
+  color: rgba(0, 0, 0, 0.23099);
+}
+
+/* line 2336, main.scss */
+.spanish .n {
+  color: rgba(0, 0, 0, 0.4905);
+}
+
+/* line 2336, main.scss */
+.spanish .o {
+  color: rgba(0, 0, 0, 0.6345);
+}
+
+/* line 2336, main.scss */
+.spanish .p {
+  color: rgba(0, 0, 0, 0.18348);
+}
+
+/* line 2336, main.scss */
+.spanish .q {
+  color: rgba(0, 0, 0, 0.06433);
+}
+
+/* line 2336, main.scss */
+.spanish .r {
+  color: rgba(0, 0, 0, 0.50219);
+}
+
+/* line 2336, main.scss */
+.spanish .s {
+  color: rgba(0, 0, 0, 0.58333);
+}
+
+/* line 2336, main.scss */
+.spanish .t {
+  color: rgba(0, 0, 0, 0.33845);
+}
+
+/* line 2336, main.scss */
+.spanish .u {
+  color: rgba(0, 0, 0, 0.28728);
+}
+
+/* line 2336, main.scss */
+.spanish .v {
+  color: rgba(0, 0, 0, 0.08333);
+}
+
+/* line 2336, main.scss */
+.spanish .w {
+  color: rgba(0, 0, 0, 0.00146);
+}
+
+/* line 2336, main.scss */
+.spanish .x {
+  color: rgba(0, 0, 0, 0.01608);
+}
+
+/* line 2336, main.scss */
+.spanish .y {
+  color: rgba(0, 0, 0, 0.07383);
+}
+
+/* line 2336, main.scss */
+.spanish .z {
+  color: rgba(0, 0, 0, 0.03801);
+}
+
+/* line 2336, main.scss */
+.spanish .ß {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .à {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .á {
+  color: rgba(0, 0, 0, 0.03655);
+}
+
+/* line 2336, main.scss */
+.spanish .â {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ã {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ä {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .å {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .æ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ç {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .è {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .é {
+  color: rgba(0, 0, 0, 0.03143);
+}
+
+/* line 2336, main.scss */
+.spanish .ê {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ë {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ì {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .í {
+  color: rgba(0, 0, 0, 0.05336);
+}
+
+/* line 2336, main.scss */
+.spanish .î {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ï {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ð {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ñ {
+  color: rgba(0, 0, 0, 0.02266);
+}
+
+/* line 2336, main.scss */
+.spanish .ò {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ó {
+  color: rgba(0, 0, 0, 0.06067);
+}
+
+/* line 2336, main.scss */
+.spanish .ô {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ö {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ø {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ù {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ú {
+  color: rgba(0, 0, 0, 0.01243);
+}
+
+/* line 2336, main.scss */
+.spanish .ü {
+  color: rgba(0, 0, 0, 0.00073);
+}
+
+/* line 2336, main.scss */
+.spanish .ý {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .þ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ą {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ć {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ĉ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ę {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ĝ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ğ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ĥ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ı {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ĵ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ł {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ń {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .œ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ś {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ŝ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ş {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ŭ {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ź {
+  color: transparent;
+}
+
+/* line 2336, main.scss */
+.spanish .ż {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .a {
+  color: black;
+}
+
+/* line 2344, main.scss */
+.portuguese .b {
+  color: rgba(0, 0, 0, 0.07109);
+}
+
+/* line 2344, main.scss */
+.portuguese .c {
+  color: rgba(0, 0, 0, 0.26521);
+}
+
+/* line 2344, main.scss */
+.portuguese .d {
+  color: rgba(0, 0, 0, 0.34108);
+}
+
+/* line 2344, main.scss */
+.portuguese .e {
+  color: rgba(0, 0, 0, 0.85919);
+}
+
+/* line 2344, main.scss */
+.portuguese .f {
+  color: rgba(0, 0, 0, 0.06972);
+}
+
+/* line 2344, main.scss */
+.portuguese .g {
+  color: rgba(0, 0, 0, 0.08886);
+}
+
+/* line 2344, main.scss */
+.portuguese .h {
+  color: rgba(0, 0, 0, 0.05332);
+}
+
+/* line 2344, main.scss */
+.portuguese .i {
+  color: rgba(0, 0, 0, 0.4231);
+}
+
+/* line 2344, main.scss */
+.portuguese .j {
+  color: rgba(0, 0, 0, 0.02734);
+}
+
+/* line 2344, main.scss */
+.portuguese .k {
+  color: rgba(0, 0, 0, 0.00137);
+}
+
+/* line 2344, main.scss */
+.portuguese .l {
+  color: rgba(0, 0, 0, 0.19002);
+}
+
+/* line 2344, main.scss */
+.portuguese .m {
+  color: rgba(0, 0, 0, 0.32399);
+}
+
+/* line 2344, main.scss */
+.portuguese .n {
+  color: rgba(0, 0, 0, 0.34518);
+}
+
+/* line 2344, main.scss */
+.portuguese .o {
+  color: rgba(0, 0, 0, 0.73411);
+}
+
+/* line 2344, main.scss */
+.portuguese .p {
+  color: rgba(0, 0, 0, 0.17225);
+}
+
+/* line 2344, main.scss */
+.portuguese .q {
+  color: rgba(0, 0, 0, 0.08202);
+}
+
+/* line 2344, main.scss */
+.portuguese .r {
+  color: rgba(0, 0, 0, 0.44634);
+}
+
+/* line 2344, main.scss */
+.portuguese .s {
+  color: rgba(0, 0, 0, 0.53383);
+}
+
+/* line 2344, main.scss */
+.portuguese .t {
+  color: rgba(0, 0, 0, 0.32399);
+}
+
+/* line 2344, main.scss */
+.portuguese .u {
+  color: rgba(0, 0, 0, 0.31647);
+}
+
+/* line 2344, main.scss */
+.portuguese .v {
+  color: rgba(0, 0, 0, 0.11415);
+}
+
+/* line 2344, main.scss */
+.portuguese .w {
+  color: rgba(0, 0, 0, 0.00273);
+}
+
+/* line 2344, main.scss */
+.portuguese .x {
+  color: rgba(0, 0, 0, 0.01709);
+}
+
+/* line 2344, main.scss */
+.portuguese .y {
+  color: rgba(0, 0, 0, 0.00068);
+}
+
+/* line 2344, main.scss */
+.portuguese .z {
+  color: rgba(0, 0, 0, 0.03213);
+}
+
+/* line 2344, main.scss */
+.portuguese .ß {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .à {
+  color: rgba(0, 0, 0, 0.00478);
+}
+
+/* line 2344, main.scss */
+.portuguese .á {
+  color: rgba(0, 0, 0, 0.0082);
+}
+
+/* line 2344, main.scss */
+.portuguese .â {
+  color: rgba(0, 0, 0, 0.03828);
+}
+
+/* line 2344, main.scss */
+.portuguese .ã {
+  color: rgba(0, 0, 0, 0.0499);
+}
+
+/* line 2344, main.scss */
+.portuguese .ä {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .å {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .æ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ç {
+  color: rgba(0, 0, 0, 0.03623);
+}
+
+/* line 2344, main.scss */
+.portuguese .è {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .é {
+  color: rgba(0, 0, 0, 0.02324);
+}
+
+/* line 2344, main.scss */
+.portuguese .ê {
+  color: rgba(0, 0, 0, 0.03076);
+}
+
+/* line 2344, main.scss */
+.portuguese .ë {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ì {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .í {
+  color: rgba(0, 0, 0, 0.00889);
+}
+
+/* line 2344, main.scss */
+.portuguese .î {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ï {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ð {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ñ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ò {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ó {
+  color: rgba(0, 0, 0, 0.02051);
+}
+
+/* line 2344, main.scss */
+.portuguese .ô {
+  color: rgba(0, 0, 0, 0.04375);
+}
+
+/* line 2344, main.scss */
+.portuguese .ö {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ø {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ù {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ú {
+  color: rgba(0, 0, 0, 0.01435);
+}
+
+/* line 2344, main.scss */
+.portuguese .ü {
+  color: rgba(0, 0, 0, 0.00205);
+}
+
+/* line 2344, main.scss */
+.portuguese .ý {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .þ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ą {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ć {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ĉ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ę {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ĝ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ğ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ĥ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ı {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ĵ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ł {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ń {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .œ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ś {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ŝ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ş {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ŭ {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ź {
+  color: transparent;
+}
+
+/* line 2344, main.scss */
+.portuguese .ż {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .a {
+  color: black;
+}
+
+/* line 2352, main.scss */
+.esperanto .b {
+  color: rgba(0, 0, 0, 0.08086);
+}
+
+/* line 2352, main.scss */
+.esperanto .c {
+  color: rgba(0, 0, 0, 0.06436);
+}
+
+/* line 2352, main.scss */
+.esperanto .d {
+  color: rgba(0, 0, 0, 0.25083);
+}
+
+/* line 2352, main.scss */
+.esperanto .e {
+  color: rgba(0, 0, 0, 0.74257);
+}
+
+/* line 2352, main.scss */
+.esperanto .f {
+  color: rgba(0, 0, 0, 0.08581);
+}
+
+/* line 2352, main.scss */
+.esperanto .g {
+  color: rgba(0, 0, 0, 0.09653);
+}
+
+/* line 2352, main.scss */
+.esperanto .h {
+  color: rgba(0, 0, 0, 0.03135);
+}
+
+/* line 2352, main.scss */
+.esperanto .i {
+  color: rgba(0, 0, 0, 0.82591);
+}
+
+/* line 2352, main.scss */
+.esperanto .j {
+  color: rgba(0, 0, 0, 0.28878);
+}
+
+/* line 2352, main.scss */
+.esperanto .k {
+  color: rgba(0, 0, 0, 0.34323);
+}
+
+/* line 2352, main.scss */
+.esperanto .l {
+  color: rgba(0, 0, 0, 0.50743);
+}
+
+/* line 2352, main.scss */
+.esperanto .m {
+  color: rgba(0, 0, 0, 0.2467);
+}
+
+/* line 2352, main.scss */
+.esperanto .n {
+  color: rgba(0, 0, 0, 0.65677);
+}
+
+/* line 2352, main.scss */
+.esperanto .o {
+  color: rgba(0, 0, 0, 0.72442);
+}
+
+/* line 2352, main.scss */
+.esperanto .p {
+  color: rgba(0, 0, 0, 0.2269);
+}
+
+/* line 2352, main.scss */
+.esperanto .q {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .r {
+  color: rgba(0, 0, 0, 0.48762);
+}
+
+/* line 2352, main.scss */
+.esperanto .s {
+  color: rgba(0, 0, 0, 0.50248);
+}
+
+/* line 2352, main.scss */
+.esperanto .t {
+  color: rgba(0, 0, 0, 0.43564);
+}
+
+/* line 2352, main.scss */
+.esperanto .u {
+  color: rgba(0, 0, 0, 0.26238);
+}
+
+/* line 2352, main.scss */
+.esperanto .v {
+  color: rgba(0, 0, 0, 0.15677);
+}
+
+/* line 2352, main.scss */
+.esperanto .w {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .x {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .y {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .z {
+  color: rgba(0, 0, 0, 0.04043);
+}
+
+/* line 2352, main.scss */
+.esperanto .ß {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .à {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .á {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .â {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ã {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ä {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .å {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .æ {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ç {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .è {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .é {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ê {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ë {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ì {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .í {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .î {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ï {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ð {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ñ {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ò {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ó {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ô {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ö {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ø {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ù {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ú {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ü {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ý {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .þ {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ą {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ć {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ĉ {
+  color: rgba(0, 0, 0, 0.05446);
+}
+
+/* line 2352, main.scss */
+.esperanto .ę {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ĝ {
+  color: rgba(0, 0, 0, 0.05693);
+}
+
+/* line 2352, main.scss */
+.esperanto .ğ {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ĥ {
+  color: rgba(0, 0, 0, 0.00165);
+}
+
+/* line 2352, main.scss */
+.esperanto .ı {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ĵ {
+  color: rgba(0, 0, 0, 0.00495);
+}
+
+/* line 2352, main.scss */
+.esperanto .ł {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ń {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .œ {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ś {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ŝ {
+  color: rgba(0, 0, 0, 0.03218);
+}
+
+/* line 2352, main.scss */
+.esperanto .ş {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ŭ {
+  color: rgba(0, 0, 0, 0.0429);
+}
+
+/* line 2352, main.scss */
+.esperanto .ź {
+  color: transparent;
+}
+
+/* line 2352, main.scss */
+.esperanto .ż {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .a {
+  color: rgba(0, 0, 0, 0.99661);
+}
+
+/* line 2359, main.scss */
+.italian .b {
+  color: rgba(0, 0, 0, 0.07888);
+}
+
+/* line 2359, main.scss */
+.italian .c {
+  color: rgba(0, 0, 0, 0.38168);
+}
+
+/* line 2359, main.scss */
+.italian .d {
+  color: rgba(0, 0, 0, 0.31722);
+}
+
+/* line 2359, main.scss */
+.italian .e {
+  color: black;
+}
+
+/* line 2359, main.scss */
+.italian .f {
+  color: rgba(0, 0, 0, 0.09754);
+}
+
+/* line 2359, main.scss */
+.italian .g {
+  color: rgba(0, 0, 0, 0.1391);
+}
+
+/* line 2359, main.scss */
+.italian .h {
+  color: rgba(0, 0, 0, 0.05428);
+}
+
+/* line 2359, main.scss */
+.italian .i {
+  color: rgba(0, 0, 0, 0.95674);
+}
+
+/* line 2359, main.scss */
+.italian .j {
+  color: rgba(0, 0, 0, 0.00085);
+}
+
+/* line 2359, main.scss */
+.italian .k {
+  color: rgba(0, 0, 0, 0.00085);
+}
+
+/* line 2359, main.scss */
+.italian .l {
+  color: rgba(0, 0, 0, 0.55216);
+}
+
+/* line 2359, main.scss */
+.italian .m {
+  color: rgba(0, 0, 0, 0.21289);
+}
+
+/* line 2359, main.scss */
+.italian .n {
+  color: rgba(0, 0, 0, 0.58355);
+}
+
+/* line 2359, main.scss */
+.italian .o {
+  color: rgba(0, 0, 0, 0.83376);
+}
+
+/* line 2359, main.scss */
+.italian .p {
+  color: rgba(0, 0, 0, 0.25954);
+}
+
+/* line 2359, main.scss */
+.italian .q {
+  color: rgba(0, 0, 0, 0.04326);
+}
+
+/* line 2359, main.scss */
+.italian .r {
+  color: rgba(0, 0, 0, 0.54029);
+}
+
+/* line 2359, main.scss */
+.italian .s {
+  color: rgba(0, 0, 0, 0.42239);
+}
+
+/* line 2359, main.scss */
+.italian .t {
+  color: rgba(0, 0, 0, 0.47668);
+}
+
+/* line 2359, main.scss */
+.italian .u {
+  color: rgba(0, 0, 0, 0.2553);
+}
+
+/* line 2359, main.scss */
+.italian .v {
+  color: rgba(0, 0, 0, 0.17812);
+}
+
+/* line 2359, main.scss */
+.italian .w {
+  color: rgba(0, 0, 0, 0.00254);
+}
+
+/* line 2359, main.scss */
+.italian .x {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .y {
+  color: rgba(0, 0, 0, 0.0017);
+}
+
+/* line 2359, main.scss */
+.italian .z {
+  color: rgba(0, 0, 0, 0.10008);
+}
+
+/* line 2359, main.scss */
+.italian .ß {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .à {
+  color: rgba(0, 0, 0, 0.05428);
+}
+
+/* line 2359, main.scss */
+.italian .á {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .â {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ã {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ä {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .å {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .æ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ç {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .è {
+  color: rgba(0, 0, 0, 0.02205);
+}
+
+/* line 2359, main.scss */
+.italian .é {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ê {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ë {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ì {
+  color: rgba(0, 0, 0, 0.00254);
+}
+
+/* line 2359, main.scss */
+.italian .í {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .î {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ï {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ð {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ñ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ò {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ó {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ô {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ö {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ø {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ù {
+  color: rgba(0, 0, 0, 0.01442);
+}
+
+/* line 2359, main.scss */
+.italian .ú {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ü {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ý {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .þ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ą {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ć {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ĉ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ę {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ĝ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ğ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ĥ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ı {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ĵ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ł {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ń {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .œ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ś {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ŝ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ş {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ŭ {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ź {
+  color: transparent;
+}
+
+/* line 2359, main.scss */
+.italian .ż {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .a {
+  color: black;
+}
+
+/* line 2366, main.scss */
+.turkish .b {
+  color: rgba(0, 0, 0, 0.23826);
+}
+
+/* line 2366, main.scss */
+.turkish .c {
+  color: rgba(0, 0, 0, 0.08054);
+}
+
+/* line 2366, main.scss */
+.turkish .d {
+  color: rgba(0, 0, 0, 0.39513);
+}
+
+/* line 2366, main.scss */
+.turkish .e {
+  color: rgba(0, 0, 0, 0.74748);
+}
+
+/* line 2366, main.scss */
+.turkish .f {
+  color: rgba(0, 0, 0, 0.03859);
+}
+
+/* line 2366, main.scss */
+.turkish .g {
+  color: rgba(0, 0, 0, 0.10487);
+}
+
+/* line 2366, main.scss */
+.turkish .h {
+  color: rgba(0, 0, 0, 0.10151);
+}
+
+/* line 2366, main.scss */
+.turkish .i {
+  color: rgba(0, 0, 0, 0.72148);
+}
+
+/* line 2366, main.scss */
+.turkish .j {
+  color: rgba(0, 0, 0, 0.00252);
+}
+
+/* line 2366, main.scss */
+.turkish .k {
+  color: rgba(0, 0, 0, 0.39262);
+}
+
+/* line 2366, main.scss */
+.turkish .l {
+  color: rgba(0, 0, 0, 0.49664);
+}
+
+/* line 2366, main.scss */
+.turkish .m {
+  color: rgba(0, 0, 0, 0.3146);
+}
+
+/* line 2366, main.scss */
+.turkish .n {
+  color: rgba(0, 0, 0, 0.62836);
+}
+
+/* line 2366, main.scss */
+.turkish .o {
+  color: rgba(0, 0, 0, 0.20805);
+}
+
+/* line 2366, main.scss */
+.turkish .p {
+  color: rgba(0, 0, 0, 0.07466);
+}
+
+/* line 2366, main.scss */
+.turkish .q {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .r {
+  color: rgba(0, 0, 0, 0.56376);
+}
+
+/* line 2366, main.scss */
+.turkish .s {
+  color: rgba(0, 0, 0, 0.25252);
+}
+
+/* line 2366, main.scss */
+.turkish .t {
+  color: rgba(0, 0, 0, 0.27768);
+}
+
+/* line 2366, main.scss */
+.turkish .u {
+  color: rgba(0, 0, 0, 0.27181);
+}
+
+/* line 2366, main.scss */
+.turkish .v {
+  color: rgba(0, 0, 0, 0.08054);
+}
+
+/* line 2366, main.scss */
+.turkish .w {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .x {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .y {
+  color: rgba(0, 0, 0, 0.2802);
+}
+
+/* line 2366, main.scss */
+.turkish .z {
+  color: rgba(0, 0, 0, 0.12584);
+}
+
+/* line 2366, main.scss */
+.turkish .ß {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .à {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .á {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .â {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ã {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ä {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .å {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .æ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ç {
+  color: rgba(0, 0, 0, 0.09732);
+}
+
+/* line 2366, main.scss */
+.turkish .è {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .é {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ê {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ë {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ì {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .í {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .î {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ï {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ð {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ñ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ò {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ó {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ô {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ö {
+  color: rgba(0, 0, 0, 0.06544);
+}
+
+/* line 2366, main.scss */
+.turkish .ø {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ù {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ú {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ü {
+  color: rgba(0, 0, 0, 0.1552);
+}
+
+/* line 2366, main.scss */
+.turkish .ý {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .þ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ą {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ć {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ĉ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ę {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ĝ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ğ {
+  color: rgba(0, 0, 0, 0.0948);
+}
+
+/* line 2366, main.scss */
+.turkish .ĥ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ı {
+  color: rgba(0, 0, 0, 0.42903);
+}
+
+/* line 2366, main.scss */
+.turkish .ĵ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ł {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ń {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .œ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ś {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ŝ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ş {
+  color: rgba(0, 0, 0, 0.14933);
+}
+
+/* line 2366, main.scss */
+.turkish .ŭ {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ź {
+  color: transparent;
+}
+
+/* line 2366, main.scss */
+.turkish .ż {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .a {
+  color: rgba(0, 0, 0, 0.92414);
+}
+
+/* line 2373, main.scss */
+.swedish .b {
+  color: rgba(0, 0, 0, 0.15172);
+}
+
+/* line 2373, main.scss */
+.swedish .c {
+  color: rgba(0, 0, 0, 0.1468);
+}
+
+/* line 2373, main.scss */
+.swedish .d {
+  color: rgba(0, 0, 0, 0.46305);
+}
+
+/* line 2373, main.scss */
+.swedish .e {
+  color: black;
+}
+
+/* line 2373, main.scss */
+.swedish .f {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 2373, main.scss */
+.swedish .g {
+  color: rgba(0, 0, 0, 0.28177);
+}
+
+/* line 2373, main.scss */
+.swedish .h {
+  color: rgba(0, 0, 0, 0.20591);
+}
+
+/* line 2373, main.scss */
+.swedish .i {
+  color: rgba(0, 0, 0, 0.5734);
+}
+
+/* line 2373, main.scss */
+.swedish .j {
+  color: rgba(0, 0, 0, 0.0601);
+}
+
+/* line 2373, main.scss */
+.swedish .k {
+  color: rgba(0, 0, 0, 0.30936);
+}
+
+/* line 2373, main.scss */
+.swedish .l {
+  color: rgba(0, 0, 0, 0.5202);
+}
+
+/* line 2373, main.scss */
+.swedish .m {
+  color: rgba(0, 0, 0, 0.34187);
+}
+
+/* line 2373, main.scss */
+.swedish .n {
+  color: rgba(0, 0, 0, 0.84138);
+}
+
+/* line 2373, main.scss */
+.swedish .o {
+  color: rgba(0, 0, 0, 0.44138);
+}
+
+/* line 2373, main.scss */
+.swedish .p {
+  color: rgba(0, 0, 0, 0.18128);
+}
+
+/* line 2373, main.scss */
+.swedish .q {
+  color: rgba(0, 0, 0, 0.00197);
+}
+
+/* line 2373, main.scss */
+.swedish .r {
+  color: rgba(0, 0, 0, 0.83054);
+}
+
+/* line 2373, main.scss */
+.swedish .s {
+  color: rgba(0, 0, 0, 0.64926);
+}
+
+/* line 2373, main.scss */
+.swedish .t {
+  color: rgba(0, 0, 0, 0.75764);
+}
+
+/* line 2373, main.scss */
+.swedish .u {
+  color: rgba(0, 0, 0, 0.18916);
+}
+
+/* line 2373, main.scss */
+.swedish .v {
+  color: rgba(0, 0, 0, 0.23842);
+}
+
+/* line 2373, main.scss */
+.swedish .w {
+  color: rgba(0, 0, 0, 0.01379);
+}
+
+/* line 2373, main.scss */
+.swedish .x {
+  color: rgba(0, 0, 0, 0.01576);
+}
+
+/* line 2373, main.scss */
+.swedish .y {
+  color: rgba(0, 0, 0, 0.06995);
+}
+
+/* line 2373, main.scss */
+.swedish .z {
+  color: rgba(0, 0, 0, 0.0069);
+}
+
+/* line 2373, main.scss */
+.swedish .ß {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .à {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .á {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .â {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ã {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ä {
+  color: rgba(0, 0, 0, 0.17734);
+}
+
+/* line 2373, main.scss */
+.swedish .å {
+  color: rgba(0, 0, 0, 0.13202);
+}
+
+/* line 2373, main.scss */
+.swedish .æ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ç {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .è {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .é {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ê {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ë {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ì {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .í {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .î {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ï {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ð {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ñ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ò {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ó {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ô {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ö {
+  color: rgba(0, 0, 0, 0.12906);
+}
+
+/* line 2373, main.scss */
+.swedish .ø {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ù {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ú {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ü {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ý {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .þ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ą {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ć {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ĉ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ę {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ĝ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ğ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ĥ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ı {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ĵ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ł {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ń {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .œ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ś {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ŝ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ş {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ŭ {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ź {
+  color: transparent;
+}
+
+/* line 2373, main.scss */
+.swedish .ż {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .a {
+  color: black;
+}
+
+/* line 2380, main.scss */
+.polish .b {
+  color: rgba(0, 0, 0, 0.1513);
+}
+
+/* line 2380, main.scss */
+.polish .c {
+  color: rgba(0, 0, 0, 0.33913);
+}
+
+/* line 2380, main.scss */
+.polish .d {
+  color: rgba(0, 0, 0, 0.36783);
+}
+
+/* line 2380, main.scss */
+.polish .e {
+  color: rgba(0, 0, 0, 0.72609);
+}
+
+/* line 2380, main.scss */
+.polish .f {
+  color: rgba(0, 0, 0, 0.01217);
+}
+
+/* line 2380, main.scss */
+.polish .g {
+  color: rgba(0, 0, 0, 0.15043);
+}
+
+/* line 2380, main.scss */
+.polish .h {
+  color: rgba(0, 0, 0, 0.0887);
+}
+
+/* line 2380, main.scss */
+.polish .i {
+  color: rgba(0, 0, 0, 0.8113);
+}
+
+/* line 2380, main.scss */
+.polish .j {
+  color: rgba(0, 0, 0, 0.16);
+}
+
+/* line 2380, main.scss */
+.polish .k {
+  color: rgba(0, 0, 0, 0.23913);
+}
+
+/* line 2380, main.scss */
+.polish .l {
+  color: rgba(0, 0, 0, 0.26609);
+}
+
+/* line 2380, main.scss */
+.polish .m {
+  color: rgba(0, 0, 0, 0.21913);
+}
+
+/* line 2380, main.scss */
+.polish .n {
+  color: rgba(0, 0, 0, 0.58609);
+}
+
+/* line 2380, main.scss */
+.polish .o {
+  color: rgba(0, 0, 0, 0.62348);
+}
+
+/* line 2380, main.scss */
+.polish .p {
+  color: rgba(0, 0, 0, 0.21304);
+}
+
+/* line 2380, main.scss */
+.polish .q {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .r {
+  color: rgba(0, 0, 0, 0.49913);
+}
+
+/* line 2380, main.scss */
+.polish .s {
+  color: rgba(0, 0, 0, 0.54087);
+}
+
+/* line 2380, main.scss */
+.polish .t {
+  color: rgba(0, 0, 0, 0.21565);
+}
+
+/* line 2380, main.scss */
+.polish .u {
+  color: rgba(0, 0, 0, 0.17913);
+}
+
+/* line 2380, main.scss */
+.polish .v {
+  color: rgba(0, 0, 0, 0.00087);
+}
+
+/* line 2380, main.scss */
+.polish .w {
+  color: rgba(0, 0, 0, 0.5487);
+}
+
+/* line 2380, main.scss */
+.polish .x {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .y {
+  color: rgba(0, 0, 0, 0.27913);
+}
+
+/* line 2380, main.scss */
+.polish .z {
+  color: rgba(0, 0, 0, 0.5087);
+}
+
+/* line 2380, main.scss */
+.polish .ß {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .à {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .á {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .â {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ã {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ä {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .å {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .æ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ç {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .è {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .é {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ê {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ë {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ì {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .í {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .î {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ï {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ð {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ñ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ò {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ó {
+  color: rgba(0, 0, 0, 0.09913);
+}
+
+/* line 2380, main.scss */
+.polish .ô {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ö {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ø {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ù {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ú {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ü {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ý {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .þ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ą {
+  color: rgba(0, 0, 0, 0.06087);
+}
+
+/* line 2380, main.scss */
+.polish .ć {
+  color: rgba(0, 0, 0, 0.06435);
+}
+
+/* line 2380, main.scss */
+.polish .ĉ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ę {
+  color: rgba(0, 0, 0, 0.09043);
+}
+
+/* line 2380, main.scss */
+.polish .ĝ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ğ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ĥ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ı {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ĵ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ł {
+  color: rgba(0, 0, 0, 0.18348);
+}
+
+/* line 2380, main.scss */
+.polish .ń {
+  color: rgba(0, 0, 0, 0.0313);
+}
+
+/* line 2380, main.scss */
+.polish .œ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ś {
+  color: rgba(0, 0, 0, 0.07043);
+}
+
+/* line 2380, main.scss */
+.polish .ŝ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ş {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ŭ {
+  color: transparent;
+}
+
+/* line 2380, main.scss */
+.polish .ź {
+  color: rgba(0, 0, 0, 0.00696);
+}
+
+/* line 2380, main.scss */
+.polish .ż {
+  color: rgba(0, 0, 0, 0.06174);
+}
+
+/* line 2387, main.scss */
+.dutch .a {
+  color: rgba(0, 0, 0, 0.39609);
+}
+
+/* line 2387, main.scss */
+.dutch .b {
+  color: rgba(0, 0, 0, 0.08355);
+}
+
+/* line 2387, main.scss */
+.dutch .c {
+  color: rgba(0, 0, 0, 0.06557);
+}
+
+/* line 2387, main.scss */
+.dutch .d {
+  color: rgba(0, 0, 0, 0.31359);
+}
+
+/* line 2387, main.scss */
+.dutch .e {
+  color: black;
+}
+
+/* line 2387, main.scss */
+.dutch .f {
+  color: rgba(0, 0, 0, 0.04283);
+}
+
+/* line 2387, main.scss */
+.dutch .g {
+  color: rgba(0, 0, 0, 0.1798);
+}
+
+/* line 2387, main.scss */
+.dutch .h {
+  color: rgba(0, 0, 0, 0.12586);
+}
+
+/* line 2387, main.scss */
+.dutch .i {
+  color: rgba(0, 0, 0, 0.34373);
+}
+
+/* line 2387, main.scss */
+.dutch .j {
+  color: rgba(0, 0, 0, 0.07721);
+}
+
+/* line 2387, main.scss */
+.dutch .k {
+  color: rgba(0, 0, 0, 0.11898);
+}
+
+/* line 2387, main.scss */
+.dutch .l {
+  color: rgba(0, 0, 0, 0.18879);
+}
+
+/* line 2387, main.scss */
+.dutch .m {
+  color: rgba(0, 0, 0, 0.11687);
+}
+
+/* line 2387, main.scss */
+.dutch .n {
+  color: rgba(0, 0, 0, 0.53041);
+}
+
+/* line 2387, main.scss */
+.dutch .o {
+  color: rgba(0, 0, 0, 0.32047);
+}
+
+/* line 2387, main.scss */
+.dutch .p {
+  color: rgba(0, 0, 0, 0.07245);
+}
+
+/* line 2387, main.scss */
+.dutch .q {
+  color: rgba(0, 0, 0, 0.00053);
+}
+
+/* line 2387, main.scss */
+.dutch .r {
+  color: rgba(0, 0, 0, 0.33897);
+}
+
+/* line 2387, main.scss */
+.dutch .s {
+  color: rgba(0, 0, 0, 0.30301);
+}
+
+/* line 2387, main.scss */
+.dutch .t {
+  color: rgba(0, 0, 0, 0.36594);
+}
+
+/* line 2387, main.scss */
+.dutch .u {
+  color: rgba(0, 0, 0, 0.11581);
+}
+
+/* line 2387, main.scss */
+.dutch .v {
+  color: rgba(0, 0, 0, 0.09783);
+}
+
+/* line 2387, main.scss */
+.dutch .w {
+  color: rgba(0, 0, 0, 0.09625);
+}
+
+/* line 2387, main.scss */
+.dutch .x {
+  color: rgba(0, 0, 0, 0.00212);
+}
+
+/* line 2387, main.scss */
+.dutch .y {
+  color: rgba(0, 0, 0, 0.00212);
+}
+
+/* line 2387, main.scss */
+.dutch .z {
+  color: rgba(0, 0, 0, 0.07245);
+}
+
+/* line 2387, main.scss */
+.dutch .ß {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .à {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .á {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .â {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ã {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ä {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .å {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .æ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ç {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .è {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .é {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ê {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ë {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ì {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .í {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .î {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ï {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ð {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ñ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ò {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ó {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ô {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ö {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ø {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ù {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ú {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ü {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ý {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .þ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ą {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ć {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ĉ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ę {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ĝ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ğ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ĥ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ı {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ĵ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ł {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ń {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .œ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ś {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ŝ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ş {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ŭ {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ź {
+  color: transparent;
+}
+
+/* line 2387, main.scss */
+.dutch .ż {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .a {
+  color: rgba(0, 0, 0, 0.39029);
+}
+
+/* line 2394, main.scss */
+.danish .b {
+  color: rgba(0, 0, 0, 0.12945);
+}
+
+/* line 2394, main.scss */
+.danish .c {
+  color: rgba(0, 0, 0, 0.03689);
+}
+
+/* line 2394, main.scss */
+.danish .d {
+  color: rgba(0, 0, 0, 0.37929);
+}
+
+/* line 2394, main.scss */
+.danish .e {
+  color: black;
+}
+
+/* line 2394, main.scss */
+.danish .f {
+  color: rgba(0, 0, 0, 0.15599);
+}
+
+/* line 2394, main.scss */
+.danish .g {
+  color: rgba(0, 0, 0, 0.26408);
+}
+
+/* line 2394, main.scss */
+.danish .h {
+  color: rgba(0, 0, 0, 0.10485);
+}
+
+/* line 2394, main.scss */
+.danish .i {
+  color: rgba(0, 0, 0, 0.38835);
+}
+
+/* line 2394, main.scss */
+.danish .j {
+  color: rgba(0, 0, 0, 0.04725);
+}
+
+/* line 2394, main.scss */
+.danish .k {
+  color: rgba(0, 0, 0, 0.22006);
+}
+
+/* line 2394, main.scss */
+.danish .l {
+  color: rgba(0, 0, 0, 0.33851);
+}
+
+/* line 2394, main.scss */
+.danish .m {
+  color: rgba(0, 0, 0, 0.20971);
+}
+
+/* line 2394, main.scss */
+.danish .n {
+  color: rgba(0, 0, 0, 0.46861);
+}
+
+/* line 2394, main.scss */
+.danish .o {
+  color: rgba(0, 0, 0, 0.30032);
+}
+
+/* line 2394, main.scss */
+.danish .p {
+  color: rgba(0, 0, 0, 0.11392);
+}
+
+/* line 2394, main.scss */
+.danish .q {
+  color: rgba(0, 0, 0, 0.00065);
+}
+
+/* line 2394, main.scss */
+.danish .r {
+  color: rgba(0, 0, 0, 0.57994);
+}
+
+/* line 2394, main.scss */
+.danish .s {
+  color: rgba(0, 0, 0, 0.37605);
+}
+
+/* line 2394, main.scss */
+.danish .t {
+  color: rgba(0, 0, 0, 0.44401);
+}
+
+/* line 2394, main.scss */
+.danish .u {
+  color: rgba(0, 0, 0, 0.12816);
+}
+
+/* line 2394, main.scss */
+.danish .v {
+  color: rgba(0, 0, 0, 0.15081);
+}
+
+/* line 2394, main.scss */
+.danish .w {
+  color: rgba(0, 0, 0, 0.00453);
+}
+
+/* line 2394, main.scss */
+.danish .x {
+  color: rgba(0, 0, 0, 0.00194);
+}
+
+/* line 2394, main.scss */
+.danish .y {
+  color: rgba(0, 0, 0, 0.04531);
+}
+
+/* line 2394, main.scss */
+.danish .z {
+  color: rgba(0, 0, 0, 0.00194);
+}
+
+/* line 2394, main.scss */
+.danish .ß {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .à {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .á {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .â {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ã {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ä {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .å {
+  color: rgba(0, 0, 0, 0.07702);
+}
+
+/* line 2394, main.scss */
+.danish .æ {
+  color: rgba(0, 0, 0, 0.05631);
+}
+
+/* line 2394, main.scss */
+.danish .ç {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .è {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .é {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ê {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ë {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ì {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .í {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .î {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ï {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ð {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ñ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ò {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ó {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ô {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ö {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ø {
+  color: rgba(0, 0, 0, 0.06084);
+}
+
+/* line 2394, main.scss */
+.danish .ù {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ú {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ü {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ý {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .þ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ą {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ć {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ĉ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ę {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ĝ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ğ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ĥ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ı {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ĵ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ł {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ń {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .œ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ś {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ŝ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ş {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ŭ {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ź {
+  color: transparent;
+}
+
+/* line 2394, main.scss */
+.danish .ż {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .a {
+  color: black;
+}
+
+/* line 2401, main.scss */
+.icelandic .b {
+  color: rgba(0, 0, 0, 0.10287);
+}
+
+/* line 2401, main.scss */
+.icelandic .c {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .d {
+  color: rgba(0, 0, 0, 0.15628);
+}
+
+/* line 2401, main.scss */
+.icelandic .e {
+  color: rgba(0, 0, 0, 0.63501);
+}
+
+/* line 2401, main.scss */
+.icelandic .f {
+  color: rgba(0, 0, 0, 0.29773);
+}
+
+/* line 2401, main.scss */
+.icelandic .g {
+  color: rgba(0, 0, 0, 0.41939);
+}
+
+/* line 2401, main.scss */
+.icelandic .h {
+  color: rgba(0, 0, 0, 0.18497);
+}
+
+/* line 2401, main.scss */
+.icelandic .i {
+  color: rgba(0, 0, 0, 0.74975);
+}
+
+/* line 2401, main.scss */
+.icelandic .j {
+  color: rgba(0, 0, 0, 0.11276);
+}
+
+/* line 2401, main.scss */
+.icelandic .k {
+  color: rgba(0, 0, 0, 0.3274);
+}
+
+/* line 2401, main.scss */
+.icelandic .l {
+  color: rgba(0, 0, 0, 0.44807);
+}
+
+/* line 2401, main.scss */
+.icelandic .m {
+  color: rgba(0, 0, 0, 0.3996);
+}
+
+/* line 2401, main.scss */
+.icelandic .n {
+  color: rgba(0, 0, 0, 0.76261);
+}
+
+/* line 2401, main.scss */
+.icelandic .o {
+  color: rgba(0, 0, 0, 0.21464);
+}
+
+/* line 2401, main.scss */
+.icelandic .p {
+  color: rgba(0, 0, 0, 0.07814);
+}
+
+/* line 2401, main.scss */
+.icelandic .q {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .r {
+  color: rgba(0, 0, 0, 0.84866);
+}
+
+/* line 2401, main.scss */
+.icelandic .s {
+  color: rgba(0, 0, 0, 0.55687);
+}
+
+/* line 2401, main.scss */
+.icelandic .t {
+  color: rgba(0, 0, 0, 0.48961);
+}
+
+/* line 2401, main.scss */
+.icelandic .u {
+  color: rgba(0, 0, 0, 0.45104);
+}
+
+/* line 2401, main.scss */
+.icelandic .v {
+  color: rgba(0, 0, 0, 0.24135);
+}
+
+/* line 2401, main.scss */
+.icelandic .w {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .x {
+  color: rgba(0, 0, 0, 0.00495);
+}
+
+/* line 2401, main.scss */
+.icelandic .y {
+  color: rgba(0, 0, 0, 0.08902);
+}
+
+/* line 2401, main.scss */
+.icelandic .z {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ß {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .à {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .á {
+  color: rgba(0, 0, 0, 0.17804);
+}
+
+/* line 2401, main.scss */
+.icelandic .â {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ã {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ä {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .å {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .æ {
+  color: rgba(0, 0, 0, 0.08605);
+}
+
+/* line 2401, main.scss */
+.icelandic .ç {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .è {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .é {
+  color: rgba(0, 0, 0, 0.06429);
+}
+
+/* line 2401, main.scss */
+.icelandic .ê {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ë {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ì {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .í {
+  color: rgba(0, 0, 0, 0.15529);
+}
+
+/* line 2401, main.scss */
+.icelandic .î {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ï {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ð {
+  color: rgba(0, 0, 0, 0.43422);
+}
+
+/* line 2401, main.scss */
+.icelandic .ñ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ò {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ó {
+  color: rgba(0, 0, 0, 0.09792);
+}
+
+/* line 2401, main.scss */
+.icelandic .ô {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ö {
+  color: rgba(0, 0, 0, 0.07715);
+}
+
+/* line 2401, main.scss */
+.icelandic .ø {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ù {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ú {
+  color: rgba(0, 0, 0, 0.06034);
+}
+
+/* line 2401, main.scss */
+.icelandic .ü {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ý {
+  color: rgba(0, 0, 0, 0.02275);
+}
+
+/* line 2401, main.scss */
+.icelandic .þ {
+  color: rgba(0, 0, 0, 0.14441);
+}
+
+/* line 2401, main.scss */
+.icelandic .ą {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ć {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ĉ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ę {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ĝ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ğ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ĥ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ı {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ĵ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ł {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ń {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .œ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ś {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ŝ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ş {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ŭ {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ź {
+  color: transparent;
+}
+
+/* line 2401, main.scss */
+.icelandic .ż {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .a {
+  color: black;
+}
+
+/* line 2408, main.scss */
+.finish .b {
+  color: rgba(0, 0, 0, 0.02291);
+}
+
+/* line 2408, main.scss */
+.finish .c {
+  color: rgba(0, 0, 0, 0.02291);
+}
+
+/* line 2408, main.scss */
+.finish .d {
+  color: rgba(0, 0, 0, 0.08511);
+}
+
+/* line 2408, main.scss */
+.finish .e {
+  color: rgba(0, 0, 0, 0.65221);
+}
+
+/* line 2408, main.scss */
+.finish .f {
+  color: rgba(0, 0, 0, 0.01555);
+}
+
+/* line 2408, main.scss */
+.finish .g {
+  color: rgba(0, 0, 0, 0.03191);
+}
+
+/* line 2408, main.scss */
+.finish .h {
+  color: rgba(0, 0, 0, 0.15139);
+}
+
+/* line 2408, main.scss */
+.finish .i {
+  color: rgba(0, 0, 0, 0.88543);
+}
+
+/* line 2408, main.scss */
+.finish .j {
+  color: rgba(0, 0, 0, 0.16694);
+}
+
+/* line 2408, main.scss */
+.finish .k {
+  color: rgba(0, 0, 0, 0.40671);
+}
+
+/* line 2408, main.scss */
+.finish .l {
+  color: rgba(0, 0, 0, 0.47136);
+}
+
+/* line 2408, main.scss */
+.finish .m {
+  color: rgba(0, 0, 0, 0.26187);
+}
+
+/* line 2408, main.scss */
+.finish .n {
+  color: rgba(0, 0, 0, 0.72259);
+}
+
+/* line 2408, main.scss */
+.finish .o {
+  color: rgba(0, 0, 0, 0.45908);
+}
+
+/* line 2408, main.scss */
+.finish .p {
+  color: rgba(0, 0, 0, 0.15057);
+}
+
+/* line 2408, main.scss */
+.finish .q {
+  color: rgba(0, 0, 0, 0.00082);
+}
+
+/* line 2408, main.scss */
+.finish .r {
+  color: rgba(0, 0, 0, 0.23486);
+}
+
+/* line 2408, main.scss */
+.finish .s {
+  color: rgba(0, 0, 0, 0.64321);
+}
+
+/* line 2408, main.scss */
+.finish .t {
+  color: rgba(0, 0, 0, 0.71604);
+}
+
+/* line 2408, main.scss */
+.finish .u {
+  color: rgba(0, 0, 0, 0.40998);
+}
+
+/* line 2408, main.scss */
+.finish .v {
+  color: rgba(0, 0, 0, 0.18412);
+}
+
+/* line 2408, main.scss */
+.finish .w {
+  color: rgba(0, 0, 0, 0.00736);
+}
+
+/* line 2408, main.scss */
+.finish .x {
+  color: rgba(0, 0, 0, 0.00245);
+}
+
+/* line 2408, main.scss */
+.finish .y {
+  color: rgba(0, 0, 0, 0.14321);
+}
+
+/* line 2408, main.scss */
+.finish .z {
+  color: rgba(0, 0, 0, 0.00409);
+}
+
+/* line 2408, main.scss */
+.finish .ß {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .à {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .á {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .â {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ã {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ä {
+  color: rgba(0, 0, 0, 0.29296);
+}
+
+/* line 2408, main.scss */
+.finish .å {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .æ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ç {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .è {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .é {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ê {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ë {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ì {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .í {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .î {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ï {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ð {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ñ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ò {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ó {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ô {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ö {
+  color: rgba(0, 0, 0, 0.03601);
+}
+
+/* line 2408, main.scss */
+.finish .ø {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ù {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ú {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ü {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ý {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .þ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ą {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ć {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ĉ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ę {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ĝ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ğ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ĥ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ı {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ĵ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ł {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ń {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .œ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ś {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ŝ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ş {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ŭ {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ź {
+  color: transparent;
+}
+
+/* line 2408, main.scss */
+.finish .ż {
+  color: transparent;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_a .char.a {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_b .char.b {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_c .char.c {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_d .char.d {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_e .char.e {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_f .char.f {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_g .char.g {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_h .char.h {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_i .char.i {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_j .char.j {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_k .char.k {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_l .char.l {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_m .char.m {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_n .char.n {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_o .char.o {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_p .char.p {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_q .char.q {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_r .char.r {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_s .char.s {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_t .char.t {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_u .char.u {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_v .char.v {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_w .char.w {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_x .char.x {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_y .char.y {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_z .char.z {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_A .char.A {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_B .char.B {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_C .char.C {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_D .char.D {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_E .char.E {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_F .char.F {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_G .char.G {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_H .char.H {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_I .char.I {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_J .char.J {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_K .char.K {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_L .char.L {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_M .char.M {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_N .char.N {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_O .char.O {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_P .char.P {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_Q .char.Q {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_R .char.R {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_S .char.S {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_T .char.T {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_U .char.U {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_V .char.V {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_W .char.W {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_X .char.X {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_Y .char.Y {
+  color: #f00;
+}
+
+/* line 2420, main.scss */
+.show_frequency.hover_Z .char.Z {
+  color: #f00;
+}
+
+/* line 2474, main.scss */
+#retinahide {
+  height: 20px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 2484, main.scss */
+#retinadetection {
+  display: inline-block;
+  width: 100px;
+  z-index: 200;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+}
+
+/*86.4,105.6,168,240 -> zoom: 110%, 175%, 250%*/
+@media (-webkit-min-device-pixel-ratio: 0.75), (min-resolution: 72dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "0.75";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 0.9), (min-resolution: 86.4dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "0.9";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 105.6dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.1";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.17708), (min-resolution: 113dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.17708";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.25";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.3";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.5";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.69792), (min-resolution: 163dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.69792";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 168dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "1.75";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.29167), (min-resolution: 220dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2.29167";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.36458), (min-resolution: 227dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2.36458";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.375), (min-resolution: 228dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2.375";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2.5";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.75), (min-resolution: 264dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "2.75";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "3";
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3.39583), (min-resolution: 326dpi) {
+  /* Retina-specific stuff here */
+  /* line 2503, main.scss */
+  #retinadetection:after {
+    content: "3.39583";
+  }
+}
+/* line 2509, main.scss */
+#beta {
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  padding: 1ex;
+  font-size: 0.8em;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 900px) {
+  /* line 2524, main.scss */
+  #beta {
+    display: none;
+  }
+}
+/* line 2528, main.scss */
+#notchromeonmac {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 20%;
+  font-size: 22px;
+  line-height: 2em;
+  background-color: #eee;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+}
+
+/* line 2547, main.scss */
+.modul_3 {
+  -webkit-font-feature-settings: normal;
+  /*Chrome Bug-Fix, otherwise columns break*/
+}
+
+/* line 2553, main.scss */
+#firstInfoTest, #firstInfoTest, #measurefonts_main {
+  display: none;
+}
+
+/* line 2569, main.scss */
+.debugging {
+  opacity: 0;
+}
+
+/* line 2571, main.scss */
+.debug .debugging {
+  z-index: 200 !important;
+  padding: 10px;
+  background-color: rgba(227, 253, 208, 0.4);
+  text-align: left;
+  right: 0;
+  top: 0;
+  font-size: 9px;
+  line-height: 9px;
+  opacity: 1;
+}
+
+/* line 2583, main.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 2590, main.scss */
+.debug .textframe {
+  border: 1px red solid;
+}
+/* line 2591, main.scss */
+.debug .type, .debug .myReadingRegular {
+  background-color: rgba(206, 253, 255, 0.4);
+}
+/* line 2592, main.scss */
+.debug .show_measurements .words {
+  background-color: rgba(255, 206, 239, 0.4);
+}
+/* line 2593, main.scss */
+.debug .myCompareDefault, .debug .mode_overlay.show_outline .myCompareDefault .font1 {
+  background-color: rgba(206, 253, 255, 0.4);
+}
+/* line 2594, main.scss */
+.debug .module {
+  background-color: rgba(114, 112, 255, 0.4);
+}
+/* line 2595, main.scss */
+.debug .module_left, .debug .module_right, .debug .module_font1, .debug .module_font2 {
+  background-color: rgba(221, 151, 106, 0.4);
+}
+/* line 2596, main.scss */
+.debug .module_control .left, .debug .module_control .center, .debug .module_control .right {
+  background-color: rgba(84, 255, 187, 0.4);
+}
+/* line 2597, main.scss */
+.debug .myCompareDefault_frame {
+  background-color: #ccf;
+}
+/* line 2598, main.scss */
+.debug .comparetext {
+  background-color: #cfc;
+}
+/* line 2599, main.scss */
+.debug .comparetext .wrap {
+  background-color: #fcc;
+}
+/* line 2601, main.scss */
+.debug .mode_overlay.show_outline .myCompareDefault .font2 {
+  color: rgba(206, 253, 255, 0.4);
+}
+/* line 2602, main.scss */
+.debug #retinadetection {
+  background-color: #ff0;
+  opacity: 1;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 2614, main.scss */
+.show_frequency .textframe .readingtext {
+  /*pseudo wordspacingonly for line detection not the actual word-spacing*/
+}
+
+/* line 2634, main.scss */
+.navbar-fixed-top {
+  top: 0;
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+/* line 2647, main.scss */
+.module_type {
+  overflow: hidden;
+}
+/* line 2650, main.scss */
+.module_type.myCompareDefault {
+  overflow: visible;
+  padding-bottom: inherit;
+}
+
+/* line 2656, main.scss */
+.flipchars .char {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 2664, main.scss */
+.hide, .hidden {
+  display: none;
+}
+
+/*Mobile Quic*/
+@media (max-width: 650px) {
+  /* line 2674, main.scss */
+  #container_wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+  }
+
+  /* line 2680, main.scss */
+  #container_main {
+    width: 200%;
+    padding-top: 30ex;
+  }
+
+  /* line 2687, main.scss */
+  .singlemode_switchfonts_button.fixed {
+    width: 100px;
+    height: 100px;
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    z-index: 9999;
+  }
+
+  /* line 2699, main.scss */
+  #singlemode_switchfonts_button_right {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  /* line 2705, main.scss */
+  .myCompareDefault_frame, .myCompareDefault_frame {
+    text-align: center;
+  }
+}

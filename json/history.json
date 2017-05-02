@@ -1,0 +1,53 @@
+{"Proto-Semitische Schrift": {
+        "Nord-Semitisch": {
+                "Kanaanäisch": "Samaritanisch",
+                "Phönizisch": {
+                    "Griechisch" : {
+                        "Westgriechisch": {
+                            "Chalkidisch-Dorisch" : {
+                                "Etruskisch" : {
+                                    "Lateinisch": {}
+                                }
+                            }
+                        },
+                        "Ostgriechisch": {
+                            "Neugrieschich": {},
+                            "Kyrillisch" : {}
+                        }
+
+                    },
+                    "Punisch": "Keltiberisch, Iberisch"
+                },
+                "Alt-Aramäisch": {
+                    "Mittel-Aramisch": {
+                        "Syrisch" : {
+                            "Estrangelo" : {
+                                "Nestorianisch" : {
+                                    "Neusyrisch": {},
+                                    "Soghdisch": {
+                                        "Uigurisch": {
+                                            "Alt-Türkisch" : {
+                                                "Alt-Ungarisch": {},
+                                                "Galik" : {
+                                                    "Mongolisch": {
+                                                        "Kalmückisch": {},
+                                                        "Mandschurisch": {}
+                                                    }
+                                                }
+
+                                          }
+                                        }
+
+                                    },
+                                    "Manichäisch" : {
+                                        "Uigurisch": {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+        "Süd-Semitsich": {}
+        }
+}
+

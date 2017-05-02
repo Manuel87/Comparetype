@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>opentype.js glyph inspector</title>
+	<meta description="A JavaScript library to manipulate the letterforms of text from the browser or node.js.">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="site.css">
+	<script src="dist/opentype.js"></script>
+</head>
+<body>
+<div class="header">
+
+</div>
+
+<div class="container">
+
+	<input id="file" type="file">
+	<span class="info" id="font-name"></span>
+	<div id="message"></div>
+	<hr>
+	<div id="glyph-data"></div>
+
+</div>
+
+
+<script>
+
+
+function displayGlyphHeight(glyphChar) {
+	var container = document.getElementById('glyph-data'),
+		glyphIndex = font.charToGlyphIndex(glyphChar);
+
+	if (glyphIndex < 0) {
+		container.innerHTML = '';
+		return;
+	}
+   var glyph = font.glyphs[glyphIndex],
+		html,
+		metrics = glyph.getMetrics();
+  //  html = '<dt>name</dt><dd>'+glyph.name+'</dd>';
+  //  html += '<dt>height</dt><dd>'+ (glyph.yMax - glyph.yMin) +'</dd>';
+  //  html += '<dt>xMin</dt><dd>' + metrics.xMin + '</dd>'
+	html = '<dt>'+ glyphChar +'Height</dt><dd>'+ (metrics.yMax - metrics.yMin) +' (' + glyph.font.unitsPerEm + ' UPM)</dd>';
+
+	container.innerHTML = html;
+}
+
+
+
+
+
+function onFontLoaded(font) {
+	window.font = font;
+	displayGlyphHeight("x");
+}
+
+function onReadFile(e) {
+	document.getElementById('font-name').innerHTML = '';
+	var file = e.target.files[0];
+	var reader = new FileReader();
+	reader.onload = function (e) {
+		try {
+			font = opentype.parse(e.target.result);
+			//showErrorMessage('');
+			onFontLoaded(font);
+		} catch (err) {
+		   // showErrorMessage(err.toString());
+			throw(err);
+		}
+	}
+	// reader.onerror = function (err) {
+	//	 showErrorMessage(err.toString());
+	// }
+
+	reader.readAsArrayBuffer(file);
+}
+
+var fontFileName = 'fonts/Roboto-Black.ttf';
+document.getElementById('font-name').innerHTML = fontFileName.split('/')[1];
+
+var fileButton = document.getElementById('file');
+fileButton.addEventListener('change', onReadFile, false);
+
+opentype.load(fontFileName, function (err, font) {
+	var amount, glyph, ctx, x, y, fontSize;
+	if (err) {
+		//showErrorMessage(err.toString());
+		return;
+	}
+	onFontLoaded(font);
+});
+</script>
+</body>
+</html>

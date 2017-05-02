@@ -1,0 +1,366 @@
+// T  Y  P  E
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// F O N T S
+//////////////////////////////////////
+$Type_Font_ui:    Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+$Type_Font_1:    "Helvetica Neue", Helvetica, sans-serif;
+$Type_Font_2:    "Georgia", Times, sans-serif;
+//          "Zapfino Linotype One", "Skia", "Marker Felt", "Inconsolata"
+
+//Fallback
+//$em2ts = 2
+
+
+
+// S I Z E
+//////////////////////////////////////
+$Type_Size_Detail:              400px;
+$Type_Size_Large_Text:          100px;
+$Type_Size_Reading:             8px;
+$Type_Size_Min:            5px;
+
+$Type_Size_Ui:                  6.5px;
+
+$Type_Size_Measuring:           1000px;
+
+
+// L I N E H E G H T S
+//////////////////////////////////////
+$Type_LineHeight_Em:            1.0em;
+$Type_LineHeight_Min:           1.0em;
+$Type_LineHeight_Small:         2.2em;
+$Type_LineHeight_Regular:       2.8em;
+$Type_LineHeight_Regular2:      3.0em;
+$Type_LineHeight_Large:         4.0em;
+
+
+
+// T E X T F R A M E    W I D T H
+//////////////////////////////////////
+$Type_FrameWidth_Small:         30em;
+$Type_FrameWidth_Reg:           50em;
+$Type_FrameWidth_Reg2:          70em;
+$Type_FrameWidth_Large:         100em;
+
+
+
+// C O L O R - General / Type
+//////////////////////////////////////
+$Color_Bg:                      #fff;
+$Color_Type:                    #000;
+$Color_Overlay_Type_1:          #ff2700;
+$Color_Overlay_Type_2:          #00d6ff;
+
+$Color_Type_Ui:                 $Color_Type;
+
+
+
+// C O L O R - Metric
+//////////////////////////////////////
+$Stroke_Width_Metrics:          1px solid;
+
+$Color_Type_Size:               #ffccc1; // Both Baselines
+$Color_Type_Size_Bg:            #ffccc1;
+$Color_Type_Size_Kegel:         #ff0;
+
+$Color_Type_LineHeight_Bg:      #ffccc1;
+$Color_Type_Asc_Desc:           #ff0;
+
+
+
+
+
+
+
+// C O L O R - D E B U G G I N G
+//////////////////////////////////////
+$Color_Debugging_BG: #e3fdd0;
+
+
+
+
+// M I S C
+//////////////////////////////////////
+$Color_Fg:                      $Color_Type;
+
+// Javascript
+/////////////
+//$Type_LineHeight_Kegel:         2.0em; // ->javascript //depends on font
+
+
+
+/// MY NORMALIZE
+/////////////////////////////////////////////
+
+div {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+body {
+  font: 100% $Type_Font_ui;
+  font-size-adjust: 1.0; /*only firefox -> */
+  color: $Color_Type;
+
+}
+
+#container {
+  width:100%;
+  padding: 20% 20% 20% 0;
+}
+
+
+
+
+
+
+.font1 {    font-family:        $Type_Font_1; }
+.font2 {    font-family:        $Type_Font_2; }
+
+.font1_before {font-family:     $Type_Font_1;}
+.font2_before {font-family:     $Type_Font_2;}
+
+
+
+.detail {      font-size:       $Type_Size_Detail;        }
+.big {         font-size:       $Type_Size_Detail;      }
+.med {         font-size:       $Type_Size_Reading;     }
+.med2 {        font-size:      $Type_Size_Reading2;    }
+.small {       font-size:       $Type_Size_Min;            }
+
+
+
+
+.lineheight_em { line-height:                 $Type_LineHeight_Em; }
+.lineheight_min { line-height:                $Type_LineHeight_Min; }
+.lineheight_reg { line-height:                $Type_LineHeight_Regular; }
+.lineheight_regular2 { line-height:           $Type_LineHeight_Regular2; }
+.lineheight_large { line-height:           $Type_LineHeight_Large; }
+
+
+.framewidth_em { line-height:                 $Type_FrameWidth_Small; }
+.framewidth_reg { line-height:                $Type_FrameWidth_Reg; }
+.framewidth_reg2 { line-height:                $Type_FrameWidth_Reg2; }
+.framewidth_larg { line-height:                $Type_FrameWidth_Large; }
+
+
+
+.measurement {
+  font-size: $Type_Size_Ui;
+  line-height: $Type_LineHeight_Ui;
+}
+
+
+.reading_regular {
+  line-height: 3em!important;
+  text-decoration: none;
+  display: inline;
+  padding-bottom: 4px;
+  white-space: normal;
+
+}
+
+.text {
+   // background-color: #ceffff;
+   // vertical-align: top;
+
+}
+
+.reading_regular .words {
+
+
+  margin-top: 0;//-2em; //-1em;// -2em;
+  line-height: 1em!important;
+  height: 1em!important;
+/*
+  border-top: 1px red solid!important;
+  padding-top: 0.15em;
+  border-bottom: 1px red solid!important;
+  padding-bottom: 0.3em;
+
+
+  background-color: transparent!important;
+  text-decoration: none;
+  background: url(../img/1px_green.png) repeat-x 100% 50%;
+
+  white-space: none;
+  vertical-align: baseline;
+*/
+  display:inline-block;
+  width: auto; //5em!important;
+  text-align: center;
+  background-color: transparent;
+   // border-color: #ff8d49;
+   //border-width: 2px; // 1px 1px 1px;
+   // border-style: solid;
+    //border:none;
+  //  overflow: auto;
+    clear: both;
+    position: relative;
+    padding-top:-2em;
+    overflow: hidden;
+    padding-top:0.1em;
+    margin-top: -0.1em;
+    padding-bottom: 0.5em;
+    margin-bottom:-0.5em;
+    padding-right: 1em;
+    margin-right:-1em;
+    padding-left: 1em;
+    margin-left:-1em;
+}
+
+
+.reading_regular .words .mybefore {
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+
+  // line-height gets defined throu javascript
+  //   content: '';
+   //  line-height: 1em;
+    // height: 0.5em;
+     width: 100%;
+     position: relative;
+     display: inline-block;
+     vertical-align: baseline;
+     margin-bottom: -1em;//;-1em;
+     margin-top:0;
+     background-color: #ffccc1;
+    left: 0;
+    //margin-top: 0em;
+    //padding-bottom: 1em;
+    border-color: #ff313c;
+    border-width: 1px; // 1px 1px 1px;
+    border-style: solid;
+
+    ;
+  //  overflow: auto;
+   clear: both;
+   top:-2em;
+}
+
+.reading_regular .words .mybefore2 {
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+
+  // line-height gets defined throu javascript
+  //   content: '';
+   //  line-height: 1em;
+    // height: 0.5em;
+     width: 100%;
+     position: relative;
+     display: inline-block;
+     margin-bottom: -2em;// -2em;
+     margin-top: 0;//-1.25em;
+    vertical-align: bottom;
+    left: 0;
+    //margin-top: 0em;
+    //padding-bottom: 1em;
+    border-color: #7aff9d;
+    border-width: 1px; // 1px 1px 1px;
+    border-style: solid;
+    top:-1.96em;
+
+   //  overflow: auto;
+    clear: both;
+}
+
+
+
+.reading_regular .char {
+  width: auto!important; //1em for monospaced
+  text-align: center;
+  display:inline-block;
+  position: relative;
+
+// color only works if not inline-block
+  border-right: 1px solid #ff98b5;
+  margin-right: -1px!important;
+
+  border-left: none;
+  background-clip: none;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  clear: both;
+  margin:0;
+    vertical-align: bottom;
+    top:-2em;
+
+}
+
+
+.measuring_square {
+    height:             1ex;
+    width:              10px;
+    background-color:   #f30;
+    display:            inline-block;
+ }
+
+
+// D E B U G G I N G
+///////////////////////////////////////////////////////////////////////////////////
+$Color_Debugging_BG: #e3fdd0;
+
+.debugging {
+      z-index: 200!important;
+      padding: 10px;
+      background-color: $Color_Debugging_BG;
+      text-align: left;
+      right: 0;
+      top: 0;
+      font-size: 9px;
+      line-height: 9px;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+
+#report {font-size: 16px;}
+
+/*
+
+
+
+//Fallback if no Javscript or no Font-Size-Adjust
+////////////////////////////////////////////
+//Multiply all Font-Sizes by 2
+
+
+//http://css-tricks.com/making-sass-talk-to-javascript-with-json/
+////////////////////////////////////////////
+//@import "../data/data.json";
+
+//JSON to SCSS
+// @if($label) { body::before { content: breakpoint-label($label); } }
+
+// @if($label) {
+//     body::before { content: breakpoint-label($label); }
+//     .lt-ie9 head { font-family: breakpoint-label($label); }
+// }
+
+//SCSS to Json
+
+// @include breakpoint(8, $label: "medium") {
+//     // medium size layout styles go here
+// }
+// @function breakpoint-label($label) {
+//     @return '{ "current" : "#{$label}" }';
+// }
+
+*/

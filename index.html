@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Compare Type</title>
+  <meta name="description" content="">
+ <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, maximum-scale=1.0, user-scalable=0" />
+  <!-- <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height" /> --> <!--and then the correct value can be get from window.innerWidth / window.innerHeight -->
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!--<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+  <script type="text/javascript" charset="utf-8" >
+       (function(){
+    // if firefox 3.5+, hide content till load (or 3 seconds) to prevent FOUT
+    //http://www.paulirish.com/2009/fighting-the-font-face-fout/
+    var d = document, e = d.documentElement, s = d.createElement('style');
+    //if (e.style.MozTransform === ''){ // gecko 1.9.1 inference
+      s.textContent = 'body{visibility:hidden}';
+      var r = document.getElementsByTagName('script')[0];
+      r.parentNode.insertBefore(s, r);
+      function f(){ s.parentNode && s.parentNode.removeChild(s); }
+      addEventListener('load',f,false);
+      setTimeout(f,3000);
+    //}
+})();
+  </script>
+  <script src ="js/vendor/modernizr-2.6.2.min.js"></script>
+  <!-- <script src ="js/vendor/detectizr.js">//console.log(Detectizr.os.name === "mac os");</script>  -->
+</head>
+<body class="" spellcheck="false" >
+         <!--
+
+
+
+
+
+/*optimizeLegibility*/ enables ligatures in text <20px -> change: browser.display.auto_quality_min_font_size
+            font-variant-ligatures: none or font-feature-settings: none
+            http://aestheticallyloyal.com/public/optimize-legibility/
+    show_split
+    debug
+    mode_overlay
+    mode_outline
+    show_frequency english german
+    show_measurements
+    make_monospaced
+  -->
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <!-- Add your site or application content here -->
+  <div id="header" class="" role="header"> <!--<header> had a strange css interaction-->
+  <div class="navbar navbar-fixed-top" role="banner">
+
+    <nav class="" role="navigation">
+      <div class="nav_wrap center" > <!-- style=" box-sizing: content-box; clear:both; background-color: #f00; width: 50vw!important; display:inline-block;" -->
+      <div id="add_fonts" class="button hide">
+        <!-- <div class="hidden">Drag</div> -->
+        <button id="add_fonts_open_dialog" class="btn btn-primary extend_options"><i class="fa fa-plus"></i>&nbsp;Add&nbsp;Fonts</button>
+        <div class="add_fonts options collapsed">
+          <!-- <div class"dropfonts">Drag Fonts Here!</div> -->
+          <span class="btn button">Drag Fonts Here!</span>
+          <div id="fonts"></div>
+
+
+        <label>System Fonts:
+          <datalist id="system_fonts">
+          <select name="system_fonts">
+            <option value="Comic Jens Pro">Comic Jens Pro</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Comic Relief">Comic Relief</option>
+            <option value="Times">Times</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Edmondas">Edmondas</option>
+            <!-- … -->
+          </select>
+          If other, please specify:
+          </datalist>
+          <input type="text" name="font" value="Helvetica" list="system_fonts" multiple placeholder="select Font" class="dropdown">
+        </label>
+        <label>Google Fonts:
+          <datalist id="google_fonts">
+          <select name="system_fonts">
+            <option value="Whatever">Whatever</option>
+            <option value="Helvetica Bold">Helvetica Bold</option>
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <!-- … -->
+          </select>
+          If other, please specify:
+          </datalist>
+          <input type="text" name="font" value="Whatever" list="google_fonts" multiple="true" class="dropdown">
+        </label>
+        <!-- <div>
+            <select name="system fonts" multiple>
+                <option value="">Helvetica</option>
+                <option value="">Helvetica Bold</option>
+                <option value="">Times</option>
+                <option value="">Times Bold</option>
+            </select>
+        </div>
+        <div>
+            <select name="google fonts" multiple>
+                <option value="">Helvetica</option>
+                <option value="">Helvetica Bold</option>
+                <option value="">Times</option>
+                <option value="">Times Bold</option>
+            </select>
+        </div> -->
+        <button>Specify Font Folder (only offline)</button>
+
+        <label>Active Fonts:
+          <datalist id="active_fonts">
+          <select name="active_fonts">
+
+            <option value="Vollkorn">Vollkorn</option>
+            <option value="Times">Times</option>
+            <!-- <option value="Dolly">Dolly</option> -->
+            <option value="TheAntiquaSunOT">TheAntiquaSunOT</option>
+            <option value="QuaText">QuaText</option>
+            <option value="Lava Std">Lava Std</option>
+            <option value="Larish Neue">Larish Neue</option>
+            <option value="Arnhem">Arnhem</option>
+            <option value="FedraSerifB">FedraSerifB</option>
+            <option value="FreightText">FreightText</option>
+            <option value="Minion Pro">Minion Pro</option>
+            <option value="Amman Serif Arabic">Amman Serif Arabic</option>
+            <option value="StanleyTrial Normal">StanleyTrial Normal</option>
+            <!-- <option value="Alida">Alida</option> -->
+            <!-- <option value="Koex">Koex</option> -->
+            <!-- <option value="Times New Roman">Times New Roman</option> -->
+            <option value="FreightMicro">FreightMicro</option>
+            <option value="Adobe Garamond Pro">Adobe Garamond Pro</option>
+            <!-- <option value="Garamond">Garamond MT</option> -->
+            <option value="Stempel Garamond LT Std">Stempel Garamond Std</option>
+            <option value="Garamond Premier Pro">Garamond Premier Pro</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Geeza Pro">Geeza Pro</option>
+            <option value="Calibri">Calibri</option>
+            <option value="St Ryde">St Ryde</option>
+            <option value="Lucida Grande">Lucida Grande</option>
+            <option value="Fira Sans OT">Fira Sans OT</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Edmondsans">Edmondas</option>
+            <option value="Corpid C1s">Corpid C1s</option>
+            <option value="Windsor">Windsor</option>
+            <option value="Warnock Pro">Warnock Pro</option>
+            <option value="Taz">Taz</option>
+            <option value="TastyRegular">TastyRegular</option>
+            <option value="SchokoPro">SchokoPro</option>
+            <option value="Mission Script">Mission Script</option>
+            <option value="Ventography Personal Use Only">Ventography Personal Use Only</option>
+            <option value="Suisse BPtestFont Serif">Suisse BPtestFont Serif</option>
+            <option value="RicciaRegular">RicciaRegular</option>
+            <option value="Kava OT">Kava OT</option>
+            <option value="Harbell Personal Use Only">Harbell Personal Use Only</option>
+            <option value="GarySans">GarySans</option>
+            <option value="Choplin">Choplin</option>
+            <option value="BurgGroteskBeta">BurgGroteskBeta</option>
+            <option value="Antithesis OT">Antithesis OT</option>
+            <option value="Neutra Text TF">Neutra Text TF</option>
+            <option value="Brandon Grotesque">Brandon Grotesque</option>
+            <option value="Futura LT">Futura LT</option>
+            <option value="Verlag">Verlag</option>
+            <option value="Helvetica Bold">Helvetica Bold</option>
+            <option value="Comic Jens Pro">Comic Jens Pro</option>
+            <option value="Comic Relief">Comic Relief</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans-Serif</option>
+
+            <!-- … -->
+          </select>
+          </datalist>
+          <input type="text" name="font" value="Whatever2" list="active_fonts" placeholder="select Font" class="dropdown">
+        </label>
+
+        <button id="add_fonts_clear" class="" >clear</button>
+        <div class="line">–––––</div>
+        </div>
+      </div>
+
+    <form id="mainForm" class="">
+    </form>
+
+
+<div id="measureInput" class="button-group"></div> <!-- First Info Test //Input -->
+
+<div id="colorInput">
+                <input class="btn-color btn-color-fg" type="color" id="color_fg" value="#000000"><!-- <button type="button" class="btn btn-color-fg"></button> --><button id="color_invert" type="button" class="btn btn-invert"><i class="fa fa-refresh" style="padding: 0 0.5ex;"></i></button><!--fa-exchange--><input class="btn-color btn-color-bg" type="color" id="color_bg" value="#FFFFFF">
+
+                <!-- <button type="button" class="btn btn-color-bg"> </button> -->
+            </div>
+
+
+  <div id="moreOptionsContainer" class="morecontainer">
+              <div class="openbutton morebutton button" onclick="$(this).closest('.morecontainer').toggleClass('open');">More Options</div>
+              <div id="moreOptions" style="width: 20px; overflow:visible;">
+              </div>
+      </div>
+
+<!-- <div> [print]</div> -->
+
+    <div class="chooseFontsContainer">
+      <div class="module_font1 fontselectdiv" id="fontselect1">
+        <!-- <input type="text" name="font" value="Times" list="active_fonts" class="dropdown center"> -->
+
+      </div>
+      <div class="module_font2 fontselectdiv" id="fontselect2">
+        <!-- <input type="text" name="font" value="Lucida Grande" list="active_fonts" class="dropdown center"> -->
+       </div>
+
+    </div>
+    </div>
+  </nav>
+</div>
+
+
+
+</div>
+<div id="container_wrapper">
+<div id="container_main" class="container">
+<div id="ruler" ></div>
+<div class="module compare">
+  <div class="module_type myCompareDefault outline">
+    <div class="module_font1">
+      <div class="myCompareDefault_frame textframe modul_1" id="dropcontainer2">
+        <span class="font1 text comparetext">
+          <span contenteditable="true" class="wrap font1_adjust content">Compare Type</span><!-- Schriftvergleich-->
+        </span>
+      </div>
+    </div>
+    <div class="module_font2">
+      <div class="myCompareDefault_frame textframe modul_1" id="dropcontainer">
+        <span class="font2 text comparetext">
+          <span contenteditable="true" class="wrap font2_adjust content">Compare Type</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="module_control">
+    <div class="left"><button type="button" class="btn btn-default">Editable Text <i class="fa fa-caret-down"> </i></button>
+    <div class="css_edit no-print">
+        <button class="openbutton morebutton button" onclick="$(this).next('style').toggleClass('open');">Edit CSS</button> <!-- .siblings() -->
+        <style contenteditable="true"
+
+    >.modul_1 {
+
+  letter-spacing: 0.0em;
+  word-spacing:   0.0em;
+
+  /*editing font-size
+  is not yet supported*/
+
+}</style>
+    </div>
+    </div>
+    <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+    <div class="right module_info">Module Info</div>
+  </div>
+</div>
+<div class="module reading">
+  <div class="module_type myReadingRegular">
+    <div class="module_font1"><!--  -->
+      <div class="myReadingRegular_frame textframe modul_2">
+
+        <span class="font1 text readingtext" title="Technical Font-Size: 13.2px"><span class="content font1_adjust" contenteditable="true">What is this site for? First, see what happens when you toggle the »New Typographic Size«. Do you see the difference?! After quite some research and trying several approaches, I came to the conclusion that only a working prototype could have the power to actually change how we size and therefore, perceive type. With this technique, typefaces with similar formal characteristics will actually produce a similar texture in body text. It sounds trivial, but this allows you to spot the actual differences while choosing a typeface for body text without all the hassle of adjusting everything manually. Test it yourself, depending on what fonts you have on your system you could compare, e.g. Calibri and Arial, Thonburi and Helvetica, Georgia and Times or Adobe Garamond and Stempel Garamond. The typographic size is defined by a real graphical dimension of the most popular characters used. In a regular Latin set text these are the lowercase characters, or more precisely the vertical dimension of most lowercase like the »e«. This has to be script specific, e.g. in uppercase set text it is clearly the uppercase size and in other script systems again another corresponding size. Yes, this is not a Latin issue only. With a general transparent introduction of a new typographical size system I hope many things will get clearer in the future, e.g. talking about formal characteristics, choosing and mixing typefaces, analyzing legibility and so on. Another issue I am addressing with this application is the myth of size between digital and print environments. Therefore, either you look on screen or print the site, the font size will be exactly the same! Hope you like it and if you want to know more about please have a look at this corresponding article: [not/yet/online].
+      </div>
+    </div>
+    <div class="module_font2">
+      <div class="myReadingRegular_frame textframe modul_2">
+        <span class="font2 text readingtext" title="Technical Font-Size: 10.2px"><span class="content font2_adjust">What is this site for? First, see what happens when you toggle the »New Typographic Size«. Do you see the difference?! After quite some research and trying several approaches, I came to the conclusion that only a working prototype could have the power to actually change how we size and therefore, perceive type. With this technique, typefaces with similar formal characteristics will actually produce a similar texture in body text. It sounds trivial, but this allows you to spot the actual differences while choosing a typeface for body text without all the hassle of adjusting everything manually. Test it yourself, depending on what fonts you have on your system you could compare, e.g. Calibri and Arial, Thonburi and Helvetica, Georgia and Times or Adobe Garamond and Stempel Garamond. The typographic size is defined by a real graphical dimension of the most popular characters used. In a regular Latin set text these are the lowercase characters, or more precisely the vertical dimension of most lowercase like the »e«. This has to be script specific, e.g. in uppercase set text it is clearly the uppercase size and in other script systems again another corresponding size. Yes, this is not a Latin issue only. With a general transparent introduction of a new typographical size system I hope many things will get clearer in the future, e.g. talking about formal characteristics, choosing and mixing typefaces, analyzing legibility and so on. Another issue I am addressing with this application is the myth of size between digital and print environments. Therefore, either you look on screen or print the site, the font size will be exactly the same! Hope you like it and if you want to know more about please have a look at this corresponding article: [not/yet/online].</a></span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--  http://stackoverflow.com/questions/6794000/fixed-position-but-relative-to-container?rq=1
+       http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ -->
+  <div class="module_control">
+        <div class="left"><button type="button" class="btn btn-default">Info Text <i class="fa fa-caret-down"> </i></button>
+        <div class="css_edit no-print">
+          <button class="openbutton morebutton button" onclick="$(this).next('style').toggleClass('open');">Edit CSS</button> <!-- .siblings() -->
+          <style contenteditable="true"
+
+    >.modul_2 {
+
+  text-align:     left;
+  line-height:    3.40em;
+
+  /*editing font-size
+  is not yet supported*/
+
+}
+</style>
+<!--
+ /*
+  font-size: 1vw!important;
+  my-font-size: 7arcmin;
+  min-font-size-px: 7;
+  min-font-size-arcmin: 7;
+  max-font-size-vw: 1vw;
+  max-font-size: ;*/
+
+.module_font1 {
+  font-size:      1.0em;
+  word-spacing:   0.0em;
+  letter-spacing: 0.0em;
+  -webkit-transform: translate(0,0.0em);
+}
+.module_font1 {
+  font-size:      1.0em;
+  word-spacing:   0.0em;
+  letter-spacing: 0.0em;
+  -webkit-transform: translate(0,0.0em);
+} -->
+          </div>
+          </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+
+<div class="module consultation">
+  <div class="module_type consultation">
+    <div class="module_font1">
+      <div class="consultation_frame textframe modul_3">
+      <!-- <div class="font1adjust"> -->
+        <span class="font1 text readingtext"><span class="content font1_adjust">Grumpy wiz&shy;ards make tox&shy;ic brew for the evil Queen and Jack. One morn&shy;ing, when Gregor Samsa woke from troubled dreams, he found him&shy;self trans&shy;formed in his bed in&shy;to a hor&shy;rible ver&shy;min. He lay on his ar&shy;mour-like back, and if he lif&shy;ted his head a little he could see his brown belly, slightly domed and di&shy;vided by arches in&shy;to stiff sec&shy;tions. The bed&shy;ding was hardly able to cov&shy;er it and seemed ready to slide off any mo&shy;ment. His many legs, pi&shy;ti&shy;fully thin com&shy;pared with the size of the rest of him, waved about help&shy;lessly as he looked. Grumpy wiz&shy;ards make tox&shy;ic brew for the evil Queen and Jack.
+          </span>
+        </span>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="module_font2 ">
+      <div class="consultation_frame textframe modul_3">
+        <span class="font2 text readingtext"><span class="content font2_adjust">Grumpy wiz&shy;ards make tox&shy;ic brew for the evil Queen and Jack. One morn&shy;ing, when Gregor Samsa woke from troubled dreams, he found him&shy;self trans&shy;formed in his bed in&shy;to a hor&shy;rible ver&shy;min. He lay on his ar&shy;mour-like back, and if he lif&shy;ted his head a little he could see his brown belly, slightly domed and di&shy;vided by arches in&shy;to stiff sec&shy;tions. The bed&shy;ding was hardly able to cov&shy;er it and seemed ready to slide off any mo&shy;ment. His many legs, pi&shy;ti&shy;fully thin com&shy;pared with the size of the rest of him, waved about help&shy;lessly as he looked. Grumpy wiz&shy;ards make tox&shy;ic brew for the evil Queen and Jack.
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="module_control ui_font">
+        <div class="left"><button type="button" class="btn btn-default">Grumpy Wiz… <i class="fa fa-caret-down"> </i></button>
+        <div class="css_edit no-print">
+        <button class="openbutton morebutton button" onclick="$(this).next('style').toggleClass('open');">Edit CSS</button> <!-- .siblings() -->
+        <style contenteditable="true"
+
+        >.modul_3 {
+  line-height:          3.4em;
+  letter-spacing:       0.0em;
+  word-spacing:         0.0em;
+  -webkit-column-count: 2;
+  -webkit-column-gap :  4em;
+
+  /*editing font-size
+  is not yet supported*/
+
+  }
+          </style>
+
+       <!--
+-webkit-margin-bottom-collapse: separate;
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap : 20px;
+        column-count: 2;
+        column-gap : 20px; -->
+          </div>
+
+        </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+
+
+
+
+<div class="module charset nocase">
+  <div class="module_type myChars">
+    <div class="module_font1">
+      <div class="myChars_frame textframe modul_4">
+        <span class="font1 text charstext" contenteditable="true" title="Technical Font-Size: 13.2pt"><span class="content font1_adjust">a b c d e f g h i j k l m n o p q r s t u v w x y z · A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  · 1 2 3 4 5 6 7 8 9 0 ·〈 ( { [ ¡ ! ¿ ? * . , : ; … ‘ “ ” ’ ‚ „ ‘ “ ‘ ” '" ‴ « » ‹ › / ¦ ‖ | \ - – —] } ) 〉· € $ £ ¥ ¢ ƒ ₡ ₢ ₣ ₤ ₦ ₧ ₨ ₩ ₪ ₮ ₱ ฿ # & ¶ § † ‡ @ ® © ™ ·
+á â à ä å ã ā ă ą ǻæ ǽ ç ć ĉ ċč ď đ ð þ é ê è ë ē ĕ ė ęě ƒ ĝ ğ ġ ģ ĥ ħ í î ì ï ı ĩ ī ĭ į ĵ i j ķ ĸ ĺ ļ ľ l· ł  ñ ń ņ ň ŋ ó ô ò ö ō ŏ ő ø ǿ œ ŕ ŗ ř ẞ ß ś ŝ ş š ș s ț ť ŧ ú û ù ü ũ ū ŭ ů ű ų ẃ ẁ ŵ ẅ ý ỳ ŷ   ÿ ź ż ž
+
+<!-- À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï  Ñ Ò Ó Ô Õ Ö  Ø Ù Ú Û Ü -->
+
+<!--                                                     -->
+<!-- IJ ij -->
+
+<!--              Œ œ ƒ ˆˇ ̆ ̇ ̊ ̨ ̃ ̋         T M                                                          
+                                                               
+   Ÿ         ñ                   ù ú          ÿ        Ñ          -->
+
+<br>
+ <abbr>¿smallcaps?</abbr>  ·
+<span class="tnumlnum">1 2 3 4 5 6 7 8 9 0</span>  ·
+<span class="tnumonum">1 2 3 4 5 6 7 8 9 0</span>  ·
+<sup>0123456789 (+⁻⁼⁾</sup>  ·
+<sub>0123456789 ₍₊₋₌₎ </sub>  ·
+
+<!-- · Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός  · ველების · -->
+ ·
++ − = ÷ × < > ± ≤ ≥ ≈ ≠ ¬ ∞ ¤ ℓ µ π ℮ ∂ ∫ √ ∆ � ∏ ∑ % ‰ ·
+
+fb ffb ff fh ffh fi ffi fj ffj fk ffk fl ffl ft tf ·
+¼ ½ ¾ ⅓ ⅔ ⅛ ⅜ ⅝ ⅞ ·
+
+
+
+<!-- *†‡§¶^~_©®℗  ™ ℠ # № ° -->
+
+←→↑↓↖↗↘↙●◯○■□▪▫◄►▲▼
+
+
+
+<!--  & @ . , ? ! ’ “ ” ( )  - – — --> <!-- He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. --></span>
+</span>
+      </div>
+    </div>
+    <div class="module_font2">
+      <div class="myChars_frame textframe modul_4">
+        <span class="font2 text charstext" title="Technical Font-Size: 10.3pt"><span class="content font2_adjust">a b c d e f g h i j k l m n o p q r s t u v w x y z · A B C D E F G H I J K L M N O P Q R S T U V W X Y Z  · 1 2 3 4 5 6 7 8 9 0 ·〈 ( { [ ¡ ! ¿ ? * . , : ; … ‘ “ ” ’ ‚ „ ‘ “ ‘ ” '" ‴ « » ‹ › / ¦ ‖ | \ - – —] } ) 〉· € $ £ ¥ ¢ ƒ ₡ ₢ ₣ ₤ ₦ ₧ ₨ ₩ ₪ ₮ ₱ ฿ # & ¶ § † ‡ @ ® © ™ ·
+á â à ä å ã ā ă ą ǻæ ǽ ç ć ĉ ċč ď đ ð þ é ê è ë ē ĕ ė ęě ƒ ĝ ğ ġ ģ ĥ ħ í î ì ï ı ĩ ī ĭ į ĵ i j ķ ĸ ĺ ļ ľ l· ł  ñ ń ņ ň ŋ ó ô ò ö ō ŏ ő ø ǿ œ ŕ ŗ ř ẞ ß ś ŝ ş š ș s ț ť ŧ ú û ù ü ũ ū ŭ ů ű ų ẃ ẁ ŵ ẅ ý ỳ ŷ   ÿ ź ż ž
+
+<!-- À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï  Ñ Ò Ó Ô Õ Ö  Ø Ù Ú Û Ü -->
+
+<!--                                                     -->
+<!-- IJ ij -->
+
+<!--              Œ œ ƒ ˆˇ ̆ ̇ ̊ ̨ ̃ ̋         T M                                                          
+                                                               
+   Ÿ         ñ                   ù ú          ÿ        Ñ          -->
+
+<br>
+ <abbr>¿smallcaps?</abbr>  ·
+<span class="tnumlnum">1 2 3 4 5 6 7 8 9 0</span>  ·
+<span class="tnumonum">1 2 3 4 5 6 7 8 9 0</span>  ·
+<sup>0123456789 (+⁻⁼⁾</sup>  ·
+<sub>0123456789 ₍₊₋₌₎ </sub>  ·
+
+<!-- · Τάχιστη αλώπηξ βαφής ψημένη γη, δρασκελίζει υπέρ νωθρού κυνός  · ველების · -->
+ ·
++ − = ÷ × < > ± ≤ ≥ ≈ ≠ ¬ ∞ ¤ ℓ µ π ℮ ∂ ∫ √ ∆ � ∏ ∑ % ‰ ·
+
+fb ffb ff fh ffh fi ffi fj ffj fk ffk fl ffl ft tf ·
+¼ ½ ¾ ⅓ ⅔ ⅛ ⅜ ⅝ ⅞ ·
+
+
+
+<!-- *†‡§¶^~_©®℗  ™ ℠ # № ° -->
+
+←→↑↓↖↗↘↙●◯○■□▪▫◄►▲▼
+</span>
+</span>
+
+
+<!-- <abbr style="-webkit-font-variant: small-caps;">OT-smallcaps: a b c d e f g h i j k l m n o p q r s t u v w x y z</abbr> · Unicode-sᴍᴀʟʟᴄᴀᴘs: ᴀ ʙ ᴄ ᴅ ᴇ ғ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ǫ ʀ s ᴛ ᴜ ᴠ ᴡ x ʏ ᴢ<span style="font-variant: small-caps;">test</span> -->
+      </div>
+    </div>
+  </div>
+  <div class="module_control">
+        <div class="left"><button type="button" class="btn btn-default">Char Set 1 <i class="fa fa-caret-down"> </i></button>
+        <div class="css_edit no-print">
+        <button class="openbutton morebutton button" onclick="$(this).next('style').toggleClass('open');">Edit CSS</button> <!-- .siblings() -->
+        <style contenteditable="true"
+
+    >.modul_4 {
+
+  text-align:     left;
+  line-height:    4.0em;
+  letter-spacing: 0.2em;
+  word-spacing:   0.0em;
+
+  /*editing font-size
+  is not yet supported*/
+
+
+}</style>
+ </div>
+        </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+
+
+
+<div class="module realsize">
+  <div class="module_type realsize">
+    <div class="module_font1">
+      <div class="realsize_frame textframe modul_5">
+      <!-- <div class="font1adjust"> -->
+        <span class="font1 text readingtext"><span class="content font1_adjust">two cm
+          </span>
+        </span>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="module_font2 ">
+      <div class="realsize_frame textframe modul_5">
+        <span class="font2 text readingtext"><span class="content font2_adjust">two cm
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="module_control ui_font">
+        <div class="left"><button type="button" class="btn btn-default">two cm <i class="fa fa-caret-down"> </i></button>
+        <div class="css_edit no-print">
+        <button class="openbutton morebutton button" onclick="$(this).next('style').toggleClass('open');">Edit CSS</button> <!-- .siblings() -->
+        <style contenteditable="true"
+
+        >.modul_5 {
+  line-height:            1.5em;
+  letter-spacing:        0.0em;
+  word-spacing:        0.0em;
+  padding-top: 	        0.5em;
+
+  /*editing font-size
+  is not yet supported*/
+
+  }
+          </style>
+          <!-- /*text-align: center;
+  width: 100%;*/ -->
+          </div>
+
+        </div>
+        <div class="center"><i class="fa fa-align-left"> </i> <i class="fa fa-align-center"></i> <i class="fa fa-align-right"> </i> </div>
+        <div class="right module_info">Module Info</div>
+    </div>
+</div>
+
+
+
+
+<div class="module">
+<div class="add_module" title="Add Modul" style="text-align: center; padding-top: 4em"><button class="plus"><span  style="font-size: 2em; line-height: 1.2ex; display:inline-block; padding: 0ex 0ex;">+</span></button></div>
+</div>
+
+<!-- <div class="module">
+  <div class="module_type outline_big poster3d">
+    <div class="module_font1">
+      <div class="poster3d_frame">
+        <div class="font1 text">a</div>
+      </div>
+    </div>
+    <div class="module_font2">
+      <div class="poster3d_frame">
+        <div class="font2 text">a</div>
+      </div>
+    </div>
+  </div>
+  <div class="module_control">
+    <div class="left">Dummy Text v </div>
+    <div class="center">left center right</div>
+    <div class="right module_info">Module Info</div>
+  </div>
+</div>
+<div> -->
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+<div class="ui_font textframe imprint">
+
+  Mini-FAQ <br>
+  • Other Scripts? – Currently only: <a href="./arabic.html">Arabic</a>, <a href="./hebrew.html">Hebrew</a> and <a href="./greek.html">Greek</a><br>
+  • What is arcmin? — It is an optical unit, roughly illustrated <a href="http://sizecalc.com/" target="blank">here</a> and extensively described <a href="http://webvision.med.utah.edu/book/part-viii-gabac-receptors/visual-acuity/" target="blank">here</a>. <br>
+  • The measurements are not correct, on screen and in print? – Please check the values on top, correct them if needed, otherwise report it to me.<br>
+    <br>
+    <br>
+  Concept, Design and Code by <a href="http://manuel.vongebhardi.de">Manuel von Gebhardi</a> <br>
+  A great thank-you is directed to <a href="http://essenmitsosse.de">Marcus Blättermann</a> for cleaning up my core code!<br>
+  <br>
+  All rights reserved — 2015—2017
+</div>
+</div>
+
+</div> <!-- close container wrapper -->
+<!-- <div class="measuring_fonts">
+      <div class="font1_before float oldsize">x<span class="measuring_square"></span>
+      </div>
+      <div class="font2_before float oldsize">x<span class="measuring_square"></span>
+      </div>
+</div>
+<div class="measuring_fonts">
+      <div class="font1 float">x<span class="measuring_square"></span>
+      </div>
+      <div class="font2 float">x<span class="measuring_square"></span>
+      </div>
+</div> -->
+
+
+<div id="firstInfoTest" class="button-group" ></div> <!-- First Info Test //Input -->
+
+<!-- <div class="type lineheight_reg size_small framewidth_reg myReadingRegular">
+  <div class="font1">Hamburgefonstiv</div>
+  <div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_reg framewidth_reg myReadingRegular">
+  <div class="font1">Hamburgefonstiv</div>
+  <div class="font2">Hamburgefonstiv</div>
+</div>
+<div class="type lineheight_reg size_large framewidth_reg myReadingRegular">
+  <div class="font1">Hamburgefonstiv</div>
+  <div class="font2">Hamburgefonstiv</div>
+</div> -->
+
+
+<!-- Navigation -->
+<div id="singlemode_switchfonts_button_left" class="singlemode_switchfonts_button fixedbottom fixed"></div>
+
+<div id="singlemode_switchfonts_button_right" class="singlemode_switchfonts_button fixedbottom fixed"></div>
+
+
+
+
+<div id="retinahide"><div id="retinadetection"> </div></div> <!-- later on this should get generated by the js, cause its not actual content -->
+</div>
+<div id="beta" class="no-print">Beta!&nbsp;Only Chrome/Mac/ Desktop</div>
+<div id="notchromeonmac">This is a beta version.<br>It’s developed on OSX with the latest version of Chrome. <br>So any other system or browser could cause problems. [x]</div>
+<div id="custom"></div> <!-- quick fix so Fontdrag wont crash, should remove that and fix it actually in the fontdrag.js -->
+<!--   ——————————————————————————————— End Content ————————————————————————————————— -->
+<!--<div id="debugging" class="fixed">[]</div>-->
+<div class="debugging fixed hidden"> <span id="on" class="button">[]</span> <br>
+<text>
+fontsizes:<br>
+<span class="fs_12">Agfs_012<span class="fs_05">&gt;2</span></span><br>
+<span class="fs_0">Agfs_0<span class="fs_0">&gt;0</span></span><br>
+<span class="fs_1">Agfs_1<span class="fs_1">&gt;1</span></span><br>
+<span class="fs_2">Agfs_2<span class="fs_2">&gt;2</span></span><br>
+<span class="fs_3">Agfs_3<span class="fs_3">&gt;3</span></span> <br>
+<span class="fs_test">fs_test<span class="fs_test">&gt;fs_test</span></span> <br>
+<div>div<span>[span]</span><p>&gt;p<span>&gt;span</span></p></div>
+<br></text>
+<additional> </additional></div>
+<!-- <div id="retinadetection" style="display: inline-block; height: 1px; background-color: #fff; position:fixed; top: 0; left: 0;"></div> -->
+
+
+<div id="typographicsizingcharacter" class="hidden" data-height="0.5">x</div> <!--ـمـ   ه  Arabic -->
+<div id="testcharactersinfont" class="hidden">x</div> <!--nocheck مقارنة ـمـ   ه  Arabic -->
+
+
+
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+NOT WORKING PROPERLY-->
+<script type="text/javascript">
+
+  </script>
+
+<!-- detects system fonts and calls -> global.js -> populateFontList-->
+<object id="fontListSWF" name="fontListSWF" type="application/x-shockwave-flash" data="FontList.swf" width="1" height="1">
+    <param name="movie" value="FontList.swf">
+     <param name="AllowScriptAccess" value="always">
+  <embed src="FontList.swf" width="1" height="1">
+  <!-- <allow-access-from domain="localhost" />
+  <cross-domain-policy>
+<allow-access-from domain="localhost"/>
+
+</cross-domain-policy> -->
+</object>
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+<script src="js/plugins.js"></script>
+<!-- <script src="js/jquery.fittext.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/contentEditable.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="js/otfeatures.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="js/contentEditable.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
+
+<script src="js/fontcheck.js?2"></script>
+<script src="js/RoundFontsize.js"></script>
+        <script type="text/javascript" charset="utf-8">
+           new RoundFontsize(".myReadingRegular_frame .font1, .myReadingRegular_frame .font2, .myCompareDefault_frame .font1, .myCompareDefault_frame .font2, .consultation_frame .font1, .consultation_frame .font2, .myChars_frame .font2, .myChars_frame .font1, .realsize_frame .font1, .realsize_frame .font2", false, false, true, 1.0);
+        </script>
+<script src="js/global.js?2"></script> <!-- First -->
+<script src="js/main.js?2"></script> <!-- Second -->
+
+<script src="js/splitlineswordschars.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/fontdrag.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/normalize.js"></script>
+<script src="js/jwerty.js"></script>
+<script src="js/init.js?2"></script>
+
+<!-- <script src="js/trmix.js"></script> --> <!-- adds classes to html wich render-engine is used -> change weight in css etc. // backup to standard web font etc. http://blog.typekit.com/2010/10/15/type-rendering-operating-systems/-->
+
+<script type="text/javascript">
+
+
+/// Hide all Fonts that dont support that specific script
+
+// function CheckAvailableFonts(testString) {
+// //var testString = "الألمانية",
+// var d = new Detector(),
+// my_list = document.getElementById("active_fonts"),
+// myFontname = "", controlString = "", str = "";
+
+// for (var index in my_list.options) {
+//    myFontname = my_list.options[index].innerHTML;
+//    if(d.detect(myFontname, testString)) {
+//      str += '<option value="'+ myFontname +'" />';
+//    }
+//  }
+// my_list.innerHTML = str;
+// };
+
+
+
+//CheckAvailableFonts("الألمانية"); //mmmmmmmmmmlli
+
+</script>
+<!-- Last -->
+<!-- <script src="js/constants.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-64128857-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'comparetype_group', 'comparetype_beta');
+</script>
+
+</body>
+</html>

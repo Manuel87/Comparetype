@@ -1,0 +1,100 @@
+
+//http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
+//http://www.smashingmagazine.com/2011/11/24/how-to-set-up-a-print-style-sheet/
+
+
+//@page
+
+
+@media print {
+
+    #header{
+      padding-top: 0.5cm; //5%
+      position: relative!important;
+
+      .navbar.navbar-fixed-top {
+      position: relative!important;
+      background: none;
+     }
+    }
+    #container_main {
+      padding-top: 0; //
+    }
+    .module {
+
+    	//display: block;
+    	///http://stackoverflow.com/questions/1630819/google-chrome-printing-page-breaks
+    	//page-break-before: always;
+    	//page-break-after: always;
+      page-break-inside: avoid;
+    	-webkit-region-break-inside: avoid;
+      padding-top: 5%;
+      &.compare {
+        padding-top: 0.5cm;
+      }
+    }
+
+
+    .no-print		{ display:none!important; }
+
+    //http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font
+  	html * {max-height: 999999px;
+  	//max-width:999999px;
+  	///text-height: font-size; // not supported in any browser…
+  	}
+
+
+
+  @page {
+     // size:297mm 210mm;
+    size: landscape; // portrait // auto // if other than auto -> no options in print preview
+    left: 0; top: 0; padding: 0; border: none;/*not sure if that fixes anything*/
+    margin: 0!important;  /* this affects the margin in the printer settings */ /*disables printer margins i.e. in firefox*/
+
+  	//http://www.tutorialspoint.com/css/css_paged_media.htm
+  	widows: 3;  //widows = minimum number of lines in a paragraph split on the new page.
+    orphans: 3; //orphans = minimum number of lines in a paragraph split on the old page.
+  }
+
+
+  .safari body { /*check if browser detection is activated and adds the class to html element*/
+      -webkit-transform: translate(-6mm,-6mm);
+          transform: translate(-6mm,-6mm);
+      /*fixes the 6mm margin in safari, except for absolute positioned elements -> in US or on Win it could be different … ? */
+      }
+
+
+    .chrome #container_main, .safari #container_main { /*seems to be a general webkit issue*/ /*check if browser detection is activated and adds the class to html element*/
+      //body would be much better… but then somehow I cant print the resulting pdf! -> "Keine zum Drucken ausgewählten Seiten vorhanden."
+      //-webkit-transform: scale(0.9372); -webkit-transform-origin: 0 0;
+      zoom: 0.9372;
+      //zoom: 93.72%;
+    }
+
+
+
+  //Size Hack for Chrome
+  //http://stackoverflow.com/questions/14511542/div-element-size-changes-when-printing-in-chrome?rq=1
+  //http://stackoverflow.com/questions/10902686/html-print-with-absolute-postitions
+  //Chrome Size Issue http://stackoverflow.com/questions/12039470/google-chrome-printing-issues?rq=1
+  // Chrome Hack http://stackoverflow.com/questions/10812093/is-there-a-google-chrome-only-css-hack
+  @media (-webkit-min-device-pixel-ratio:0) {
+  /* Safari and Chrome */
+  #container_main { zoom: 0.9372;}
+  //body would be much better… but then somehow I cant print the resulting pdf! -> "Keine zum Drucken ausgewählten Seiten vorhanden."
+
+  /* Safari only override */
+  // ::i-block-chrome,body { //  	zoom: 1; -moz-transform: scale(1); -moz-transform-origin: 0 0 // }
+  }
+
+
+  @media (color) { //@media print and (color)
+     * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+     }
+  }
+
+} // END @Media PRINT
+
+

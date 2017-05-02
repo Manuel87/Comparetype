@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>How the Word Cloud Generator Works</title>
+<style>
+
+#bbtree rect { stroke: #f00; fill: none; }
+#bbtree .collide rect { stroke: #fc0; }
+#bbtree g, #vis text { cursor: pointer; }
+#bbtree {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+</style>
+</head><body>
+<div id="bbtree"></div>
+
+
+<script src="../lib/d3/d3.js"></script>
+<script src="../d3.layout.cloud.js"></script>
+<script src="../bbtree.js"></script>
+
+<script>
+	var fill = d3.scale.category20();
+
+	d3.layout.cloud().size([500, 500])
+			.words([
+				"a", "b", "c", "d", "e", "Hello", "world", "normally", "you", "want", "more", "words",
+				"than", "this", "Hello", "world", "normally", "you", "want", "more", "words",
+				"than", "this", "Hello", "world", "normally", "you", "want", "more", "words",
+				"than", "this"].map(function(d) {
+				return {text: d, size: 10 + Math.random() * 90};
+			}))
+			.padding(0)
+			.rotate(0) //function() { return ~~(Math.random() * 2) * 90; })
+			.font("TastyRegular")
+			.fontSize(function(d) { return d.size; })
+			.on("end", draw)
+			.start();
+
+	function draw(words) {
+		d3.select("body").append("svg")
+				.attr("width", 500)
+				.attr("height", 500)
+			.append("g")
+				.attr("transform", "translate(250,250)")
+			.selectAll("text")
+				.data(words)
+			.enter().append("text")
+				.style("font-size", function(d) { return d.size + "px"; })
+				.style("font-family", "TastyRegular")
+				.style("fill", function(d, i) { return fill(i); })
+				.attr("text-anchor", "middle")
+				.attr("transform", function(d) {
+					return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+				})
+				.text(function(d) { return d.text; });
+	}
+</script>
+</body>
+</html>
