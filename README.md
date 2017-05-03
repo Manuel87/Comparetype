@@ -27,13 +27,14 @@ Tool to compare fonts at a normalized typographic size.
   
 **Preview**
 ![CompareType_Latin](README_media/CompareType_Latin.gif)
+(Within the Adobe Arabic Regular font there is a slightly bolder version of the Adobe Minion)
   
 ![CompareType_Arabic](README_media/CompareType_Arabic.gif)
   
   
 **One issue caused by the current technical model**
 ![Minion_scaled-Latin-to-match-other-scripts-typeface-metrics](README_media/Minion_scaled-Latin-to-match-other-scripts-typeface-metrics.png)
-Different versions of Minion are differently scaled to accompany
+Different versions of Minion. They are differently scaled to accompany
 type designs of other scripts; Top: original
 setting; Bottom: scaled to the same x-height.
   
