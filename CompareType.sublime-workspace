@@ -80,10 +80,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/vongebhardi.de/webseiten/comparetype/dev"
+		"/Users/manuelvongebhardi/Documents/GITHUB/Comparetype"
 	],
 	"file_history":
 	[
+		"/Users/manuelvongebhardi/Documents/GITHUB/Comparetype/arabic.html",
+		"/Users/manuelvongebhardi/Documents/GITHUB/Comparetype/js/global.js",
+		"/Users/manuelvongebhardi/Documents/GITHUB/Comparetype/index.html",
 		"/Volumes/vongebhardi.de/webseiten/comparetype/dev/CompareType.sublime-project",
 		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/css/style.css",
 		"/Users/manuelvongebhardi/Projekte/2015_Studio_Farn__Website/HTML_StudioFarn/index.html",
@@ -95,7 +98,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -109,6 +112,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"(",
+			".js",
 			"Tomorrow",
 			"lineh",
 			"wrapper",
