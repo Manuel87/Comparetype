@@ -41,3 +41,10 @@ setting; Bottom: scaled to the same x-height.
   
 **Technical Type Size**
 ![Technical-Typesize](README_media/Technical-Typesize.png)
+
+**License & Copyright**
+
+[Apache 2.0](https://github.com/Manuel87/Comparetype/blob/master/LICENSE.txt)
+- Permissions: Commercial use, Modification, Distribution, Patent use, Private use
+- Limitations: Trademark use, Liability, Warranty
+- Conditions: License and copyright notice & State changes
