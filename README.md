@@ -22,7 +22,8 @@ Tool to compare fonts at a normalized typographic size.
   
 **Current main limitation - Sizing the body text**
 - currently it is only possible to change the actual type size via the specification in global.js
-- workaround: to quickly change the size use the reading distance field (double the distance, double the size)
+  - which is indeed super anoying. Sorry, I should have fixed that by now :/
+  - workaround: to quickly change the size use the reading distance field (double the distance, double the size)
   
   
 **Preview**
@@ -42,8 +43,10 @@ setting; Bottom: scaled to the same x-height.
 **Technical Type Size**
 ![Technical-Typesize](README_media/Technical-Typesize.png)
 
-**License & Copyright**
+**Indesign**
+https://github.com/Manuel87/InDesignNormalizeFontsize
 
+**License & Copyright**
 [Apache 2.0](https://github.com/Manuel87/Comparetype/blob/master/LICENSE.txt)
 - Permissions: Commercial use, Modification, Distribution, Patent use, Private use
 - Limitations: Trademark use, Liability, Warranty
